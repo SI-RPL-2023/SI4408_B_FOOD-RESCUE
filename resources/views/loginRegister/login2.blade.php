@@ -29,8 +29,9 @@
 
                 <button type="submit" class="text-white bg-hijau2 hover:bg-hijau1 focus:ring-4 focus:outline-non focus:ring-hijau1 font-medium rounded-lg text-sm block sm:w-auto px-72 py-2.5 text-cente dark:bg-hijau1 dar:hover:bg-hijau1 dar:focus:ring-hijau1 mx-auto">Login</button>
             </form>
-
         </div>
+
+        <p class="pl-48 pt-8 text-center">Belum Punya Akun? <strong><a class="hover:text-hijau1" href="{{ url('register-options') }}" class="text-reset text-heavy">Daftar Sekarang</a></strong></p>
 
     {{-- Kanan --}}
     <img srcset="/images/login1.jpg 1x, /images/login.jpg 2x" class="w-full h-full max-w-xl rounded-lg mx-auto" alt="image description">

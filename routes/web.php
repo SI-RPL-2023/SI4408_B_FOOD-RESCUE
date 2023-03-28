@@ -18,6 +18,22 @@ Route::get('/', function () {
 });
 
 Route::get('/login', function () {
-    return view('login');
+    return view('loginRegister.login');
+});
+
+Route::get('/login2', function () {
+    return view('loginRegister.login2');
+});
+
+Route::get('/register-options', function () {
+    return view('loginRegister.registerOption');
+});
+
+Route::get('/register-bisnis', function () {
+    return view('loginRegister.registerBusiness');
+});
+
+Route::get('/register-personal', function () {
+    return view('loginRegister.registerPersonal');
 });
 
