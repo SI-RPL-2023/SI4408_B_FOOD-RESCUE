@@ -37,3 +37,8 @@ Route::get('/register-personal', function () {
     return view('loginRegister.registerPersonal');
 });
 
+
+
+Route::get('register', [UserController::class, 'register'])->name('register');
+Route::post('register', [UserController::class, 'register_action'])->name('register.action');
+

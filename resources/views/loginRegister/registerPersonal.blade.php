@@ -21,7 +21,7 @@
 
             {{-- form --}}
             <div class="px-8 pt-8 formLogin">
-                <form method="POST" action="/..">
+                <form method="POST" action="{{ route('register.action') }}">
                     @csrf
 
                     <div class="gap-8 columns-2">
