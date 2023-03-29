@@ -8,22 +8,27 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class Pengguna extends Model
+// class Pengguna extends Model
+class ControllerPengguna extends Authenticatable
 {
+    use HasApiTokens, HasFactory, Notifiable;
+
     /**
      * The attributes that are mass assignable.
      *
      * @var string[]
      */
-    protected $table = 'users';
+    protected $table = 'table_pengguna';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'name',
-        'email',
-        'uname',
-        'nohp',
+        'namaDepan',
+        'namaBelakang',
         'lokasi',
-        'password'
+        'nohp',
+        'email',
+        'role_id',
+        'password',
+
     ];
 
     /**

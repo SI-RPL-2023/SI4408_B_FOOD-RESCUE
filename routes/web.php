@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ControllerPengguna;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,9 +22,9 @@ Route::get('/login', function () {
     return view('loginRegister.login');
 });
 
-Route::get('/login2', function () {
-    return view('loginRegister.login2');
-});
+// Route::get('/login2', function () {
+//     return view('loginRegister.login2');
+// });
 
 Route::get('/register-options', function () {
     return view('loginRegister.registerOption');
@@ -39,6 +40,14 @@ Route::get('/register-personal', function () {
 
 
 
-Route::get('register', [UserController::class, 'register'])->name('register');
-Route::post('register', [UserController::class, 'register_action'])->name('register.action');
 
+
+// Route::get('login', [ControllerPengguna::class, 'login'])->name('login');
+Route::post('login', [ControllerPengguna::class, 'login'])->name('login.action');
+
+Route::get('registerPersonal', [ControllerPengguna::class, 'register'])->name('register');
+Route::post('registerPersonal', [ControllerPengguna::class, 'register_action'])->name('register.action');
+
+
+// tester routes
+Route::post('/testing', [ControllerPengguna::class, 'testing'])->name('testing');

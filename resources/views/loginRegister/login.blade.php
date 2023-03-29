@@ -20,7 +20,7 @@
             <p class="text-center mb-3 font-normal text-gray-700 dark:text-gray-400">Silahkan masukan informasi Anda</p>
 
             <div class="pt-8 formLogin">
-                <form method="POST" action="/..">
+                <form method="POST" action="{{ route('login.action') }}">
                     @csrf
                     <div class="mb-6">
                         <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Masukan Email Anda</label>
