@@ -42,8 +42,8 @@ Route::get('/register-personal', function () {
 
 
 
-// Route::get('login', [ControllerPengguna::class, 'login'])->name('login');
-Route::post('login', [ControllerPengguna::class, 'login'])->name('login.action');
+Route::get('login', [ControllerPengguna::class, 'login'])->name('login');
+Route::post('login', [ControllerPengguna::class, 'login_action'])->name('login.action');
 
 Route::get('registerPersonal', [ControllerPengguna::class, 'register'])->name('register');
 Route::post('registerPersonal', [ControllerPengguna::class, 'register_action'])->name('register.action');

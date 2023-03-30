@@ -47,27 +47,28 @@ class ControllerPengguna extends Controller
         return redirect()->route('login')->with('success', 'Registrasi Berhasil!');
     }
 
-//     public function login()
-//     {
-//         $data['title'] = 'Login';
-//         return view('loginRegister.login', $data);
-//     }
+    public function login()
+    {
+        $data['title'] = 'Login';
+        return view('loginRegister.login', $data);
+    }
 
-//     public function login_action(Request $request)
-//     {
-//         $request->validate([
-//             'email' => 'required',
-//             'password' => 'required',
-//         ]);
-//         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-//             $request->session()->regenerate();
-//             return redirect()->intended('/');
-//         }
+    public function login_action(Request $request)
+    {
+        $request->validate([
+            'email' => 'required',
+            'password' => 'required',
+        ]);
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+            $request->session()->regenerate();
+            return redirect()->intended('/register-options');
+        }
 
-//         return back()->withErrors([
-//             'password' => 'Gagal Login',
-//         ]);
-//     }
+        return back()->withErrors([
+            'password' => 'Gagal Login',
+        ]);
+    }
+
 
 //     public function profile()
 //     {
