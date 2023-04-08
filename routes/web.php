@@ -14,34 +14,51 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+// Views Routes
+
+// Landing Page
 Route::get('/', function () {
     return view('welcome');
 });
 
+// Login Routes
 Route::get('/login', function () {
     return view('loginRegister.login');
 });
 
-// Route::get('/login2', function () {
-//     return view('loginRegister.login2');
-// });
-
+// Register Option Routes
 Route::get('/register-options', function () {
     return view('loginRegister.registerOption');
 });
 
+// Register Business Routes
 Route::get('/register-bisnis', function () {
     return view('loginRegister.registerBusiness');
 });
 
+// Register Person Routes
 Route::get('/register-personal', function () {
     return view('loginRegister.registerPersonal');
+});
+
+// reported-items
+Route::get('/admin-report-items', function () {
+    return view('admin.itemreport');
+});
+
+// reported-items
+Route::get('/admin-dashboard', function () {
+    return view('admin.dashboard');
 });
 
 
 
 
 
+
+
+// POST GET Routes
 Route::get('login', [ControllerPengguna::class, 'login'])->name('login');
 Route::post('login', [ControllerPengguna::class, 'login_action'])->name('login.action');
 
