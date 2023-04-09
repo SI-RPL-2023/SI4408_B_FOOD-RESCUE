@@ -67,8 +67,8 @@ class ControllerPengguna extends Controller
         }
 
         return back()->withErrors([
-            'password' => 'Gagal Login',
-        ]);
+            'email' => 'Gagal Login',
+        ])->onlyInput('email');
     }
 
 
