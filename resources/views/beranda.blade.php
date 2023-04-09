@@ -34,7 +34,7 @@
 <!-- Dropdown menu -->
 <div id="dropdownAvatar" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
     <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
-      <div class="font-medium ">Bonnie Green</div>
+      <div class="font-medium ">{{ Auth::user()->namaDepan }} {{ Auth::user()->namaBelakang }}</div>
     </div>
     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton">
       <li>
@@ -42,7 +42,7 @@
       </li>
     </ul>
     <div class="py-2">
-      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+      <a href="{{ route('logout') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
     </div>
 </div>
   @endauth
@@ -54,7 +54,8 @@
     </button>
   </div>
   <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 " id="navbar-cta">
-    <ul class="flex flex-col py-4 px-8 mt-4 mb-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-11 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-hijau4 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+    <ul class="flex flex-col py-4 px-8 mt-4 mb-4 bo
+    rder border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-11 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-hijau4 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
       <li>
         <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg" aria-current="page">Home</a>
       </li>
@@ -97,11 +98,11 @@
     <div class="col-span-2">
         <p class="mb-3 text-white mt-44 ml-14 text-5xl font-Cabin-Medium font-bold">Donate Your Food</p>
         <p class="mb-3 text-white ml-14 text-5xl font-Cabin-Medium font-bold">to Reduce Food Waste</p>
-        <p class="mb-3 text-white ml-14 text-lg font-Cabin-Medium mt-10">Let's join our mission to reduce food waste by donating unconsumed 
-food to those in need. Every year, millions of tons of food are thrown 
-away, contributing to environmental damage. Let's fight food waste by 
-giving away edible food to people who are less fortunate. A small action 
-from us can make a big difference to those in need. Let's join hands in 
+        <p class="mb-3 text-white ml-14 text-lg font-Cabin-Medium mt-10">Let's join our mission to reduce food waste by donating unconsumed
+food to those in need. Every year, millions of tons of food are thrown
+away, contributing to environmental damage. Let's fight food waste by
+giving away edible food to people who are less fortunate. A small action
+from us can make a big difference to those in need. Let's join hands in
 sharing unconsumed food to reduce food waste!</p>
         <button type="button" class="text-white  bg-kuning  hover:bg-kuning2 focus:ring-4 focus:outline-none focus:ring-blue-300 flex justify-center font-medium rounded-full px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 font-Cabin-Medium text-xl mt-20 ml-96">Donate Now</button>
     </div>
@@ -113,10 +114,10 @@ sharing unconsumed food to reduce food waste!</p>
     <div class="col-span-2">
         <p class="mb-3 text-white mt-64  mr-14 text-5xl font-Cabin-Medium font-bold">Discover New Recipe</p>
         <p class="mb-3 text-white mr-14  text-5xl font-Cabin-Medium font-bold">Using What You Have</p>
-        <p class="mb-3 text-white mr-14  text-lg font-Cabin-Medium mt-10">Discover new recipes with our Food Search feature! Create delicious 
-meals from the ingredients you have on hand. Simply input the 
-ingredients you want to use and the Food Search feature will display 
-suitable recipes. Enjoy tasty food without wasting unused ingredients. 
+        <p class="mb-3 text-white mr-14  text-lg font-Cabin-Medium mt-10">Discover new recipes with our Food Search feature! Create delicious
+meals from the ingredients you have on hand. Simply input the
+ingredients you want to use and the Food Search feature will display
+suitable recipes. Enjoy tasty food without wasting unused ingredients.
 Try it now and become a creative cook in your own kitchen!</p>
         <button type="button" class="text-white  bg-kuning  hover:bg-kuning2 focus:ring-4 focus:outline-none focus:ring-blue-300 flex justify-center font-medium rounded-full px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 font-Cabin-Medium text-xl mt-36 ml-96">Search Recipe</button>
     </div>
@@ -126,10 +127,10 @@ Try it now and become a creative cook in your own kitchen!</p>
     <div class="col-span-2">
         <p class="mb-3 text-white mt-52 ml-14 text-5xl font-Cabin-Medium font-bold">Earn Points from</p>
         <p class="mb-3 text-white ml-14 text-5xl font-Cabin-Medium font-bold">Uploading Your Food</p>
-        <p class="mb-3 text-white ml-14 text-lg font-Cabin-Medium mt-10">Our new feature rewards users who upload food with redeemable points. 
-These points can be exchanged for shopping vouchers, giving users an 
-extra incentive to continue uploading and reducing the amount of edible 
-food waste. Help us combat food waste while enjoying great rewards. 
+        <p class="mb-3 text-white ml-14 text-lg font-Cabin-Medium mt-10">Our new feature rewards users who upload food with redeemable points.
+These points can be exchanged for shopping vouchers, giving users an
+extra incentive to continue uploading and reducing the amount of edible
+food waste. Help us combat food waste while enjoying great rewards.
 Join us now and start uploading!</p>
         <button type="button" class="text-white  bg-kuning  hover:bg-kuning2 focus:ring-4 focus:outline-none focus:ring-blue-300 flex justify-center font-medium rounded-full px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 font-Cabin-Medium text-xl mt-20 ml-96">Your Rewards</button>
     </div>
