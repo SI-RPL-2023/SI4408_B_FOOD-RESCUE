@@ -41,6 +41,10 @@ Route::get('/register-bisnis', function () {
 Route::get('/register-personal', function () {
     return view('loginRegister.registerPersonal');
 });
+Route::get('/inputmakanan', function () {
+    return view('inputmakanan');
+});
+
 
 // reported-items
 Route::get('/admin-report-items', function () {
