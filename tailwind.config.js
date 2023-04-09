@@ -12,7 +12,10 @@ module.exports = {
             hijau1 : '#4D774E',
             hijau2 : '#164A41',
             hijau3 : '#81BC83',
-
+            hijau4 : '#113932',
+            hijau5 : '#A6C9A7',
+            kuning : '#F1B24A',
+            kuning2 : '#E39616',
         },
       extend: {
         backgroundImage: {
@@ -21,7 +24,9 @@ module.exports = {
             // 'loggin' : '/images/background-login.svg',
         },
         fontFamily: {
-            'Cabin-Medium': ['Cabin', 'sans-serif']
+            'Cabin-Medium': ['Cabin', 'sans-serif'],
+            'Alkatra': ['Alkatra', 'cursive'],
+
         }
       },
     },
