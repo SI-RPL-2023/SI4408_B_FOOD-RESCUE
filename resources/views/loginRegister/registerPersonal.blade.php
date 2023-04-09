@@ -69,7 +69,7 @@
                     </div>
                 </form>
             </div>
-            
+
             <p class="pt-4 text-center font-Cabin-Medium">Sudah Punya Akun? <strong><a class="hover:text-hijau1" href="{{ url('login') }}" class="text-reset text-heavy">Masuk Sekarang</a></strong></p>
         </div>
     </div>

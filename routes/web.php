@@ -52,6 +52,11 @@ Route::get('/admin-dashboard', function () {
     return view('admin.dashboard');
 });
 
+// test-logout
+Route::get('/profile', function () {
+    return view('loginregister.logouttest');
+});
+
 
 
 
@@ -61,6 +66,9 @@ Route::get('/admin-dashboard', function () {
 // POST GET Routes
 Route::get('login', [ControllerPengguna::class, 'login'])->name('login');
 Route::post('login', [ControllerPengguna::class, 'login_action'])->name('login.action');
+
+Route::get('logout', [ControllerPengguna::class, 'logout'])->name('logout');
+
 
 Route::get('registerPersonal', [ControllerPengguna::class, 'register'])->name('register');
 Route::post('registerPersonal', [ControllerPengguna::class, 'register_action'])->name('register.action');

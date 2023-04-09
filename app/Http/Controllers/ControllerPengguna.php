@@ -61,7 +61,7 @@ class ControllerPengguna extends Controller
         ]);
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             $request->session()->regenerate();
-            return redirect()->intended('/register-options');
+            return redirect()->intended('/logout');
         }
 
         return back()->withErrors([
@@ -107,11 +107,11 @@ class ControllerPengguna extends Controller
 //         return redirect()->route('profile');
 //     }
 
-//     public function logout(Request $request)
-//     {
-//         Auth::logout();
-//         $request->session()->invalidate();
-//         $request->session()->regenerateToken();
-//         return redirect('/');
-//     }
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/login');
+    }
 }
