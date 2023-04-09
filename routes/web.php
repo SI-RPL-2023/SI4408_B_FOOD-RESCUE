@@ -52,6 +52,10 @@ Route::get('/admin-dashboard', function () {
     return view('admin.dashboard');
 });
 
+// Beranda
+Route::get('/beranda', function () {
+    return view('beranda');
+});
 
 
 
