@@ -37,3 +37,7 @@ Route::get('/register-personal', function () {
     return view('loginRegister.registerPersonal');
 });
 
+Route::get('/beranda', function () {
+    return view('beranda');
+});
+
