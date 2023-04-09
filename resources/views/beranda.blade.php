@@ -94,6 +94,20 @@ Try it now and become a creative cook in your own kitchen!</p>
     </div>
 </div>
 
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-3">
+    <div class="col-span-2">
+        <p class="mb-3 text-white mt-52 ml-14 text-5xl font-Cabin-Medium font-bold">Earn Points from</p>
+        <p class="mb-3 text-white ml-14 text-5xl font-Cabin-Medium font-bold">Uploading Your Food</p>
+        <p class="mb-3 text-white ml-14 text-lg font-Cabin-Medium mt-10">Our new feature rewards users who upload food with redeemable points. 
+These points can be exchanged for shopping vouchers, giving users an 
+extra incentive to continue uploading and reducing the amount of edible 
+food waste. Help us combat food waste while enjoying great rewards. 
+Join us now and start uploading!</p>
+        <button type="button" class="text-white  bg-kuning  hover:bg-kuning2 focus:ring-4 focus:outline-none focus:ring-blue-300 flex justify-center font-medium rounded-full px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 font-Cabin-Medium text-xl mt-20 ml-96">Your Rewards</button>
+    </div>
+    <img class="h-auto w-10/12 mt-40" src="images/reward.jpg" alt="image description">
+</div>
+
 
 </body>
 </html>
