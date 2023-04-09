@@ -27,6 +27,11 @@ Route::get('/login', function () {
     return view('loginRegister.login');
 });
 
+// Logout Routes
+Route::get('/login', function () {
+    return view('loginRegister.logouttest');
+});
+
 // Register Option Routes
 Route::get('/register-options', function () {
     return view('loginRegister.registerOption');

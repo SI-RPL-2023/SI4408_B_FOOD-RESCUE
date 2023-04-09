@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+// use Illuminate\Support\Facades\Validator;
 
 class ControllerPengguna extends Controller
 {
@@ -56,12 +57,13 @@ class ControllerPengguna extends Controller
     public function login_action(Request $request)
     {
         $request->validate([
-            'email' => 'required',
+            'email' => 'required|email|exists:table_pengguna,email',
             'password' => 'required',
         ]);
+
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             $request->session()->regenerate();
-            return redirect()->intended('/logout');
+            return redirect()->intended('/login');
         }
 
         return back()->withErrors([
