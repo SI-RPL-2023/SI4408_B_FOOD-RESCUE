@@ -8,8 +8,9 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     * @return void
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('table_pengguna', function (Blueprint $table) {
             $table->bigIncrements('id');
@@ -18,7 +19,7 @@ return new class extends Migration
             $table->string('lokasi', 255);
             $table->string('nohp', 255);
             $table->string('email', 255);
-            $table->bigInteger('role_id');
+            $table->bigInteger('role');
             $table->string('password', 255);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
@@ -27,9 +28,10 @@ return new class extends Migration
 
     /**
      * Reverse the migrations.
+     * @return void
      */
-    public function down(): void
+    public function down()
     {
-        //
+        Schema::dropIfExists('table_pengguna');
     }
 };

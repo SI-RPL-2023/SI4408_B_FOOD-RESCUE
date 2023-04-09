@@ -12,6 +12,7 @@ module.exports = {
             hijau1 : '#4D774E',
             hijau2 : '#164A41',
             hijau3 : '#81BC83',
+            hijau4 : '#A6C9A7'
 
         },
       extend: {
