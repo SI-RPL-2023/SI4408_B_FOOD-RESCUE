@@ -16,6 +16,7 @@ module.exports = {
             hijau5 : '#A6C9A7',
             kuning : '#F1B24A',
             kuning2 : '#E39616',
+            kuning3 : '#F8D191'
         },
       extend: {
         backgroundImage: {

@@ -52,6 +52,8 @@ Route::get('/inputmakanan', function () {
     return view('inputmakanan');
 });
 
+
+// ============= Admin Things =================
 // reported-items
 Route::get('/admin-report-items', function () {
     return view('admin.itemreport');
