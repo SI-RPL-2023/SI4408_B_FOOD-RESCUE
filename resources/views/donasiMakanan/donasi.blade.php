@@ -106,6 +106,27 @@
     </div>
   </div>
 
+  @if (session()->has('success'))
+    <div class="w-full h-screen bg-black bg-opacity-30 fixed top-0 flex justify-center items-center">
+      <div class="bg-[#EDEDED] rounded-md w-1/3 font-Inter py-8 overflow-hidden flex flex-col items-center">
+        <div class="text-center">
+          <img src="/images/report-success.svg" alt="Report berhasil" class="w-24 mx-auto">
+          <h3 class="text-sm font-bold mt-5">Terima kasih telah memberi tahu kami</h3>
+          <span class="text-[#6C6C6C] text-xs">Kami menggunakan laporan ini untuk:</span>
+        </div>
+        <div class="w-[70%] flex mt-10">
+          <img src="/images/icons/info.svg" alt="Icon" class="w-5 mr-3">
+          <span class="text-xs text-left">Pahami masalah yang dihadapi orang dengan berbagai jenis postingan di Food Rescue</span>
+        </div>
+        <div class="w-[70%] flex mt-2">
+          <img src="/images/icons/hide.svg" alt="Icon" class="w-5 mr-3">
+          <span class="text-xs text-left">Tampilkan lebih sedikit postingan semacam ini di masa mendatang</span>
+        </div>
+        <button class="rounded-full bg-[#E39616] text-white font-Inter text-center w-fit px-14 py-2 mt-10 close-btn">Tutup</button>
+      </div>
+    </div>
+  @endif
+
   <script>
     const selectBtn = document.querySelectorAll('.select-btn'),
           closeBtn = document.querySelectorAll('.close-btn'),
