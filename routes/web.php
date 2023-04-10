@@ -76,6 +76,7 @@ Route::get('/beranda', function () {
 
 // Halaman Donasi Makanan
 Route::get('/donasi', [ControllerDonasiMakanan::class, 'makananMatang']);
+Route::get('/donasi/mentah', [ControllerDonasiMakanan::class, 'makananMentah']);
 
 // POST GET Routes
 Route::get('login', [ControllerPengguna::class, 'login'])->name('login');

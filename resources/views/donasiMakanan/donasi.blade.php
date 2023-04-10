@@ -51,4 +51,37 @@
       </li>
     </ul>
   </div>
+
+  <div class="max-w-full px-6 mb-20 grid grid-cols-3 gap-10">
+    @foreach ($makanans as $makanan)
+      <div class="bg-white rounded-md flex items-center py-8 relative overflow-hidden">
+        <div class="w-full h-full bg-white opacity-80 absolute hidden justify-center items-center">
+          <img src="/images/icons/hide.svg" alt="Icon" class="w-40">
+        </div>
+        <div class="absolute top-3 right-3 text-right">
+          <button class="inline select-btn" data-id-makanan="{{ $makanan->id }}"><img src="/images/icons/dot-three.svg" alt="Icon" class="w-3"></button>
+          <ul class="bg-[#EDEDED] text-[#6C6C6C] py-2 px-3 font-semibold text-xs text-left rounded-lg font-Cabin-Medium hidden transition mr-1">
+            <li class="my-1 cursor-pointer hover:text-[#9A9A9A] report">Report</li>
+            <li class="my-1 cursor-pointer hover:text-[#9A9A9A] hide">Hide</li>
+          </ul>
+        </div>
+        <div class="flex w-full items-center px-4 gap-4">
+          <img src="/images/donasi/{{ $makanan->foto }}" alt="{{ $makanan->nama }}" width="200px">
+          <div class="flex flex-col justify-between h-full flex-1">
+            <div class="font-Cabin-Medium">
+              <h3 class="text-hijau1 font-semibold text-xl">{{ $makanan->nama }}</h3>
+              <span class="text-hijau1 text-md font-semibold block">@ariadani</span>
+              <div class="mt-10">
+                <img src="/images/icons/comment.svg" alt="Icon" class="mr-2 w-4 inline"><span class="text-sm">{{ rand(1, 999) }} comments</span>
+              </div>
+              <div class="mt-1">
+                <img src="/images/icons/location.svg" alt="Icon" class="mr-2 w-4 inline"><span class="text-sm">Jl. Malioboro, Yogyakarta</span>
+              </div>
+            </div>
+            <a href="#" class="rounded-full bg-[#E39616] text-white font-inter text-center w-fit px-14 py-2 mt-10">Read More</a>
+          </div>
+        </div>
+      </div>
+    @endforeach
+  </div>
 </body>
