@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
-      "./resources/**/*.blade.php",
-      "./resources/**/*.js",
-      "./resources/**/*.vue",
-      "./node_modules/flowbite/**/*.js"
+        "./resources/**/*.blade.php",
+        "./resources/**/*.js",
+        "./resources/**/*.vue",
+        "./node_modules/flowbite/**/*.js",
     ],
     theme: {
         colors: {
@@ -18,20 +18,18 @@ module.exports = {
             kuning2 : '#E39616',
             kuning3 : '#F8D191'
         },
-      extend: {
-        backgroundImage: {
-            'pattern': "url('/public/images/background-login.svg')",
-            // 'bgLogin': "url('/images/login.jpg')"
-            // 'loggin' : '/images/background-login.svg',
+        extend: {
+            backgroundImage: {
+                pattern: "url('/public/images/background-login.svg')",
+                // 'bgLogin': "url('/images/login.jpg')"
+                // 'loggin' : '/images/background-login.svg',
+            },
+            fontFamily: {
+                "Cabin-Medium": ["Cabin", "sans-serif"],
+                Alkatra: ["Alkatra", "cursive"],
+                Inter: ["Inter"],
+            },
         },
-        fontFamily: {
-            'Cabin-Medium': ['Cabin', 'sans-serif'],
-            'Alkatra': ['Alkatra', 'cursive'],
-
-        }
-      },
     },
-    plugins: [
-        require('flowbite/plugin')
-    ],
-  }
+    plugins: [require("flowbite/plugin")],
+};

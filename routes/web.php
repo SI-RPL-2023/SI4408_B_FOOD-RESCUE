@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ControllerDonasiMakanan;
 use App\Http\Controllers\ControllerPengguna;
 use Illuminate\Support\Facades\Route;
 
@@ -77,8 +78,14 @@ Route::get('/profile', function () {
 // });
 
 
+// Halaman Profil
+Route::get('/profile-page', function () {
+    return view('profilePage.profilPage');
+});
 
 
+// Halaman Donasi Makanan
+Route::get('/donasi', [ControllerDonasiMakanan::class, 'makananMatang']);
 
 
 // POST GET Routes

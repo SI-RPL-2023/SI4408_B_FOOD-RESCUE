@@ -11,18 +11,18 @@
 
 <body class = "bg-hijau2">
 <!-- Navbar -->
-<nav class="bg-hijau2 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 mt-7">
-  <div class="container flex flex-wrap items-center justify-between mx-auto">
-  <a href="/" class="flex items-center">
-      <img src="images/logo2.svg" class="h-13 mr-3 sm:h-14 ml-8" alt="FoodRescue Logo" />
-      <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"></span>
-  </a>
-  <div class="flex md:order-2 mr-20">
+    <nav class="bg-hijau2 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 mt-7">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+        <a href="/" class="flex items-center">
+            <img src="images/logo2.svg" class="h-13 mr-3 sm:h-14 ml-8" alt="FoodRescue Logo" />
+            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"></span>
+        </a>
+    <div class="flex md:order-2 mr-20">
 
-  <!-- Tombol Sebelum Login -->
-  @guest
-  <a href="{{ url('login') }}" class="text-white bg-kuning hover:bg-kuning2 focus:ring-4 focus:outline-none focus:ring-kuning3 rounded-lg px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-kuning3 dark:hover:bg-kuning3 dark:focus:ring-kuning3 font-Cabin-Medium text-sm font-bold">Login</a>
-  @endguest
+    <!-- Tombol Sebelum Login -->
+    @guest
+    <a href="{{ url('login') }}" class="text-white bg-kuning hover:bg-kuning2 focus:ring-4 focus:outline-none focus:ring-kuning3 rounded-lg px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-kuning3 dark:hover:bg-kuning3 dark:focus:ring-kuning3 font-Cabin-Medium text-sm font-bold">Login</a>
+    @endguest
 
   <!-- Tombol Sesudah Login -->
   @auth
@@ -42,7 +42,7 @@
       </li>
     </ul>
     <div class="py-2">
-      <a href="{{ route('logout') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+        <a href="{{ route('logout') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
     </div>
 </div>
   @endauth
