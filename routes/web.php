@@ -74,8 +74,16 @@ Route::get('/beranda', function () {
     return view('beranda');
 });
 
+
+// Halaman Profil
+Route::get('/profile-page', function () {
+    return view('profilePage.profilPage');
+});
+
+
 // Halaman Donasi Makanan
 Route::get('/donasi', [ControllerDonasiMakanan::class, 'makananMatang']);
+
 
 // POST GET Routes
 Route::get('login', [ControllerPengguna::class, 'login'])->name('login');
