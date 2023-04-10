@@ -9,7 +9,7 @@
     <title>Login</title>
 </head>
 <body class="h-screen bg-no-repeat bg-cover bg-pattern">
-    
+
     <img class="pl-8 pt-8 mx-auto h-auto max-w-[10%]" src="/images/logo2.svg" alt="logo2">
 
     <div class=" pt-8 flex mx-auto place-content-center">
