@@ -36,4 +36,8 @@
       <span class="font-Inter">Filter</span>
     </div>
   </nav>
+
+  <div class="max-w-full h-screen px-4">
+    <div class="w-full h-full bg-[url('/public/images/banner-donasi.svg')] bg-cover bg-center"></div>
+  </div>
 </body>
