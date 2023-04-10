@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ControllerDonasiMakanan;
 use App\Http\Controllers\ControllerPengguna;
 use Illuminate\Support\Facades\Route;
 
@@ -73,10 +74,8 @@ Route::get('/beranda', function () {
     return view('beranda');
 });
 
-
-
-
-
+// Halaman Donasi Makanan
+Route::get('/donasi', [ControllerDonasiMakanan::class, 'makananMatang']);
 
 // POST GET Routes
 Route::get('login', [ControllerPengguna::class, 'login'])->name('login');
