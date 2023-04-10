@@ -40,4 +40,15 @@
   <div class="max-w-full h-screen px-4">
     <div class="w-full h-full bg-[url('/public/images/banner-donasi.svg')] bg-cover bg-center"></div>
   </div>
+
+  <div class="max-w-fit bg-[#113932] p-3 rounded-xl text-white font-Alkatra my-10 mx-auto">
+    <ul class="flex">
+      <li class="mx-5">
+        <a href="{{ Request::is('donasi') ? '#' : '/donasi' }}" class="{{ Request::is('donasi') ? 'text-[#E39616]' : 'hover:text-[#E39616]' }}">Makanan Matang</a>
+      </li>
+      <li class="mx-5 cursor-pointer">
+        <a href="{{ Request::is('donasi/mentah') ? '#' : '/donasi/mentah' }}" class="{{ Request::is('donasi/mentah') ? 'text-[#E39616]' : 'hover:text-[#E39616]' }}">Makanan Mentah</a>
+      </li>
+    </ul>
+  </div>
 </body>
