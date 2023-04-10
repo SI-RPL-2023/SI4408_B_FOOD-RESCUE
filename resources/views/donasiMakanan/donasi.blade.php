@@ -84,4 +84,58 @@
       </div>
     @endforeach
   </div>
+
+  <div class="w-full h-screen bg-black bg-opacity-30 fixed top-0 hidden justify-center items-center modal-overlay">
+    <div class="bg-[#EDEDED] rounded-md w-1/3 font-inter relative overflow-hidden">
+      <h2 class="font-bold text-center py-5 border-b-2">Report</h2>
+      <button class="w-10 h-10 absolute top-3 right-1 rounded-full text-xl close-btn"><img src="/images/icons/close.svg" alt="Icon" class="w-4"></button>
+      <form action="/donasi/report" method="post">
+        @csrf
+        <input type="hidden" name="id_makanan" class="id">
+        <div class="grid grid-cols-1 divide-y-2">
+          <h3 class="text-sm font-bold px-4 py-4">Mengapa anda melaporkan postingan ini?</h3>
+          <button type="submit" class="report-choice" name="report" value="Saya hanya tidak menyukainya">Saya hanya tidak menyukainya <img src="/images/icons/right-arrow.svg" alt="Icon" class="w-4"></button>
+          <button type="submit" class="report-choice" name="report" value="Informasi palsu">Informasi palsu <img src="/images/icons/right-arrow.svg" alt="Icon" class="w-4"></button>
+          <button type="submit" class="report-choice" name="report" value="Penipuan atau penggelapan">Penipuan atau penggelapan <img src="/images/icons/right-arrow.svg" alt="Icon" class="w-4"></button>
+          <button type="submit" class="report-choice" name="report" value="Berbau SARA">Berbau SARA <img src="/images/icons/right-arrow.svg" alt="Icon" class="w-4"></button>
+          <button type="submit" class="report-choice" name="report" value="Makanan sudah kadaluarsa">Makanan sudah kadaluarsa <img src="/images/icons/right-arrow.svg" alt="Icon" class="w-4"></button>
+          <button type="submit" class="report-choice" name="report" value="Makanan ilegal">Makanan ilegal <img src="/images/icons/right-arrow.svg" alt="Icon" class="w-4"></button>
+          <button type="submit" class="report-choice" name="report" value="Lainnya">Lainnya <img src="/images/icons/right-arrow.svg" alt="Icon" class="w-4"></button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const selectBtn = document.querySelectorAll('.select-btn'),
+          closeBtn = document.querySelectorAll('.close-btn'),
+          modalOverlay = document.querySelector('.modal-overlay'),
+          id = document.querySelector('.id');
+
+    selectBtn.forEach(select => {
+      select.addEventListener('click', function() {
+        const options = this.nextElementSibling,
+              idMakanan = this.dataset.idMakanan;
+        options.classList.toggle('hidden');
+        
+        options.lastElementChild.addEventListener('click', function() {
+          const card = this.parentElement.parentElement.previousElementSibling;
+          card.classList.toggle('flex');
+          card.classList.toggle('hidden');
+        });
+
+        options.firstElementChild.addEventListener('click', function() {
+          modalOverlay.classList.replace('hidden', 'flex');
+          id.setAttribute('value', idMakanan);
+        });
+      });
+    });
+
+    closeBtn.forEach(close => {
+      close.addEventListener('click', function() {
+        this.parentElement.parentElement.classList.replace('flex', 'hidden');
+        id.removeAttribute('value');
+      })
+    })
+  </script>
 </body>
