@@ -27,6 +27,11 @@ Route::get('/login', function () {
     return view('loginRegister.login');
 });
 
+// Logout Routes
+Route::get('/login', function () {
+    return view('loginRegister.logouttest');
+});
+
 // Register Option Routes
 Route::get('/register-options', function () {
     return view('loginRegister.registerOption');
@@ -41,6 +46,10 @@ Route::get('/register-bisnis', function () {
 Route::get('/register-personal', function () {
     return view('loginRegister.registerPersonal');
 });
+Route::get('/inputmakanan', function () {
+    return view('inputmakanan');
+});
+
 
 // reported-items
 Route::get('/admin-report-items', function () {
@@ -51,6 +60,13 @@ Route::get('/admin-report-items', function () {
 Route::get('/admin-dashboard', function () {
     return view('admin.dashboard');
 });
+
+
+// test-logout
+Route::get('/profile', function () {
+    return view('loginregister.logouttest');
+});
+
 
 // Beranda
 Route::get('/beranda', function () {
@@ -65,6 +81,9 @@ Route::get('/beranda', function () {
 // POST GET Routes
 Route::get('login', [ControllerPengguna::class, 'login'])->name('login');
 Route::post('login', [ControllerPengguna::class, 'login_action'])->name('login.action');
+
+Route::get('logout', [ControllerPengguna::class, 'logout'])->name('logout');
+
 
 Route::get('registerPersonal', [ControllerPengguna::class, 'register'])->name('register');
 Route::post('registerPersonal', [ControllerPengguna::class, 'register_action'])->name('register.action');
