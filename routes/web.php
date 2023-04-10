@@ -80,7 +80,7 @@ Route::get('/profile', function () {
 
 // Halaman Profil
 Route::get('/profile-page', function () {
-    return view('profilePage.profilPage');
+    return view('profilPage');
 });
 
 

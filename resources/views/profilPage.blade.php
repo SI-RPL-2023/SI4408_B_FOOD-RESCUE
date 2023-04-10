@@ -11,8 +11,8 @@
 <!-- Navbar -->
 <nav class="bg-hijau2 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 mt-7">
   <div class="container flex flex-wrap items-center justify-between mx-auto">
-  <a href="https://flowbite.com/" class="flex items-center">
-      <img src="images/logo2.svg" class="h-13 mr-3 sm:h-14 ml-8" alt="Flowbite Logo" />
+  <a href="/" class="flex items-center">
+      <img src="images/logo2.svg" class="h-13 mr-3 sm:h-14 ml-8" alt="FoodRescue Logo" />
       <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"></span>
   </a>
   <div class="flex md:order-2 mr-14"></div>
@@ -48,12 +48,15 @@
             <div class="w-full md:w-3/12 md:mx-2">
                 <!-- Profile Card -->
                 <div class="bg-white p-3 border-t-4 border-green-400">
-                    <div class="image overflow-hidden">
+                    <div class="image overflow-hidden rounded-xl">
                         <img class="h-auto w-full mx-auto"
                             src="https://i.pinimg.com/736x/3b/92/1c/3b921c51dc99d9fb2be192af3ec14f72.jpg"
                             alt="profilepic">
                     </div>
-                    <h1 class="block py-2 pl-3 pr-4 text-black bg-blue-700 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-black font-Alkatra text-lg1"><center>Saul Budiman<center></h1>
+                    <div class="pt-4">
+
+                        <h1 class="block py-2 pl-3 pr-4 text-black bg-blue-700 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-black font-Alkatra text-xl"><center>{{ Auth::user()->namaDepan }} {{ Auth::user()->namaBelakang }}<center></h1>
+                    </div>
                 </div>
             </div>
             <!-- End of profile card -->
@@ -76,20 +79,20 @@
                         <div class="grid md:grid-cols-2 text-sm">
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">First Name</div>
-                                <div class="px-4 py-2">Saul</div>
+                                <div class="px-4 py-2">{{ Auth::user()->namaDepan }}</div>
                             </div>
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">Last Name</div>
-                                <div class="px-4 py-2">Budiman</div>
+                                <div class="px-4 py-2">{{ Auth::user()->namaBelakang }}</div>
                             </div>
-        
+
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">Contact No.</div>
-                                <div class="px-4 py-2">+1 505 503 4455</div>
+                                <div class="px-4 py-2">+1 {{ Auth::user()->nohp}}</div>
                             </div>
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">Address</div>
-                                <div class="px-4 py-2">Albuquerque, New Mexico</div>
+                                <div class="px-4 py-2">{{ Auth::user()->lokasi }}</div>
                             </div>
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">Point</div>
@@ -98,10 +101,10 @@
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">Email</div>
                                 <div class="px-4 py-2">
-                                    <a class="text-blue-800" href="mailto:saulorangbaik@yahoo.com">saulorangbaik@yahoo.com</a>
+                                    <a class="text-blue-800" href="mailto:saulorangbaik@yahoo.com">{{ Auth::user()->email }}</a>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                     <button
