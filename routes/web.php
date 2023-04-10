@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 // Landing Page
 Route::get('/', function () {
-    return view('welcome');
+    return view('beranda');
 });
 
 // Login Routes
@@ -47,11 +47,14 @@ Route::get('/register-bisnis', function () {
 Route::get('/register-personal', function () {
     return view('loginRegister.registerPersonal');
 });
+
+// Input Makanan
 Route::get('/inputmakanan', function () {
     return view('inputmakanan');
 });
 
 
+// ============= Admin Things =================
 // reported-items
 Route::get('/admin-report-items', function () {
     return view('admin.itemreport');
@@ -70,9 +73,9 @@ Route::get('/profile', function () {
 
 
 // Beranda
-Route::get('/beranda', function () {
-    return view('beranda');
-});
+// Route::get('/', function () {
+//     return view('beranda');
+// });
 
 
 // Halaman Profil

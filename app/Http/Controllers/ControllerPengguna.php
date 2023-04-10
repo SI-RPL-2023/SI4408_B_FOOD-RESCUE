@@ -63,12 +63,12 @@ class ControllerPengguna extends Controller
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             $request->session()->regenerate();
-            return redirect()->intended('/login');
+            return redirect()->intended('/');
         }
 
         return back()->withErrors([
-            'password' => 'Gagal Login',
-        ]);
+            'email' => 'Gagal Login',
+        ])->onlyInput('email');
     }
 
 
@@ -114,6 +114,6 @@ class ControllerPengguna extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/login');
+        return redirect('/');
     }
 }

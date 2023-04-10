@@ -8,14 +8,15 @@ module.exports = {
     ],
     theme: {
         colors: {
-            bekgron: "#212121",
-            hijau1: "#4D774E",
-            hijau2: "#164A41",
-            hijau3: "#81BC83",
-            hijau4: "#113932",
-            hijau5: "#A6C9A7",
-            kuning: "#F1B24A",
-            kuning2: "#E39616",
+            bekgron : '#212121',
+            hijau1 : '#4D774E',
+            hijau2 : '#164A41',
+            hijau3 : '#81BC83',
+            hijau4 : '#113932',
+            hijau5 : '#A6C9A7',
+            kuning : '#F1B24A',
+            kuning2 : '#E39616',
+            kuning3 : '#F8D191'
         },
         extend: {
             backgroundImage: {
