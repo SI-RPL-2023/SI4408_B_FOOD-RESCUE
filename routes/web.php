@@ -73,6 +73,11 @@ Route::get('/beranda', function () {
     return view('beranda');
 });
 
+// Halaman Profil
+Route::get('/profile-page', function () {
+    return view('profilePage.profilPage');
+});
+
 
 
 
