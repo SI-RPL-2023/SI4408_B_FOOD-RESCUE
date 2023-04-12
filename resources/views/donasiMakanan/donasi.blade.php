@@ -127,7 +127,7 @@
     </div>
   </div>
 
-  @if (session()->has('success'))
+  @if (session()->has('success1'))
     <div class="w-full h-screen bg-black bg-opacity-30 fixed top-0 flex justify-center items-center">
       <div class="bg-[#EDEDED] rounded-md w-1/3 font-Inter py-8 overflow-hidden flex flex-col items-center">
         <div class="text-center">

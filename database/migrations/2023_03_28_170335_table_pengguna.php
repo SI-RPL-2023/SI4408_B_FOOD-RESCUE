@@ -22,6 +22,7 @@ return new class extends Migration
             $table->bigInteger('role');
 
             $table->string('password', 255);
+            $table->string('foto')->nullable();            
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });

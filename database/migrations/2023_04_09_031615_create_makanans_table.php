@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('jenis');
             $table->date('exp_date');
             $table->string('availability');
-            $table->string('foto');
+            $table->string('foto')->nullable();
             $table->timestamps();
         });
     }
