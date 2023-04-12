@@ -1,3 +1,7 @@
+@extends('navbars.layoutnav')
+
+@section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,7 +40,7 @@
 
 </head>
 
-<body>
+<body class="bg-hijau2">
 
     <section id="Update" class="bg-teal-700 py-5 min-h-screen">
         <div class="container mx-auto px-4 bg-white">
@@ -163,6 +167,8 @@
             }));
         });
     </script>
+
+    @endsection
 </body>
 
 </html>
