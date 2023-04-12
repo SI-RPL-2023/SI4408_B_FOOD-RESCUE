@@ -10,13 +10,13 @@ use File;
 class ControllerDonasiMakanan extends Controller
 {
     public function makananMatang() {
-        $makanans = Makanan::where('jenis', 'Makanan Matang')->get();
+        $makanans = Makanan::where('jenis', '2')->get();
 
         return view('donasiMakanan.donasi', compact('makanans'));
     }
 
     public function makananMentah() {
-        $makanans = Makanan::where('jenis', 'Makanan Mentah')->get();
+        $makanans = Makanan::where('jenis', '1')->get();
 
         return view('donasiMakanan.donasi', compact('makanans'));
     }
