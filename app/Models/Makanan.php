@@ -10,4 +10,14 @@ class Makanan extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
+    protected $table = 'makanans';
+    protected $primaryKey = 'id';
+    protected $fillable = [
+        'nama',
+        'deskripsi',
+        'jenis',
+        'exp_date',
+        'availability',
+        'foto',
+    ];
 }

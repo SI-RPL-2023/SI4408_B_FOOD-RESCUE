@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ControllerDonasiMakanan;
 use App\Http\Controllers\ControllerPengguna;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -83,11 +84,23 @@ Route::get('/profile-page', function () {
     return view('profilPage');
 });
 
+Route::get('/profile-update', function () {
+    return view('profile_update');
+});
+
+Route::post('/profile/update', [ProfileController::class, 'update'])->middleware('auth');
+
 
 // Halaman Donasi Makanan
+Route::get('/donasi-makanan', function () {
+    return view('donasiMakanan.donasi');
+});
 Route::get('/donasi', [ControllerDonasiMakanan::class, 'makananMatang']);
 Route::get('/donasi/mentah', [ControllerDonasiMakanan::class, 'makananMentah']);
 Route::post('/donasi/report', [ControllerDonasiMakanan::class, 'report']);
+
+// Halaman Input Makanan
+Route::post('donasi', [ControllerDonasiMakanan::class, 'add_donasi'])->name('donasi.action');
 
 
 // POST GET Routes

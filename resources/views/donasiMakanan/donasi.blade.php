@@ -87,7 +87,7 @@
           </ul>
         </div>
         <div class="flex w-full items-center px-4 gap-4">
-          <img src="/images/donasi/{{ $makanan->foto }}" alt="{{ $makanan->nama }}" width="200px">
+          <img src="/upload/makanan/{{ $makanan->foto }}" alt="{{ $makanan->nama }}" width="200px">
           <div class="flex flex-col justify-between h-full flex-1">
             <div class="font-Cabin-Medium">
               <h3 class="text-hijau1 font-semibold text-xl">{{ $makanan->nama }}</h3>
@@ -127,7 +127,7 @@
     </div>
   </div>
 
-  @if (session()->has('success'))
+  @if (session()->has('success1'))
     <div class="w-full h-screen bg-black bg-opacity-30 fixed top-0 flex justify-center items-center">
       <div class="bg-[#EDEDED] rounded-md w-1/3 font-Inter py-8 overflow-hidden flex flex-col items-center">
         <div class="text-center">
