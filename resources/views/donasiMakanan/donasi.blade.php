@@ -1,3 +1,7 @@
+@extends('navbars.layoutnav')
+
+@section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,32 +16,6 @@
 </head>
 
 <body class="bg-hijau2">
-
-    <div class="flex mx-auto place-content-center">
-
-        <nav class="py-6 px-10 flex justify-between items-center">
-            <a href="#">
-                <img src="/images/logo2.svg" alt="Logo" width="100px" >
-            </a>
-            <div class="bg-[#113932] p-3 rounded-xl text-white font-Alkatra">
-            <ul class="flex">
-                <li class="mx-5">
-                <a href="#" class="hover:text-[#E39616]">Home</a>
-                </li>
-                <li class="mx-5">
-                <a href="#" class="hover:text-[#E39616] {{ Request::is('donasi*') ? 'text-[#E39616]' : '' }}">Donate</a>
-                </li>
-                <li class="mx-5">
-                <a href="#" class="hover:text-[#E39616]">Reward</a>
-                </li>
-                <li class="mx-5">
-                <a href="#" class="hover:text-[#E39616]">Recipe</a>
-                </li>
-            </ul>
-            </div>
-
-            </div>
-        </nav>
 
         <div class="flex mx-auto place-content-center">
             <a href="{{ url('inputmakanan') }}" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Tambah Makanan</a>
@@ -180,4 +158,6 @@
       })
     })
   </script>
+
+  @endsection
 </body>
