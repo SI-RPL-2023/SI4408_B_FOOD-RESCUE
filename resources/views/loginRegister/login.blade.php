@@ -8,9 +8,13 @@
     @vite(['resources/css/app.css','resources/js/app.js'])
     <title>Login</title>
 </head>
-<body class="h-screen bg-no-repeat bg-cover bg-pattern">
+<body class="h-screen bg-no-repeat bg-cover bg-pattern bg-hijau1">
 
-    <img class="pl-8 pt-8 h-auto max-w-[10%]" src="/images/logo2.svg" alt="logo2">
+    <div class="pl-0 pt-8 mx-auto h-auto max-w-[10%]">
+        <a href="/" class="flex items-center">
+            <img src="images/logo2.svg" class="h-auto" alt="FoodRescue Logo" />
+        </a>
+    </div>
 
     @auth
     <div class=" pt-8 flex mx-auto place-content-center">

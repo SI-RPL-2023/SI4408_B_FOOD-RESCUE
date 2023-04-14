@@ -18,10 +18,13 @@
 
 <nav class="bg-hijau2 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 mt-7">
     <div class="container flex flex-wrap items-center justify-between mx-auto">
-    <a href="/" class="flex items-center">
-        <img src="images/logo2.svg" class="h-13 mr-3 sm:h-14 ml-8" alt="FoodRescue Logo" />
-        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"></span>
-    </a>
+
+        <div class="pl-0 pt-0 h-auto max-w-[10%]">
+            <a href="/" class="flex items-center">
+                <img src="images/logo2.svg" class="h-auto mr-3 sm:h-14 ml-8" alt="FoodRescue Logo" />
+                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"></span>
+            </a>
+        </div>
 <div class="flex md:order-2 mr-20">
 
         <!-- Tombol Sebelum Login -->
@@ -66,22 +69,22 @@
     <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 " id="navbar-cta">
         <ul class="flex flex-col py-4 px-8 mt-4 mb-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-11 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-hijau4 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
-                <a href="{{ url('/') }}" class="block py-2 pl-3 pr-4 text-white bg-kuning3 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg" aria-current="page">Home</a>
+                <a href="{{ url('/') }}" class="block py-2 pl-3 pr-4 text-white hover:text-kuning bg-kuning3 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg" aria-current="page">Home</a>
             </li>
             <li>
-                <a href="{{ url('/donasi') }}" class="block py-2 pl-3 pr-4 text-white bg-kuning3 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg">Donate</a>
+                <a href="{{ url('/donasi') }}" class="block py-2 pl-3 pr-4 text-white hover:text-kuning bg-kuning3 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg">Donate</a>
             </li>
             <li>
-                <a href="#" class="block py-2 pl-3 pr-4 text-white bg-kuning3 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg">Reward</a>
+                <a href="#" class="block py-2 pl-3 pr-4 text-white hover:text-kuning bg-kuning3 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg">Reward</a>
             </li>
             <li>
-                <a href="#" class="block py-2 pl-3 pr-4 text-white bg-kuning3 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg">Recipe</a>
+                <a href="#" class="block py-2 pl-3 pr-4 text-white hover:text-kuning bg-kuning3 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg">Recipe</a>
             </li>
             <li>
-                <a href="#" class="block py-2 pl-3 pr-4 text-white bg-kuning3 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg">Blog</a>
+                <a href="#" class="block py-2 pl-3 pr-4 text-white hover:text-kuning bg-kuning3 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg">Blog</a>
             </li>
             <li>
-                <a href="#" class="block py-2 pl-3 pr-4 text-white bg-kuning3 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg">About Us</a>
+                <a href="#" class="block py-2 pl-3 pr-4 text-white hover:text-kuning bg-kuning3 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg">About Us</a>
             </li>
         </ul>
     </div>
