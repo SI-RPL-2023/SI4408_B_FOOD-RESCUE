@@ -24,9 +24,9 @@ We're Group 265 from class SI4408. Bachelor of Information Systems Telkom Univer
 *(Using MacOS? You can install it using [Homebrew](https://brew.sh/) )*
 - PHP >= 8
 - [Composer](https://getcomposer.org/) 
-- NodeJS
+- [NodeJS](https://nodejs.org/en/download)
 - [Flowbite](https://nodejs.org/en/download) *(Installed and run via NodeJS)*
-- XAMPP or Sequel Pro
+- [XAMPP](https://www.apachefriends.org/download.html) or [Sequel Pro](http://sequelpro.com/)
 
 
 ## Serve the Application
