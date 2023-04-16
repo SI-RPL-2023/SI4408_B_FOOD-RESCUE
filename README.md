@@ -26,7 +26,7 @@ We're Group 265 from class SI4408. Bachelor of Information Systems Telkom Univer
 - [Composer](https://getcomposer.org/) 
 - [NodeJS](https://nodejs.org/en/download)
 - [Flowbite](https://nodejs.org/en/download) *(Installed and run via NodeJS)*
-- [XAMPP](https://www.apachefriends.org/download.html) or [Sequel Pro](http://sequelpro.com/)
+- [XAMPP](https://www.apachefriends.org/download.html) or [DBeaver](https://dbeaver.io)
 
 
 ## Serve the Application
