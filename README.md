@@ -6,7 +6,7 @@ FoodRescue This is a website that receives food items that are approaching their
 
 # About Us
 
-We're Group 265 from class SI4408. Bachelor of Information Systems Telkom University batch 44. Our Member are consist of :
+We're Group 265 from class SI4408. Bachelor of Information Systems Telkom University batch 44. Our Members are consist of :
 
 | No  | Name                                                                         | NIM        | Role                |
 | --- | ---------------------------------------------------------------------------- | ---------- | ------------------- |
