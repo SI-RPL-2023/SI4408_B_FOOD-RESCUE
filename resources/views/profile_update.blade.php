@@ -42,14 +42,10 @@
 
 <body class="bg-hijau2">
 
-    <section id="Update" class="bg-teal-700 py-5 min-h-screen">
-        <div class="container mx-auto px-4 bg-white">
+    <section id="Update" class="bg-hijau2 py-5 min-h-screen pt-20">
+        <div class="container mx-auto px-4 bg-white rounded-xl pt-8">
             <div class="text-center py-4">
-                <h1 class="font-Alkatra text-3xl m-0 text-green-800">Food Rescue</h1>
-                <h1 class="font-Cabin font-bold text-3xl m-0">My Profile</h1>
-                <div class="flex justify-center">
-                    <img src="{{ asset('img/logo.jpg') }}" class="w-14" alt="">
-                </div>
+                <h1 class="font-Cabin-Medium font-bold text-3xl m-0">Edit Profile</h1>
             </div>
 
             <form action="/profile/update" method="post" enctype="multipart/form-data">
@@ -58,36 +54,37 @@
                     <div class="px-20 grid grid-cols-1 gap-x-7 gap-y-7 sm:grid-cols-6">
                         <div class="sm:col-span-3">
                             <input type="text" name="namaDepan" id="firstname" placeholder="Firstname"
-                                class="block w-full rounded-md border-0 px-3 py-2 bg-gray-200 shadow-sm  ring-2 ring-gray-500 focus:outline-gray-800 placeholder:text-gray-600 sm:text-sm sm:leading-6"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-hijau1 focus:border-hijau1 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-hijau1 dark:focus:border-hijau1 font-Cabin-Medium"
                                 value="{{ auth()->user()->namaDepan }}">
                         </div>
 
                         <div class="sm:col-span-3">
                             <input type="text" name="namaBelakang" id="lastname" placeholder="Lastname"
-                                class="block w-full rounded-md border-0 px-3 py-2 bg-gray-200 shadow-sm  ring-2 ring-gray-500 focus:outline-gray-800 placeholder:text-gray-600 sm:text-sm sm:leading-6"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-hijau1 focus:border-hijau1 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-hijau1 dark:focus:border-hijau1 font-Cabin-Medium"
                                 value="{{ auth()->user()->namaBelakang }}">
                         </div>
 
                         <div class="sm:col-span-full">
                             <input type="text" name="lokasi" id="location" placeholder="Location"
-                                class="block w-full rounded-md border-0 px-3 py-2 bg-gray-200 shadow-sm  ring-2 ring-gray-500 focus:outline-gray-800 placeholder:text-gray-600 sm:text-sm sm:leading-6"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-hijau1 focus:border-hijau1 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-hijau1 dark:focus:border-hijau1 font-Cabin-Medium"
                                 value="{{ auth()->user()->lokasi }}">
                         </div>
 
                         <div class="sm:col-span-full">
                             <input type="email" name="email" id="email" placeholder="Enter Your Email"
-                                class="block w-full rounded-md border-0 px-3 py-2 bg-gray-200 shadow-sm  ring-2 ring-gray-500 focus:outline-gray-800 placeholder:text-gray-600 sm:text-sm sm:leading-6"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-hijau1 focus:border-hijau1 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-hijau1 dark:focus:border-hijau1 font-Cabin-Medium"
                                 value="{{ auth()->user()->email }}">
                         </div>
 
                         <div class="sm:col-span-full">
                             <input type="password" name="password" id="password" placeholder="Enter Your Password"
-                                class="block w-full rounded-md border-0 px-3 py-2 bg-gray-200 shadow-sm  ring-2 ring-gray-500 focus:outline-gray-800 placeholder:text-gray-600 sm:text-sm sm:leading-6">
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-hijau1 focus:border-hijau1 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-hijau1 dark:focus:border-hijau1 font-Cabin-Medium">
                         </div>
 
                         <div class="sm:col-span-full">
                             <input type="password" name="confirm" id="confirm" placeholder="Confirm Password"
-                                class="block w-full rounded-md border-0 px-3 py-2 bg-gray-200 shadow-sm  ring-2 ring-gray-500 focus:outline-gray-800 placeholder:text-gray-600 sm:text-sm sm:leading-6">
+                                {{-- class="block w-full rounded-md border-0 px-3 py-2 bg-gray-200 shadow-sm  ring-2 ring-gray-500 focus:outline-gray-800 placeholder:text-gray-600 sm:text-sm sm:leading-6"> --}}
+                                class="bg-gray-50 px-3 py-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-hijau1 focus:border-hijau1 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-hijau1 dark:focus:border-hijau1 font-Cabin-Medium">
                             @error('confirm')
                                 <div class="text-sm text-red-600">{{ $message }}</div>
                             @enderror
@@ -120,16 +117,12 @@
                     </div>
                 </div>
 
-                <div class="text-center py-4">
+                <div class="text-center py-4 pt-8 pb-20">
                     <button type="submit"
-                        class="bg-emerald-900 font-Cabin py-2 px-40  text-lg text-white rounded-md">Update
+                        class="w-28 flex flex-col items-center text-white bg-hijau1 hover:bg-hijau2 focus:ring-4 focus:outline-non focus:ring-hijau3 font-medium rounded-lg text-sm sm:w-auto px-8 py-2.5 text-center dark:bg-hijau1 dar:hover:bg-hijau1 dark:focus:ring-hijau1 mx-auto font-Cabin-Medium">Update
                         Profil</button>
                 </div>
             </form>
-
-            <div class="text-center pb-8">
-                <p class="text-sm">First time visiting Us? <a href="/register" class="font-bold">Register</a> </p>
-            </div>
         </div>
 
 

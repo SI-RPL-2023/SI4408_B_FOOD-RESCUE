@@ -8,11 +8,15 @@
     @vite(['resources/css/app.css','resources/js/app.js'])
     <title>Register Bisnis</title>
 </head>
-<body class="h-screen bg-no-repeat bg-cover bg-pattern">
+<body class="h-screen bg-no-repeat bg-cover bg-pattern bg-hijau1" >
 
-    <img class="pl-8 pt-8 mx-auto h-auto max-w-[10%]" src="/images/logo2.svg" alt="logo2">
+    <div class="pl-0 pt-8 mx-auto h-auto max-w-[10%]">
+        <a href="/" class="flex items-center">
+            <img src="images/logo2.svg" class="h-auto" alt="FoodRescue Logo" />
+        </a>
+    </div>
 
-    <div class=" pt-8 flex mx-auto place-content-center">
+    <div class=" pt-8 pb-8 flex mx-auto place-content-center">
         <div class=" py-8 max-w-xl p-2 bg-white border border-gray-200 rounded-xl shadow dark:bg-gray-800 dark:border-gray-700">
             <a>
                 <h5 class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Halooo..<br>Anda akan mendaftar sebagai Bisnis</h5>
@@ -94,13 +98,7 @@
             </div>
 
             <p class="pt-8 text-center font-Cabin-Medium">Sudah Punya Akun? <strong><a class="hover:text-hijau1" href="{{ url('login') }}" class="text-reset text-heavy">Masuk Sekarang</a></strong></p>
-
-            {{-- <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                Read more
-                <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-2 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </a> --}}
         </div>
-
     </div>
 
 

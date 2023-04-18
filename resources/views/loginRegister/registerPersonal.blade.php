@@ -10,9 +10,13 @@
 </head>
 <body class="h-screen bg-no-repeat bg-cover bg-pattern">
 
-    <img class="pl-8 pt-8 mx-auto h-auto max-w-[10%]" src="/images/logo2.svg" alt="logo2">
+    <div class="pl-0 pt-8 mx-auto h-auto max-w-[10%]">
+        <a href="/" class="flex items-center">
+            <img src="images/logo2.svg" class="h-auto" alt="FoodRescue Logo" />
+        </a>
+    </div>
 
-    <div class=" pt-8 flex mx-auto place-content-center">
+    <div class=" pt-8 pb-8 flex mx-auto place-content-center">
         <div class=" py-8 max-w-xl p-2 bg-white border border-gray-200 rounded-xl shadow dark:bg-gray-800 dark:border-gray-700">
             <a>
                 <h5 class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white font-Cabin-Medium">Halooo..<br>Anda akan mendaftar sebagai Personal</h5>

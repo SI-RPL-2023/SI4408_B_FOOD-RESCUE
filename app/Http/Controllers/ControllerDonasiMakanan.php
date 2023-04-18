@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Report;
 use App\Models\Makanan;
 use Illuminate\Http\Request;
+// use Illuminate\Http\File;
 use File;
 
 class ControllerDonasiMakanan extends Controller
@@ -30,7 +31,7 @@ class ControllerDonasiMakanan extends Controller
 
         return redirect('/donasi')->with('success1', 'tes');
     }
-    
+
     public function add_donasi(Request $request)
     {
         $food = new Makanan([

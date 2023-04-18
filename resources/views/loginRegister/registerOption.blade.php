@@ -8,11 +8,17 @@
     @vite(['resources/css/app.css','resources/js/app.js'])
     <title>Login | Pilih akun</title>
 </head>
-<body class="h-screen bg-no-repeat bg-cover bg-pattern">
+<body class="h-screen bg-no-repeat bg-cover bg-pattern bg-hijau1">
 
-    <img class="pl-8 pt-8 mx-auto h-auto max-w-[10%]" src="/images/logo2.svg" alt="logo2">
+    {{-- <img class="pl-8 pt-8 mx-auto h-auto max-w-[10%]" src="/images/logo2.svg" alt="logo2"> --}}
 
-    <div class=" pt-20 flex mx-auto place-content-center">
+    <div class="pl-0 pt-8 mx-auto h-auto max-w-[10%]">
+        <a href="/" class="flex items-center">
+            <img src="images/logo2.svg" class="h-auto" alt="FoodRescue Logo" />
+        </a>
+    </div>
+
+    <div class=" pt-[50px] flex mx-auto place-content-center">
         <div class="max-w-xl p-6 bg-white border border-gray-200 rounded-xl shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
                 <h5 class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white font-Cabin-Medium">Pilih Jenis Akun</h5>
