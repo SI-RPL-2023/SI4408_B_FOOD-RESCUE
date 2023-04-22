@@ -9,6 +9,13 @@ module.exports = {
     theme: {
         colors: {
             bekgron : '#212121',
+            hijau_hover : '#B8C9B8',
+            abu : '#EDEDED',
+            abu2 : '#6C6C6C',
+            oren : '#F24E1E',
+            oren2 : '#FBCABB',
+
+
             hijau1 : '#4D774E',
             hijau2 : '#164A41',
             hijau3 : '#81BC83',

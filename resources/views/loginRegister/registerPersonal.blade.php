@@ -8,7 +8,7 @@
     @vite(['resources/css/app.css','resources/js/app.js'])
     <title>Login</title>
 </head>
-<body class="h-screen bg-no-repeat bg-cover bg-pattern">
+<body class="h-screen bg-no-repeat bg-cover bg-pattern bg-hijau1">
 
     <div class="pl-0 pt-8 mx-auto h-auto max-w-[10%]">
         <a href="/" class="flex items-center">

@@ -55,17 +55,32 @@ Route::get('/inputmakanan', function () {
 });
 
 
-// ============= Admin Things =================
-// reported-items
-Route::get('/admin-report-items', function () {
-    return view('admin.itemreport');
-});
-
-// reported-items
-Route::get('/admin-dashboard', function () {
+// ================= Admin Things =================
+// Dashboard
+Route::get('/dashboard', function () {
     return view('admin.dashboard');
 });
+// Dashboard Pengguna
+Route::get('/dashboard-pengguna', function () {
+    return view('admin.admin_pengguna');
+});
+// Dashboard Barang
+Route::get('/dashboard-barang', function () {
+    return view('admin.admin_barang');
+});
+// Dashboard Resep
+Route::get('/dashboard-resep', function () {
+    return view('admin.admin_resep');
+});
+// reported-items
+Route::get('/dashboard-laporan', function () {
+    return view('admin.admin_laporan');
+});
 
+// pop-up
+Route::get('/share', function () {
+    return view('share');
+});
 
 // test-logout
 Route::get('/profile', function () {
@@ -73,10 +88,6 @@ Route::get('/profile', function () {
 });
 
 
-// Beranda
-// Route::get('/', function () {
-//     return view('beranda');
-// });
 
 
 // Halaman Profil
@@ -95,6 +106,11 @@ Route::post('/profile/update', [ProfileController::class, 'update'])->middleware
 Route::get('/donasi-makanan', function () {
     return view('donasiMakanan.donasi');
 });
+
+
+
+// Controllers Routes
+
 Route::get('/donasi', [ControllerDonasiMakanan::class, 'makananMatang']);
 Route::get('/donasi/mentah', [ControllerDonasiMakanan::class, 'makananMentah']);
 Route::post('/donasi/report', [ControllerDonasiMakanan::class, 'report']);
