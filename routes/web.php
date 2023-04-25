@@ -54,6 +54,20 @@ Route::get('/inputmakanan', function () {
     return view('inputmakanan');
 });
 
+// Halaman AboutUs
+// Route::get('/about', function () {
+//     return view('AboutUs.about');
+// });
+
+// Halaman FAQ
+// Route::get('/FAQ', function () {
+//     return view('Faq.FaqPage');
+// });
+
+// Halaman 404
+Route::get('/404', function () {
+    return view('404.noPage');
+});
 
 // ============= Admin Things =================
 // reported-items
