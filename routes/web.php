@@ -55,9 +55,9 @@ Route::get('/inputmakanan', function () {
 });
 
 // Halaman AboutUs
-// Route::get('/about', function () {
-//     return view('AboutUs.about');
-// });
+Route::get('/about', function () {
+    return view('AboutUs.about');
+});
 
 // Halaman FAQ
 // Route::get('/FAQ', function () {
