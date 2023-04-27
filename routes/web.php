@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ControllerDonasiMakanan;
 use App\Http\Controllers\ControllerPengguna;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 // Landing Page
 Route::get('/', function () {
-    return view('welcome');
+    return view('beranda');
 });
 
 // Login Routes
@@ -47,11 +48,14 @@ Route::get('/register-bisnis', function () {
 Route::get('/register-personal', function () {
     return view('loginRegister.registerPersonal');
 });
+
+// Input Makanan
 Route::get('/inputmakanan', function () {
     return view('inputmakanan');
 });
 
 
+// ============= Admin Things =================
 // reported-items
 Route::get('/admin-report-items', function () {
     return view('admin.itemreport');
@@ -70,19 +74,33 @@ Route::get('/profile', function () {
 
 
 // Beranda
-Route::get('/beranda', function () {
-    return view('beranda');
-});
+// Route::get('/', function () {
+//     return view('beranda');
+// });
 
 
 // Halaman Profil
 Route::get('/profile-page', function () {
-    return view('profilePage.profilPage');
+    return view('profilPage');
 });
+
+Route::get('/profile-update', function () {
+    return view('profile_update');
+});
+
+Route::post('/profile/update', [ProfileController::class, 'update'])->middleware('auth');
 
 
 // Halaman Donasi Makanan
+Route::get('/donasi-makanan', function () {
+    return view('donasiMakanan.donasi');
+});
 Route::get('/donasi', [ControllerDonasiMakanan::class, 'makananMatang']);
+Route::get('/donasi/mentah', [ControllerDonasiMakanan::class, 'makananMentah']);
+Route::post('/donasi/report', [ControllerDonasiMakanan::class, 'report']);
+
+// Halaman Input Makanan
+Route::post('donasi', [ControllerDonasiMakanan::class, 'add_donasi'])->name('donasi.action');
 
 
 // POST GET Routes
@@ -98,3 +116,21 @@ Route::post('registerPersonal', [ControllerPengguna::class, 'register_action'])-
 
 // tester routes
 Route::post('/testing', [ControllerPengguna::class, 'testing'])->name('testing');
+
+// navbar
+Route::get('/navbar', function () {
+    return view('navbars.navbar');
+});
+
+Route::get('/layout', function () {
+    return view('navbars.layoutnav');
+});
+
+// Halaman Review
+Route::get('/review-page', function () {
+    return view('review.reviewpage');
+});
+
+Route::get('/write-review', function () {
+    return view('review.writeReview');
+});
