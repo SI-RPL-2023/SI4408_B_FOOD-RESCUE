@@ -27,7 +27,38 @@
                 </div>
         </div> --}}
 
-  
+  <div class="max-w-full h-screen px-4 mt-5">
+    <div class="w-full h-full bg-center flex flex-col justify-center items-center bg-[url('/public/images/banner-donasi.png')]">
+      <div>
+        <h1 class="text-white font-bold text-6xl">Get and donate the food you want</h1>
+        <p class="text-white w-3/5 text-lg mx-auto text-center my-10">find and get food according to the location you want at no cost through Food Rescue</p>
+      </div>
+      <div class="relative">
+        <div class="bg-[#EDEDED] rounded-md w-72 py-[9px] font-inter flex items-center cursor-pointer filter-btn">
+          <img src="/images/icons/location.svg" alt="Icon" class="mx-3 w-4 inline">
+          <span class="font-Inter">Location</span>
+        </div>
+        <div class="bg-[#EDEDED] py-5 px-3 w-80 rounded-lg absolute z-10 hidden mt-5 search-box">
+          <h3 class="text-[#113932]">Lokasi</h3>
+          <form action="{{ Request::is('donasi') ? '/donasi' : '/donasi/mentah' }}">
+            <input type="text" class="bg-[#D9D9D9] border-0 w-full pt-2 mb-6 mt-2 rounded text-xs focus:ring-0 search-location" placeholder="Cari Lokasi" name="location" value="{{ request('location') }}">
+            <div class="grid grid-cols-2 gap-x-3 gap-y-4 text-[#113932]">
+              <button class="location-choice" value="Jakarta">Jakarta</button>
+              <button class="location-choice" value="Bogor">Bogor</button>
+              <button class="location-choice" value="Bandung">Bandung</button>
+              <button class="location-choice" value="Semarang">Semarang</button>
+              <button class="location-choice" value="Yogyakarta">Yogyakarta</button>
+              <button class="location-choice" value="Cirebon">Cirebon</button>
+              <button class="location-choice" value="Solo">Solo</button>
+              <button class="location-choice" value="Malang">Malang</button>
+              <button class="location-choice" value="Surabaya">Surabaya</button>
+              <button class="location-choice" value="Jakarta">Tangerang</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="flex justify-center items-center">
     <a class="bg-[#E39616] rounded-full p-2 mr-5" href="{{ url('inputmakanan') }}">
@@ -42,15 +73,6 @@
           <a href="{{ Request::is('donasi/mentah') ? '#' : '/donasi/mentah' }}" class="{{ Request::is('donasi/mentah') ? 'text-[#E39616]' : 'hover:text-[#E39616]' }}">Makanan Mentah</a>
         </li>
       </ul>
-    </div>
-  </div>
-
-  <div class="max-w-full h-screen px-4 mt-5">
-    <div class="w-full h-full bg-center flex justify-center items-center bg-[url('/public/images/banner-donasi.png')]">
-      <div>
-        <h1 class="text-white font-bold text-6xl" >Get and donate the food you want</h1>
-        <p class="text-white w-3/5 text-lg mx-auto text-center my-10">find and get food according to the location you want at no cost through Food Rescue</p>
-      </div>
     </div>
   </div>
 
@@ -134,7 +156,11 @@
     const selectBtn = document.querySelectorAll('.select-btn'),
           closeBtn = document.querySelectorAll('.close-btn'),
           modalOverlay = document.querySelector('.modal-overlay'),
-          id = document.querySelector('.id');
+          id = document.querySelector('.id'),
+          filter = document.querySelector('.filter-btn'),
+          searchBox = document.querySelector('.search-box'),
+          locationBtn = document.querySelectorAll('.location-choice'),
+          searchLocation = document.querySelector('.search-location');
 
     selectBtn.forEach(select => {
       select.addEventListener('click', function() {
@@ -159,6 +185,17 @@
       close.addEventListener('click', function() {
         this.parentElement.parentElement.classList.replace('flex', 'hidden');
         id.removeAttribute('value');
+      })
+    })
+
+    filter.addEventListener('click', () => {
+      searchBox.classList.toggle('hidden');
+    });
+
+    locationBtn.forEach(location => {
+      location.addEventListener('click', function() {
+        const searchValue = this.getAttribute('value');
+        searchLocation.setAttribute('value', searchValue);  
       })
     })
   </script>
