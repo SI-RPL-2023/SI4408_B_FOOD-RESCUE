@@ -33,7 +33,11 @@
         <h1 class="text-white font-bold text-6xl">Get and donate the food you want</h1>
         <p class="text-white w-3/5 text-lg mx-auto text-center my-10">find and get food according to the location you want at no cost through Food Rescue</p>
       </div>
-      <div class="relative">
+      <div class="flex justify-center">
+        <div class="bg-[#EDEDED] rounded-md w-72 py-[1px] font-inter flex items-center mr-3">
+          <img src="/images/icons/search.svg" alt="Icon" class="ml-3 mr-1 w-4 inline">
+          <input type="text" placeholder="Search" class="bg-[#EDEDED] border-0 focus:ring-0">
+        </div>
         <div class="bg-[#EDEDED] rounded-md w-72 py-[9px] font-inter flex items-center cursor-pointer filter-btn">
           <img src="/images/icons/location.svg" alt="Icon" class="mx-3 w-4 inline">
           <span class="font-Inter">Location</span>
