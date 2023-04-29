@@ -41,7 +41,7 @@
         <div class="bg-[#EDEDED] py-5 px-3 w-80 rounded-lg absolute z-10 hidden mt-5 search-box">
           <h3 class="text-[#113932]">Lokasi</h3>
           <form action="{{ Request::is('donasi') ? '/donasi' : '/donasi/mentah' }}">
-            <input type="text" class="bg-[#D9D9D9] border-0 w-full pt-2 mb-6 mt-2 rounded text-xs focus:ring-0 search-location" placeholder="Cari Lokasi" name="location" value="{{ request('location') }}">
+            <input type="text" class="bg-[#D9D9D9] border-0 w-full pt-2 mb-6 mt-2 rounded text-xs focus:ring-0 search-location" placeholder="Cari Lokasi" name="location" value="">
             <div class="grid grid-cols-2 gap-x-3 gap-y-4 text-[#113932]">
               <button class="location-choice" value="Jakarta">Jakarta</button>
               <button class="location-choice" value="Bogor">Bogor</button>
@@ -100,7 +100,7 @@
                 <img src="/images/icons/comment.svg" alt="Icon" class="mr-2 w-4 inline"><span class="text-sm">{{ rand(1, 99) }} comments</span>
               </div>
               <div class="mt-1">
-                <img src="/images/icons/location.svg" alt="Icon" class="mr-2 w-4 inline"><span class="text-sm">Jl. Malioboro, Yogyakarta</span>
+                <img src="/images/icons/location.svg" alt="Icon" class="mr-2 w-4 inline"><span class="text-sm">{{ $makanan->lokasi }}</span>
               </div>
             </div>
             <a href="#" class="rounded-full bg-[#E39616] text-white font-inter text-center w-fit px-14 py-2 mt-10">Read More</a>
