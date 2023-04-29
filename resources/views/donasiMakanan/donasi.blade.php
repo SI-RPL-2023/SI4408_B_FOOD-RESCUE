@@ -12,38 +12,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Inter&display=swap" rel="stylesheet">
   @vite(['resources/css/app.css','resources/js/app.js'])
-  <title>Donasi</title>
 </head>
-
 <body class="bg-hijau2">
-
-        <div class="flex mx-auto place-content-center">
+        {{-- <div class="flex mx-auto place-content-center">
             <a href="{{ url('inputmakanan') }}" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Tambah Makanan</a>
         </div>
 
         <div class="w-[130px] flex mx-auto place-content-center">
 
             {{-- tombol filter --}}
-                <div class="bg-white rounded-full px-5 py-[6px] font-inter flex items-center cursor-pointer">
+                {{-- <div class="bg-white rounded-full px-5 py-[6px] font-inter flex items-center cursor-pointer">
                     <img src="/images/icons/filter.svg" alt="Icon" class="w-4 mr-5">
                     <span class="font-Inter">Filter</span>
                 </div>
-        </div>
+        </div> --}}
 
+  
 
-
-  <div class="pt-4">
-    <div class="max-w-fit bg-[#113932] p-3 rounded-xl text-white font-Alkatra my-10 mx-auto">
-        <ul class="flex">
-          <li class="mx-5">
-            <a href="{{ Request::is('donasi') ? '#' : '/donasi' }}" class="{{ Request::is('donasi') ? 'text-[#E39616]' : 'hover:text-[#E39616]' }}">Makanan Matang</a>
-          </li>
-          <li class="mx-5 cursor-pointer">
-            <a href="{{ Request::is('donasi/mentah') ? '#' : '/donasi/mentah' }}" class="{{ Request::is('donasi/mentah') ? 'text-[#E39616]' : 'hover:text-[#E39616]' }}">Makanan Mentah</a>
-          </li>
-        </ul>
-      </div>
-
+  <div class="flex justify-center items-center">
+    <a class="bg-[#E39616] rounded-full p-2 mr-5" href="{{ url('inputmakanan') }}">
+      <img src="/images/icons/add-makanan.svg" alt="Tambah Makanan" width="40px">
+    </a>
+    <div class="max-w-fit bg-[#113932] p-3 rounded-xl text-white font-Alkatra my-10 relative">
+      <ul class="flex">
+        <li class="mx-5">
+          <a href="{{ Request::is('donasi') ? '#' : '/donasi' }}" class="{{ Request::is('donasi') ? 'text-[#E39616]' : 'hover:text-[#E39616]' }}">Makanan Jadi</a>
+        </li>
+        <li class="mx-5 cursor-pointer">
+          <a href="{{ Request::is('donasi/mentah') ? '#' : '/donasi/mentah' }}" class="{{ Request::is('donasi/mentah') ? 'text-[#E39616]' : 'hover:text-[#E39616]' }}">Makanan Mentah</a>
+        </li>
+      </ul>
+    </div>
   </div>
 
 
@@ -62,7 +61,8 @@
                     </ul>
                 </div>
                 <div class="flex w-full items-center px-4 gap-4">
-                    <img src="/upload/makanan/{{ $makanan->foto }}" alt="{{ $makanan->nama }}" width="200px">
+                    {{-- <img src="/upload/makanan/{{ $makanan->foto }}" alt="{{ $makanan->nama }}" width="200px"> --}}
+                    <img src="/images/donasi/{{ $makanan->foto }}" alt="{{ $makanan->nama }}" width="200px">
                     <div class="flex flex-col justify-between h-full flex-1">
                         <div class="font-Cabin-Medium">
                             <h3 class="text-black font-bold text-2xl">{{ $makanan->nama }}</h3>

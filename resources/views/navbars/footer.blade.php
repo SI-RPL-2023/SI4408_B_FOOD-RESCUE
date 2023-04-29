@@ -20,7 +20,7 @@
                 <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
                     <a href="/" class="flex items-center">
-                        <img src="images/logo2.svg" class="h-16 mr-3" alt="FoodRescue Logo" />
+                        <img src="/images/logo2.svg" class="h-16 mr-3" alt="FoodRescue Logo" />
                     </a>
                 </div>
                 <div class="grid grid-cols-2 gap-16 sm:gap-12 sm:grid-cols-3">
