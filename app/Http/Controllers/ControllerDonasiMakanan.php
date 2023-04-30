@@ -12,7 +12,7 @@ class ControllerDonasiMakanan extends Controller
 {
     public function index() {
         $makanans = Makanan::filter(request(['search', 'location', 'jenis']))->get();
-
+        
         return view('donasiMakanan.donasi', compact('makanans'));
     }
 

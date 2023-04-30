@@ -31,7 +31,7 @@ class Makanan extends Model
 
         $query->when($filters['location'] ?? false, function($query, $location) {
             return $query->where(function($query) use ($location) {
-                $query->where('location', $location);
+                $query->where('lokasi', $location);
             });
         });
 
