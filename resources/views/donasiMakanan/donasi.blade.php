@@ -34,29 +34,31 @@
         <p class="text-white w-3/5 text-lg mx-auto text-center my-10">find and get food according to the location you want at no cost through Food Rescue</p>
       </div>
       <div class="flex justify-center">
-        <div class="bg-[#EDEDED] rounded-md w-72 py-[1px] font-inter flex items-center mr-3">
-          <img src="/images/icons/search.svg" alt="Icon" class="ml-3 mr-1 w-4 inline">
-          <input type="text" placeholder="Search" class="bg-[#EDEDED] border-0 focus:ring-0">
-        </div>
+        <form action="{{ Request::is('donasi') ? '/donasi' : '/donasi/mentah' }}" class="inline-block">
+          <div class="bg-[#EDEDED] rounded-md w-72 py-[1px] font-inter flex items-center mr-3">
+            <img src="/images/icons/search.svg" alt="Icon" class="ml-3 mr-1 w-4 inline">
+            <input type="text" placeholder="Search" class="bg-[#EDEDED] border-0 focus:ring-0" name="search">
+          </div>
+        </form>
         <div class="bg-[#EDEDED] rounded-md w-72 py-[9px] font-inter flex items-center cursor-pointer filter-btn">
           <img src="/images/icons/location.svg" alt="Icon" class="mx-3 w-4 inline">
-          <span class="font-Inter">Location</span>
+          <span class="font-Inter">{{ request("location") ?? "Location" }}</span>
         </div>
         <div class="bg-[#EDEDED] py-5 px-3 w-80 rounded-lg absolute z-10 hidden mt-5 search-box">
           <h3 class="text-[#113932]">Lokasi</h3>
           <form action="{{ Request::is('donasi') ? '/donasi' : '/donasi/mentah' }}">
             <input type="text" class="bg-[#D9D9D9] border-0 w-full pt-2 mb-6 mt-2 rounded text-xs focus:ring-0 search-location" placeholder="Cari Lokasi" name="location" value="">
             <div class="grid grid-cols-2 gap-x-3 gap-y-4 text-[#113932]">
-              <button class="location-choice" value="Jakarta">Jakarta</button>
-              <button class="location-choice" value="Bogor">Bogor</button>
-              <button class="location-choice" value="Bandung">Bandung</button>
-              <button class="location-choice" value="Semarang">Semarang</button>
-              <button class="location-choice" value="Yogyakarta">Yogyakarta</button>
-              <button class="location-choice" value="Cirebon">Cirebon</button>
-              <button class="location-choice" value="Solo">Solo</button>
-              <button class="location-choice" value="Malang">Malang</button>
-              <button class="location-choice" value="Surabaya">Surabaya</button>
-              <button class="location-choice" value="Jakarta">Tangerang</button>
+              <a class="location-choice" href="{{ Request::is('donasi?jenis=jadi') ? '/donasi?jenis=jadi&lokasi=jakarta' : '/donasi?jenis=mentah&lokasi=jakarta' }}">Jakarta</a>
+              <a class="location-choice" >Bogor</a>
+              <a class="location-choice" >Bandung</a>
+              <a class="location-choice" >Semarang</a>
+              <a class="location-choice" >Yogyakarta</a>
+              <a class="location-choice" >Cirebon</a>
+              <a class="location-choice" >Solo</a>
+              <a class="location-choice" >Malang</a>
+              <a class="location-choice" >Surabaya</a>
+              <a class="location-choice" >Tangerang</a>
             </div>
           </form>
         </div>

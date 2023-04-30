@@ -11,21 +11,29 @@ use File;
 class ControllerDonasiMakanan extends Controller
 {
     public function makananMatang() {
+        $makanans = Makanan::where('jenis', '2');
+
         if(request('location')) {
-            $makanans = Makanan::where('jenis', '2')->where('lokasi', 'like', '%' . request('location') . '%')->get();
-        } else {
-            $makanans = Makanan::where('jenis', '2')->get();
-        };
+            $makanans->where('lokasi', 'like', '%' . request('location') . '%');
+        } 
+
+        if(request('search')) {
+            $makanans->where('nama', 'like', '%' . request('search') . '%');
+        } 
+        
+        $makanans = $makanans->get();
 
         return view('donasiMakanan.donasi', compact('makanans'));
     }
 
     public function makananMentah() {
+        $makanans = Makanan::where('jenis', '1');
+
         if(request('location')) {
-            $makanans = Makanan::where('jenis', '1')->where('lokasi', 'like', '%' . request('location') . '%')->get();
-        } else {
-            $makanans = Makanan::where('jenis', '1')->get();
-        };
+            $makanans->where('lokasi', 'like', '%' . request('location') . '%');
+        } 
+
+        $makanans = $makanans->get();
 
         return view('donasiMakanan.donasi', compact('makanans'));
     }
