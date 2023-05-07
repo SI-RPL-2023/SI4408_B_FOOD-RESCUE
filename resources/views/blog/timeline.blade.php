@@ -21,7 +21,7 @@
                 @foreach ($blogs as $blog)
                 <article class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
                     <div class="flex justify-between items-center mb-5 text-gray-500">
-                        <img class="h-44 w-full object-cover mx-auto rounded-lg" src="/images/blog/tessect1.jpeg" alt="Blog image">
+                        <img class="h-44 w-full object-cover mx-auto rounded-lg" src="/upload/blog/{{ $blog->foto }}" alt="Blog image">
                     </div>
                     <h2 class="mb-2 text-2xl font-cabin-medium font-bold tracking-tight text-gray-900 dark:text-white"><a href="#"> {{ $blog->judul }}</a></h2>
                     <p class="mb-5 font-cabin text-gray-500 dark:text-gray-400">{{ $blog->deskripsi }}</p>
