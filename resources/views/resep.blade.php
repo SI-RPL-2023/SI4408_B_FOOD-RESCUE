@@ -24,7 +24,7 @@
     @foreach($resep as $resep)
         <div class="bg-white rounded-lg shadow-lg overflow-hidden flex">
             <div class="w-2/3">
-                <img class="w-full object-cover object-center" src="{{ $resep->foto }}" alt="{{ $resep->nama }}">
+                <img class="w-full object-cover object-center" src="{{ asset('storage/photos/'.$resep->foto) }}" alt="{{ $resep->nama }}">
             </div>
             <div class="p-4 w-2/3">
                 <h2 class="font-bold text-lg mb-2 text-center font-Cabin-Medium">{{ $resep->nama }}</h2>

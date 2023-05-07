@@ -109,5 +109,8 @@ class DatabaseSeeder extends Seeder
             'availability' => 'Tersedia',
             'foto' => 'daging-sapi.svg'
         ]);
+
+        $this->call(ResepSeeder::class);
     }
+    
 }

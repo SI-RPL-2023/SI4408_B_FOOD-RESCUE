@@ -15,15 +15,17 @@
 
 <body class = "bg-hijau2">
 
-<div class="ml-12">
-    <a href="{{ url('/resep') }}" style="display: flex; align-items: center;"><img src="../images/back.svg" alt="." style="width:26px;"></svg><h1 class="text-xl font-bold font-Cabin-Medium ml-4 ">Back to Recipe</h1></a>
+<div class="ml-12 mt-6">
+    <a href="{{ url('/resep') }}" style="display: flex; align-items: center;"> <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="w-6 h-6 mr-4 text-white" >
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"></path>
+</svg> <h1 class="text-xl font-bold font-Cabin-Medium ml-1 text-white">Back to Recipe</h1> </a>
 </div>
 
-<div class="container mx-auto my-10">
+<div class="container mx-auto my-4">
     <div class="bg-white mx-10">
     <div class="flex flex-wrap">
         <div class="w-full md:w-1/2 lg:w-1/3 ">
-            <img src="{{ $resep->foto }}" alt="{{ $resep->nama }}" class="w-full h-auto mr-6 ml-14 mb-8 mt-36">
+            <img src="{{ asset('storage/photos/'.$resep->foto) }}" alt="{{ $resep->nama }}" class="w-full h-auto mr-6 ml-14 mb-8 mt-36">
 
 <!-- Tombol share -->
 <a href="#" class="text-white bg-kuning hover:bg-kuning2 focus:ring-4 focus:outline-none focus:ring-kuning3 rounded-lg px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-kuning3 dark:hover:bg-kuning3 dark:focus:ring-kuning3 font-Cabin-Medium text-xl font-bold ml-64 mt-6 mb-10" onclick="openModal()">Share</a>

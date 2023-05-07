@@ -34,7 +34,7 @@
                                 <a href="https://tailwindcss.com/" class="hover:underline ">Blog</a>
                             </li>
                             <li>
-                                <a href="https://flowbite.com/" class="hover:underline">Resep</a>
+                                <a href="{{ url('/resep') }}" class="hover:underline">Resep</a>
                             </li>
                         </ul>
                     </div>
