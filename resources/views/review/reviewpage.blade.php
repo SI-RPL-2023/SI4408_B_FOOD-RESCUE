@@ -1,4 +1,5 @@
-
+@extends('navbars.layoutnav')
+@section('content')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -109,5 +110,6 @@
         </div>
     </aside>
 </article>
+@endsection
 </body>
 </html>
