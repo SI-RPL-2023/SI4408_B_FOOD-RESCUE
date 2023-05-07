@@ -8,10 +8,16 @@ use File;
 
 class BlogController extends Controller
 {
-    public function view_blog(){
+    public function section(){
         $blogs = Blog::all();
 
         return view('blog.timeline', compact('blogs'));
+    }
+
+    public function view_add_blog(){
+        $blogs = Blog::all();
+
+        return view('blog.unggah_blog', compact('blogs'));
     }
 
     public function add_blog(Request $request)
