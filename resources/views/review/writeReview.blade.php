@@ -1,4 +1,5 @@
-
+@extends('navbars.layoutnav')
+@section('content')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -98,6 +99,6 @@
    </div>
 </form>
 
-
+@endsection
 </body>
 </html>
