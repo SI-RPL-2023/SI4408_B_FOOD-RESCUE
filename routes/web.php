@@ -121,3 +121,4 @@ Route::post('/testing', [ControllerPengguna::class, 'testing'])->name('testing')
 // BLOG
 Route::get('/timeline', [BlogController::class, 'section']);
 Route::get('/unggah-blog', [BlogController::class, 'view_add_blog']);
+Route::post('input-blog', [BlogController::class, 'add_blog'])->name('input-blog');

@@ -24,7 +24,7 @@
 
 
         <div class="ml-1 mt-4 pb-4 mb-4 rounded-t">
-            <form action="/profile/update" method="post" enctype="multipart/form-data">
+            <form action="{{ route('input-blog') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-6">
                     <label for="judul" class="block mb-2 text-xl font-cabin-medium text-hijau2 dark:text-white">Judul</label>
