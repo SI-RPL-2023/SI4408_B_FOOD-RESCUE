@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/css/app.css','resources/js/app.js'])
     <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
-    <title>FodRescue</title>
+    <title>FoodRescue</title>
 </head>
 
 <body class = "bg-hijau2">
@@ -81,7 +81,7 @@
                 <a href="#" class="block py-2 pl-3 pr-4 text-white hover:text-kuning bg-kuning3 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg">Recipe</a>
             </li>
             <li>
-                <a href="#" class="block py-2 pl-3 pr-4 text-white hover:text-kuning bg-kuning3 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg">Blog</a>
+                <a href="{{ url('/timeline') }}" class="block py-2 pl-3 pr-4 text-white hover:text-kuning bg-kuning3 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg">Blog</a>
             </li>
             <li>
                 <a href="#" class="block py-2 pl-3 pr-4 text-white hover:text-kuning bg-kuning3 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg">About Us</a>

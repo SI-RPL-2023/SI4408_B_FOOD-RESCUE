@@ -116,3 +116,8 @@ Route::post('registerPersonal', [ControllerPengguna::class, 'register_action'])-
 
 // tester routes
 Route::post('/testing', [ControllerPengguna::class, 'testing'])->name('testing');
+
+// BLOG
+Route::get('/timeline', function () {
+    return view('blog.timeline');
+});
