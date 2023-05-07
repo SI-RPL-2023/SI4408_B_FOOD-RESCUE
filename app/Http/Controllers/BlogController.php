@@ -19,7 +19,8 @@ class BlogController extends Controller
     }
 
     public function view_blog($id){
-        return view('blog.detail_blog');
+        $blogs = Blog::findOrFail($id);
+        return view('blog.detail_blog', compact('blogs'));
     }
 
     public function add_blog(Request $request)

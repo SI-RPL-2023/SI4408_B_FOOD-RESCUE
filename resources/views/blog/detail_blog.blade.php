@@ -17,8 +17,24 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"></path>
                 </svg>
             </a>
+            <img class="h-44 w-full object-cover mx-auto rounded-lg" src="/upload/blog/{{ $blogs->foto }}" alt="Blog image">
 
-            
+            <div class="flex items-center mx-auto mt-5 mb-5 w-3/5">
+                <img class="w-7 h-7 rounded-full mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="Admin avatar" />
+                    <span class="font-Cabin-medium dark:text-white">
+                        Admin Food Rescue
+                    </span>
+            </div>
+
+            <div class="container w-3/5 mx-auto">
+                <h1 class="font-Cabin-Medium text-4xl font-bold text-hijau2 mb-5">
+                    {{ $blogs->judul }}
+                </h1>
+
+                <p class="font-cabin text-black dark:text-white mb-5">
+                    {!! nl2br($blogs->deskripsi) !!}
+                </p>
+            </div>
     </div>
     
 @endsection
