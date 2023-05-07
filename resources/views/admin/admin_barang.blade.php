@@ -20,7 +20,7 @@
 {{-- =============================================================== Sidebar =============================================================== --}}
 
 {{-- SideBar ubah disini --}}
-<aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-[338px] h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
+{{-- <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-[338px] h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
     <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
         <ul class="pt-4 space-y-[21px] font-medium">
 
@@ -41,18 +41,18 @@
                     </svg>
                     <span class=" flex-1 ml-3 whitespace-nowrap text-abu2 font-bold text-[22px] font-Cabin-Medium">Daftar Pengguna</span>
                 </a>
-            </li>
+            </li> --}}
             {{-- ======= Active State ======= --}}
-            <li class="flex mx-auto place-content-center">
+            {{-- <li class="flex mx-auto place-content-center">
                 <a href="{{ url('dashboard-barang') }}" class="flex items-center w-[278px] p-2 text-gray-900 rounded-lg bg-hijau1 ring-offset-2 focus:ring-2 focus:ring-hijau2 mr-3">
                     <svg aria-hidden="true" class="pl-4 flex-shrink-0 w-auto h-6 text-abu transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
                     </svg>
                     <span class=" flex-1 ml-3 whitespace-nowrap text-abu font-bold text-[22px] font-Cabin-Medium">Daftar Barang</span>
                 </a>
-            </li>
+            </li> --}}
             {{-- ======= End of Active State ======= --}}
-
+{{--
             <li class="flex mx-auto place-content-center pr-[12.5px]">
                 <a href="{{ url('dashboard-resep') }}" class="flex items-center w-[278px] p-2 text-gray-900 rounded-lg  hover:bg-hijau_hover ring-offset-2 focus:ring-2 focus:outline-non focus:ring-hijau2">
                     <svg aria-hidden="true" class="pl-[16.5px] flex-shrink-0 w-auto h-6 text-abu2 transition duration-75  group-hover:text-gray-900 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -70,9 +70,26 @@
                     <span class=" flex-1 ml-3 whitespace-nowrap text-abu2 font-bold text-[22px] font-Cabin-Medium hover:text-oren">Laporan Produk</span>
                 </a>
             </li>
-        </ul>
+        </ul> --}}
+
+
+        {{-- CTA Admin --}}
+
+        {{-- <div id="dropdown-cta" class=" p-4 mt-[349px] rounded-lg bg-hijau_kartu dark:bg-blue-900 outline outline-hijau3 outline-2" role="alert">
+            <div class="flex items-center mb-3">
+                <span class="bg-orange-100 text-orange-800 text-sm font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-orange-200 dark:text-orange-900 outline outline-orange-900 outline-2">Perhatian</span>
+            </div>
+            <p class="mb-3 text-sm text-hijau2 dark:text-blue-400">
+                Klik tombol dibawah untuk menuju ke halaman beranda FoodRescue.
+            </p>
+                <a href="{{ url ('/') }}" class="flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-hijau1 rounded-lg hover:bg-hijau2 focus:ring-2 focus:outline-none focus:ring-hijau3 ring-offset-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Go
+                <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </a>
+        </div>
+
     </div>
-</aside>
+</aside> --}}
 
 
 

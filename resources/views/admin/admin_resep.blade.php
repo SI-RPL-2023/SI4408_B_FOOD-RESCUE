@@ -74,6 +74,25 @@
                 </a>
             </li>
         </ul>
+
+
+        {{-- CTA Admin --}}
+
+        <div id="dropdown-cta" class=" p-4 mt-[349px] rounded-lg bg-hijau_kartu dark:bg-blue-900 outline outline-hijau3 outline-2" role="alert">
+            <div class="flex items-center mb-3">
+                <span class="bg-orange-100 text-orange-800 text-sm font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-orange-200 dark:text-orange-900 outline outline-orange-900 outline-2">Perhatian</span>
+            </div>
+            <p class="mb-3 text-sm text-hijau2 dark:text-blue-400">
+                Klik tombol dibawah untuk menuju ke halaman beranda FoodRescue.
+            </p>
+            {{-- <a class="text-sm text-blue-800 underline font-medium hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300" href="#">Turn new navigation off</a> --}}
+            <a href="{{ url ('/') }}" class="flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-hijau1 rounded-lg hover:bg-hijau2 focus:ring-2 focus:outline-none focus:ring-hijau3 ring-offset-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Go
+                <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </a>
+        </div>
+
+        
     </div>
 </aside>
 
@@ -89,13 +108,10 @@
                 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
-                            <th scope="col" class="px-6 py-3 place-content-center text-center">Gambar Makanan</th>
-                            <th scope="col" class="px-6 py-3 place-content-center text-center">Nama Produk</th>
-                            <th scope="col" class="px-6 py-3 place-content-center text-center">Lokasi</th>
-                            <th scope="col" class="px-6 py-3 place-content-center">Category</th>
+                            <th scope="col" class="px-6 py-3 place-content-center text-center">Foto Makanan</th>
+                            <th scope="col" class="px-6 py-3 place-content-center text-center">Id Resep</th>
+                            <th scope="col" class="px-6 py-3 place-content-center text-center">Nama Makanan</th>
                             <th scope="col" class="px-6 py-3 md:table-fixed max-w-xs break-words place-content-center text-center">Deskripsi</th>
-                            <th scope="col" class="px-6 py-3 place-content-center text-center">Harga</th>
-                            <th scope="col" class="px-6 py-3 place-content-center text-center">Tanggal Lapor</th>
                             <th scope="col" class="px-6 py-3 place-content-center text-center">Tindakan</th>
                             </th>
 
@@ -108,12 +124,9 @@
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white flex mx-auto place-content-center">
                                 <img class="w-24 h-24 rounded" src="/images/products/brokoli.jpg" alt="brokoli">
                             </th>
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white mx-auto place-content-center text-center">1</th>
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white mx-auto place-content-center text-center">Sayuran</th>
-                            <td class="px-6 py-4 place-content-center text-center">Jakarta</td>
-                            <td class="px-6 py-4 place-content-center text-center">Sayuran</td>
                             <td class="px-6 py-3 md:table-fixed max-w-xs break-words place-content-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi nulla dolorem aspernatur voluptatum tempore earum fugit quisquam fuga, quam, doloribus velit!</td>
-                            <td class="px-6 py-4 place-content-center text-center">$2999</td>
-                            <td class="px-6 py-4 place-content-center text-center">2023-04-21</td>
                             <td class="px-6 py-4 place-content-center text-center">
                                 <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Periksa</a>
                             </td>

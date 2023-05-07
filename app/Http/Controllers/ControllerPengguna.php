@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
+use Illuminate\View\View;
 // use Illuminate\Support\Facades\Validator;
 
 class ControllerPengguna extends Controller
@@ -63,13 +65,45 @@ class ControllerPengguna extends Controller
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             $request->session()->regenerate();
-            return redirect()->intended('/');
+            $user = Auth::user();
+            $role = $user->role;
+
+            if ($role == 0) {
+                // Admin User
+                return redirect()->intended('/dashboard');
+            } else {
+                // Normal User
+                return redirect()->intended('/');
+            }
         }
 
         return back()->withErrors([
             'email' => 'Gagal Login',
         ])->onlyInput('email');
     }
+
+
+    // public function pullData(): View {
+    //     $data_pengguna = DB::table('table_pengguna')->get();
+    // }
+
+    public function pullDataPengguna(): View
+    {
+        $data_pengguna = DB::table('table_pengguna')->get();
+
+        return view('admin.admin_pengguna', ['data_pengguna' => $data_pengguna]);
+    }
+
+
+    public function pullDataResep(): View
+    {
+        $data_pengguna = DB::table('table_pengguna')->get();
+
+        return view('admin.admin_pengguna', ['data_pengguna' => $data_pengguna]);
+    }
+
+
+
 
 
 //     public function profile()

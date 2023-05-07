@@ -6,4 +6,30 @@
     .report-choice {
         @apply w-full py-4 text-sm flex justify-between items-center px-4 hover:bg-[#DADADA];
     }
+
+
+    .btn-aktif {
+        @apply  bg-hijau1 ;
+    }
+
+    .btn-nonaktif {
+        @apply  hover:bg-hijau_hover focus:outline-none ;
+    }
+
+    .ico-aktif {
+        @apply pl-4 flex-shrink-0 w-auto h-6 text-abu transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white;
+    }
+    .ico-nonaktif {
+        @apply pl-[16.5px] flex-shrink-0 w-auto h-6 text-abu2 transition duration-75  group-hover:text-gray-900;
+    }
+
+    .txt-aktif {
+        @apply flex-1 ml-3 whitespace-nowrap text-abu font-bold text-[22px] font-Cabin-Medium;
+
+    }
+    .txt-nonaktif {
+        @apply flex-1 ml-3 whitespace-nowrap text-abu2 font-bold text-[22px] font-Cabin-Medium;
+
+    }
 }
+

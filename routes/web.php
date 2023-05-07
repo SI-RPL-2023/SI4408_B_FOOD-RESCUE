@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ControllerDashboard;
 use App\Http\Controllers\ControllerDonasiMakanan;
 use App\Http\Controllers\ControllerPengguna;
 use App\Http\Controllers\ProfileController;
@@ -57,13 +58,24 @@ Route::get('/inputmakanan', function () {
 
 // ================= Admin Things =================
 // Dashboard
-Route::get('/dashboard', function () {
-    return view('admin.dashboard');
-});
-// Dashboard Pengguna
-Route::get('/dashboard-pengguna', function () {
-    return view('admin.admin_pengguna');
-});
+// Route::get('/dashboard', function () {
+//     return view('admin.dashboard');
+// });
+Route::get('/dashboard', [ControllerDashboard::class, 'index'])
+    ->name('dashboard')
+    ->middleware('admin');
+    // ->middleware(AdminMiddleware::class);
+
+    Route::get('/dashboard', [ControllerDashboard::class, 'sumDataPengguna']);
+
+
+    // Dashboard Pengguna
+// Route::get('/donasi', [ControllerPengguna::class, 'tombol']);
+Route::get('/dashboard-pengguna', [ControllerPengguna::class, 'pullDataPengguna']);
+
+
+
+
 // Dashboard Barang
 Route::get('/dashboard-barang', function () {
     return view('admin.admin_barang');
