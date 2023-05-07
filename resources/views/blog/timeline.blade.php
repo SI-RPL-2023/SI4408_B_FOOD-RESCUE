@@ -23,7 +23,7 @@
                     <div class="flex justify-between items-center mb-5 text-gray-500">
                         <img class="h-44 w-full object-cover mx-auto rounded-lg" src="/upload/blog/{{ $blog->foto }}" alt="Blog image">
                     </div>
-                    <h2 class="mb-2 text-2xl font-cabin-medium font-bold tracking-tight text-gray-900 dark:text-white"><a href="#"> {{ $blog->judul }}</a></h2>
+                    <h2 class="mb-2 text-2xl font-cabin-medium font-bold tracking-tight text-gray-900 dark:text-white"><a href="{{ url('detail-blog/' .$blog->id) }}"> {{ $blog->judul }}</a></h2>
                     <p class="mb-5 font-cabin text-gray-500 dark:text-gray-400">{{ $blog->deskripsi }}</p>
                     <div class="flex justify-between items-center">
                         <div class="flex items-center space-x-4">

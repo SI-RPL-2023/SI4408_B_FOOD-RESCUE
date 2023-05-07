@@ -21,7 +21,7 @@
 
         <div class="pl-0 pt-0 h-auto max-w-[10%]">
             <a href="/" class="flex items-center">
-                <img src="images/logo2.svg" class="h-auto mr-3 sm:h-14 ml-8" alt="FoodRescue Logo" />
+                <img src="/images/logo2.svg" class="h-auto mr-3 sm:h-14 ml-8" alt="FoodRescue Logo" />
                 <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"></span>
             </a>
         </div>

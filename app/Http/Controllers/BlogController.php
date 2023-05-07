@@ -15,9 +15,11 @@ class BlogController extends Controller
     }
 
     public function view_add_blog(){
-        $blogs = Blog::all();
+        return view('blog.unggah_blog');
+    }
 
-        return view('blog.unggah_blog', compact('blogs'));
+    public function view_blog($id){
+        return view('blog.detail_blog');
     }
 
     public function add_blog(Request $request)
