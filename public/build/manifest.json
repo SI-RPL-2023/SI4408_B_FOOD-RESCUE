@@ -1,11 +1,15 @@
 {
+  "public/images/background-login.svg": {
+    "file": "assets/background-login-5e88c48a.svg",
+    "src": "public/images/background-login.svg"
+  },
   "resources/css/app.css": {
-    "file": "assets/app-0ead8bc6.css",
+    "file": "assets/app-44ccec21.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
   "resources/js/app.js": {
-    "file": "assets/app-397cd224.js",
+    "file": "assets/app-1c249bf5.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }
