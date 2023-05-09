@@ -3,6 +3,7 @@
 use App\Http\Controllers\ControllerDonasiMakanan;
 use App\Http\Controllers\ControllerPengguna;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ResepController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -114,6 +115,15 @@ Route::post('/donasi/report', [ControllerDonasiMakanan::class, 'report']);
 
 // Halaman Input Makanan
 Route::post('donasi', [ControllerDonasiMakanan::class, 'add_donasi'])->name('donasi.action');
+
+// Halaman Resep
+Route::get('/resep', function () {
+    return view('resep');
+});
+// Menampilkan Resep
+Route::get('/resep', [ResepController::class, 'index'])->name('resep.index');
+// Menampilkan Detail Resep
+Route::get('/resep/{id}', [ResepController::class, 'show'])->name('detailresep');
 
 
 // POST GET Routes
