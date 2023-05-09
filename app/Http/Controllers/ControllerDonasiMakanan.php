@@ -10,15 +10,9 @@ use File;
 
 class ControllerDonasiMakanan extends Controller
 {
-    public function makananMatang() {
-        $makanans = Makanan::where('jenis', '2')->get();
-
-        return view('donasiMakanan.donasi', compact('makanans'));
-    }
-
-    public function makananMentah() {
-        $makanans = Makanan::where('jenis', '1')->get();
-
+    public function index() {
+        $makanans = Makanan::filter(request(['search', 'location', 'jenis']))->get();
+        
         return view('donasiMakanan.donasi', compact('makanans'));
     }
 
