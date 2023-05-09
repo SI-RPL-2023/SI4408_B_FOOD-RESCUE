@@ -13,11 +13,18 @@
     }
 
     .btn-nonaktif {
-        @apply  hover:bg-hijau_hover focus:outline-none ;
+        @apply  hover:bg-hijau_hover focus:ring-2 focus:outline-none ring-offset-2  focus:ring-hijau2 ;
+    }
+    .btn-aktif-laporan {
+        @apply  bg-oren ;
+    }
+
+    .btn-nonaktif-laporan {
+        @apply  hover:bg-oren2 focus:ring-2 focus:outline-none ring-offset-2  focus:ring-oren ;
     }
 
     .ico-aktif {
-        @apply pl-4 flex-shrink-0 w-auto h-6 text-abu transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white;
+        @apply pl-4 flex-shrink-0 w-auto h-6 text-abu transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white focus:ring-2 focus:outline-none focus:ring-hijau2;
     }
     .ico-nonaktif {
         @apply pl-[16.5px] flex-shrink-0 w-auto h-6 text-abu2 transition duration-75  group-hover:text-gray-900;

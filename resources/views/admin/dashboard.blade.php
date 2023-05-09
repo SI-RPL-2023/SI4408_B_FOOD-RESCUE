@@ -33,7 +33,7 @@
                         <div>
                             {{-- Dashboard Info Pengguna --}}
                             <div class="w-auto">
-                                <a href="#" class=" flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100">
+                                <a href="{{ url('dashboard-pengguna') }}" class=" flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100">
                                     <img class="p-4 w-24 h-24 max-w-xs rounded-lg" src="/images/products/brokoli.jpg" alt="">
                                     <div class="flex flex-col justify-between p-4 leading-normal">
                                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $data_pengguna }}</h5>
@@ -45,7 +45,7 @@
 
                             {{-- Dashboard Info Barang --}}
                             <div class="w-auto">
-                                <a href="#" class=" flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                <a href="{{ url('dashboard-barang') }}" class=" flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                                     <img class="p-4 w-24 h-24 rounded" src="/images/products/brokoli.jpg" alt="">
                                     <div class="flex flex-col justify-between p-4 leading-normal">
                                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">10</h5>
@@ -59,7 +59,7 @@
                             {{-- Dashboard Info Resep --}}
                             <div class=" ">
                                 <div class="w-auto">
-                                    <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                    <a href="{{ url('dashboard-resep') }}" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                                         <img class="p-4 w-24 h-24 rounded" src="/images/products/brokoli.jpg" alt="">
                                         <div class="flex flex-col justify-between p-4 leading-normal">
                                             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">10</h5>
@@ -72,7 +72,7 @@
                             {{-- Dashboard Info Resep --}}
                             <div>
                                 <div class="w-auto">
-                                    <a href="#" class=" flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                    <a href="{{ url('dashboard-laporan') }}" class=" flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                                         <img class="p-4 w-24 h-24 rounded" src="/images/products/brokoli.jpg" alt="">
                                         <div class="flex flex-col justify-between p-4 leading-normal">
                                             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">10</h5>

@@ -78,7 +78,7 @@
                 </li>
                 {{-- ======= Daftar Pengguna ======= --}}
                 <li class="flex mx-auto place-content-center">
-                    <a href="{{ Request::is('/dashboard-pengguna') ? '#' : '/dashboard-pengguna' }}" class="{{ Request::is('dashboard-pengguna') ? 'btn-aktif' : 'btn-nonaktif' }} flex items-center w-[278px] p-2 text-gray-900 rounded-lg ring-offset-2 focus:ring-hijau2">
+                    <a href="{{ Request::is('/dashboard-pengguna') ? '#' : '/dashboard-pengguna' }}" class="{{ Request::is('dashboard-pengguna') ? 'btn-aktif' : 'btn-nonaktif' }} flex items-center w-[278px] p-2 text-gray-900 rounded-lg">
                         <svg aria-hidden="true" class="{{ Request::is('dashboard-pengguna') ? 'ico-aktif' : 'ico-nonaktif' }}" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
                         </svg>
@@ -92,27 +92,25 @@
                     <svg aria-hidden="true" class="{{ Request::is('dashboard-barang') ? 'ico-aktif' : 'ico-nonaktif' }}" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
                     </svg>
-                    <span class=" {{ Request::is('dashboard-barang') ? 'txt-aktif' : 'txt-nonaktif'}} flex-1 ml-3 whitespace-nowrap font-bold text-[22px] font-Cabin-Medium">Daftar Barang</span>
+                    <span class="{{ Request::is('dashboard-barang') ? 'txt-aktif' : 'txt-nonaktif'}} flex-1 ml-3 whitespace-nowrap font-bold text-[22px] font-Cabin-Medium">Daftar Barang</span>
                 </a>
             </li>
-            <li class="flex mx-auto place-content-center pr-[12.5px]">
-                <a href="{{ url('dashboard-resep') }}" class="flex items-center w-[278px] p-2 text-gray-900 rounded-lg  hover:bg-hijau_hover ring-offset-2 focus:ring-2 focus:outline-non focus:ring-hijau2">
-                    <svg aria-hidden="true" class="pl-[16.5px] flex-shrink-0 w-auto h-6 text-abu2 transition duration-75  group-hover:text-gray-900 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            {{-- Daftar Resep --}}
+            <li class="flex mx-auto place-content-center">
+                <a href="{{ url('dashboard-resep') }}" class="{{ Request::is('dashboard-resep') ? 'btn-aktif' : 'btn-nonaktif' }} flex items-center w-[278px] p-2 text-gray-900 rounded-lg ring-offset-2 focus:ring-hijau2">
+                    <svg aria-hidden="true" class="{{ Request::is('dashboard-resep') ? 'ico-aktif' : 'ico-nonaktif' }}" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
                     </svg>
-                    <span class=" flex-1 ml-3 whitespace-nowrap text-abu2 font-bold text-[22px] font-Cabin-Medium">Daftar Resep</span>
+                    <span class=" {{ Request::is('dashboard-resep') ? 'txt-aktif' : 'txt-nonaktif'}} flex-1 ml-3 whitespace-nowrap font-bold text-[22px] font-Cabin-Medium">Daftar Resep</span>
                 </a>
             </li>
-            <li class="flex mx-auto place-content-center pr-[12.5px]">
-                <a href="{{ url('dashboard-laporan') }}" class="flex items-center w-[278px] p-2 text-gray-900 rounded-lg  hover:bg-oren2 ring-offset-2 focus:ring-2 focus:outline-non focus:ring-hijau2">
-
-                    <svg fill="currentColor" class="pl-[16.5px] flex-shrink-0 w-auto h-6 text-abu2   hover:text-oren " viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            {{-- Laporan Produk --}}
+            <li class="flex mx-auto place-content-center">
+                <a href="{{ url('dashboard-laporan') }}" class="{{ Request::is('dashboard-laporan') ? 'btn-aktif-laporan' : 'btn-nonaktif-laporan' }} flex items-center w-[278px] p-2 text-gray-900 rounded-lg ring-offset-2 focus:ring-hijau2">
+                    <svg fill="currentColor" class="{{ Request::is('dashboard-laporan') ? 'ico-aktif' : 'ico-nonaktif' }}" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path clip-rule="evenodd" fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z"></path>
                     </svg>
-
-
-
-                    <span class=" flex-1 ml-3 whitespace-nowrap text-abu2 font-bold text-[22px] font-Cabin-Medium hover:text-oren">Laporan Produk</span>
+                    <span class=" {{ Request::is('dashboard-laporan') ? 'txt-aktif' : 'txt-nonaktif'}} flex-1 ml-3 whitespace-nowrap font-bold text-[22px] font-Cabin-Medium">Laporan Produk</span>
                 </a>
             </li>
         </ul>
