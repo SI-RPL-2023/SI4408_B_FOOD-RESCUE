@@ -31,6 +31,7 @@ class ControllerDonasiMakanan extends Controller
         $food = new Makanan([
             'nama' => $request->nama,
             'deskripsi' => $request->deskripsi,
+            'lokasi' => $request->lokasi,
             'jenis' => $request->jenis,
             'exp_date' => $request->exp_date,
             'availability' => $request->availability,
