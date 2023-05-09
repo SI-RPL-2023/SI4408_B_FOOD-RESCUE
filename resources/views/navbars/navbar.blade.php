@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/css/app.css','resources/js/app.js'])
     <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
-    <title>FodRescue</title>
+    <title>FoodRescue</title>
 </head>
 
 <body class = "bg-hijau2">
@@ -49,6 +49,14 @@
                         <a href="{{ url('profile-page') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Profile</a>
                     </li>
                 </ul>
+
+                <!-- Add Post Blog untuk Admin -->
+                @if (Auth::user()->role==0)
+                <div class="py-2">
+                    <a href="{{ url('unggah-blog') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Unggah Blog</a>
+                </div>
+                @endif
+
                 <div class="py-2">
                     <a href="{{ route('logout') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
                 </div>
@@ -78,13 +86,11 @@
                 <a href="{{ url('/404') }}" class="block py-2 pl-3 pr-4 text-white hover:text-kuning bg-kuning3 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg">Reward</a>
             </li>
             <li>
-<<<<<<< HEAD
                 <a href="{{ url('/resep') }}" class="block py-2 pl-3 pr-4 text-white hover:text-kuning bg-kuning3 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg">Recipe</a>
-=======
                 <a href="{{ url('/404') }}" class="block py-2 pl-3 pr-4 text-white hover:text-kuning bg-kuning3 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg">Recipe</a>
->>>>>>> master
             </li>
             <li>
+                <a href="{{ url('/timeline') }}" class="block py-2 pl-3 pr-4 text-white hover:text-kuning bg-kuning3 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg">Blog</a>
                 <a href="{{ url('/404') }}" class="block py-2 pl-3 pr-4 text-white hover:text-kuning bg-kuning3 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg">Blog</a>
             </li>
             <li>

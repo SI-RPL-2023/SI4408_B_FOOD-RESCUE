@@ -3,6 +3,7 @@
 use App\Http\Controllers\ControllerDonasiMakanan;
 use App\Http\Controllers\ControllerPengguna;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ResepController;
 use Illuminate\Support\Facades\Route;
 
@@ -139,3 +140,12 @@ Route::post('registerPersonal', [ControllerPengguna::class, 'register_action'])-
 
 // tester routes
 Route::post('/testing', [ControllerPengguna::class, 'testing'])->name('testing');
+
+// BLOG
+Route::get('/timeline', [BlogController::class, 'section']);
+Route::get('/unggah-blog', [BlogController::class, 'view_add_blog']);
+Route::get('/edit-blog/{id}', [BlogController::class, 'view_edit_blog']);
+Route::post('input-blog', [BlogController::class, 'add_blog'])->name('input-blog');
+Route::post('update-blog/{id}', [BlogController::class, 'update_blog'])->name('update-blog');
+Route::get('/detail-blog/{id}', [BlogController::class, 'view_blog']);
+Route::get('/hapus-blog/{id}', [BlogController::class, 'hapus_blog']);
