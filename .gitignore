@@ -37,4 +37,5 @@ Thumbs.db
 
 .env
 /node_modules
+/vendor
 hot
