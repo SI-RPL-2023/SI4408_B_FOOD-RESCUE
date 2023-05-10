@@ -4,6 +4,7 @@ use App\Http\Controllers\ControllerDashboard;
 use App\Http\Controllers\ControllerDonasiMakanan;
 use App\Http\Controllers\ControllerPengguna;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\KunjunganController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,9 +22,14 @@ use Illuminate\Support\Facades\Route;
 // Views Routes
 
 // Landing Page
-Route::get('/', function () {
-    return view('beranda');
-});
+// Route::get('/', function () {
+//     return view('beranda');
+// });
+
+Route::get('/', [KunjunganController::class, 'index'])->name('home');
+
+Route::post('/profile/update', [ProfileController::class, 'update'])->middleware('auth');
+
 
 // Login Routes
 Route::get('/login', function () {
@@ -67,6 +73,7 @@ Route::get('/dashboard', [ControllerDashboard::class, 'index'])
     // ->middleware(AdminMiddleware::class);
 
     Route::get('/dashboard', [ControllerDashboard::class, 'sumDataPengguna']);
+    // Route::get('/dashboard', [ControllerDashboard::class, 'totalKunjungan']);
 
 
     // Dashboard Pengguna

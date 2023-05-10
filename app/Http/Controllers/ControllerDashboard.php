@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 
+use App\Http\Controllers\KunjunganController;
 use App\Models\User;
+use App\Models\Kunjungan;
 use Illuminate\View\View;
 
 /*
@@ -14,6 +16,11 @@ use Illuminate\View\View;
 
 class ControllerDashboard extends Controller
 {
+    /*
+    |---------------------------------------------------------------------|
+    |----------------------- Middleware Controller -----------------------|
+    |---------------------------------------------------------------------|
+    */
     public function __construct(){
         $this->middleware('admin');
     }
@@ -21,6 +28,7 @@ class ControllerDashboard extends Controller
     public function index() {
         return view('admin.dashboard');
     }
+    //|-------------------------------------------------------------------|
 
 
     public function sumDataPengguna(): View
@@ -49,6 +57,12 @@ class ControllerDashboard extends Controller
 
     public function tombol() {
         return view('admin.admin_pengguna', compact('makanans'));
+    }
+
+    public function totalKunjungan(): View {
+        $totalKunjungan = Kunjungan::firstOrFail();
+
+        return view('admin.dashboard', compact('totalKunjungan'));
     }
 
 }
