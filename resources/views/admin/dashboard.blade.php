@@ -88,7 +88,7 @@
                         <div class="h-[250px] w-[393px] grid"> {{-- baris 3 --}}
                             <a href="#" class=" px-6 pt-4 bg-hijau1 border-gray-200 rounded-lg shadow hover:bg-hijau2">
                                 <h5 class="text-2xl  text-center font-bold tracking-wider text-abu dark:text-white pt-[2px]">Total Kunjungan</h5>
-                                <h1 class="text-[96px]  text-center font-bold tracking-wider text-abu dark:text-white">{{ $totalKunjungan->count }}</h1>
+                                <h1 class="text-[96px]  text-center font-bold tracking-wider text-abu dark:text-white">{{ $total_kunjungan }}</h1>
                                 <h1 class="text-2xl  text-center font-bold tracking-wider text-abu dark:text-white">Kali</h1>
                             </a>
                         </div>

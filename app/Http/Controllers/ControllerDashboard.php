@@ -30,39 +30,64 @@ class ControllerDashboard extends Controller
     }
     //|-------------------------------------------------------------------|
 
+    public function all(){
+        $controller = new ControllerDashboard();
+        $data_pengguna = $controller->sumDataPengguna();
+        $dataResep = $controller->sumDataResep();
+        $dataBarang = $controller->sumDataBarang();
+        $dataLaporan = $controller->sumDataLaporan();
+        $totalKunjungan = $controller->totalKunjungan();
 
-    public function sumDataPengguna(): View
+        return view('admin.dashboard', [
+            'data_pengguna' => $data_pengguna->data_pengguna,
+            'data_resep' => $dataResep->data_resep,
+            'data_barang' => $dataBarang->data_barang,
+            'data_laporan' => $dataLaporan->data_laporan,
+            'total_kunjungan' => $totalKunjungan,
+        ]);
+
+    }
+
+    private function sumDataPengguna(): View
     {
         $total_users = User::count();
         return view('admin.dashboard', ['data_pengguna' => $total_users]);
     }
 
-    public function sumDataResep(): View
+    private function sumDataResep(): View
     {
         $total_dashboard = User::count();
         return view('admin.dashboard', ['data_barang' => $total_dashboard]);
     }
 
-    public function sumDataBarang(): View
+    private function sumDataBarang(): View
     {
         $total_barang = User::count();
         return view('admin.dashboard', ['data_barang' => $total_barang]);
     }
 
-    public function sumDataLaporan(): View
+    private function sumDataLaporan(): View
     {
         $total_laporan = User::count();
         return view('admin.dashboard', ['data_barang' => $total_laporan]);
     }
 
-    public function tombol() {
+    private function tombol() {
         return view('admin.admin_pengguna', compact('makanans'));
     }
 
-    public function totalKunjungan(): View {
-        $totalKunjungan = Kunjungan::firstOrFail();
+    private function totalKunjungan(){
+        $firstKunjungan = Kunjungan::firstOrFail(); // Retrieve the first record
 
-        return view('admin.dashboard', compact('totalKunjungan'));
+        if ($firstKunjungan) {
+            $totalKunjungan = $firstKunjungan->count; // Access the 'count' property of the first record
+        } else {
+            $totalKunjungan = 0; // Default value if no records found
+        }
+
+        return $totalKunjungan;
     }
 
 }
+
+

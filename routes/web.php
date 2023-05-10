@@ -1,10 +1,14 @@
 <?php
 
+
 use App\Http\Controllers\ControllerDashboard;
 use App\Http\Controllers\ControllerDonasiMakanan;
 use App\Http\Controllers\ControllerPengguna;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\KunjunganController;
+use App\Http\Controllers\ControllerView;
+use App\Http\Controllers\ControllerJumlah;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -72,9 +76,8 @@ Route::get('/dashboard', [ControllerDashboard::class, 'index'])
     ->middleware('admin');
     // ->middleware(AdminMiddleware::class);
 
-    Route::get('/dashboard', [ControllerDashboard::class, 'sumDataPengguna']);
-    // Route::get('/dashboard', [ControllerDashboard::class, 'totalKunjungan']);
 
+Route::get('/dashboard', [ControllerDashboard::class, 'all']);
 
     // Dashboard Pengguna
 // Route::get('/donasi', [ControllerPengguna::class, 'tombol']);
@@ -87,6 +90,8 @@ Route::get('/dashboard-pengguna', [ControllerPengguna::class, 'pullDataPengguna'
 Route::get('/dashboard-barang', function () {
     return view('admin.admin_barang');
 });
+
+
 // Dashboard Resep
 Route::get('/dashboard-resep', function () {
     return view('admin.admin_resep');
