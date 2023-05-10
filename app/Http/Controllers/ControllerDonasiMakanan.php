@@ -34,7 +34,8 @@ class ControllerDonasiMakanan extends Controller
             'lokasi' => $request->lokasi,
             'jenis' => $request->jenis,
             'exp_date' => $request->exp_date,
-            'availability' => $request->availability,
+            'id_pengunggah' => $request->id_pengunggah,
+            'availability' => $request->availability
         ]);
 
         if ($request->foto) {

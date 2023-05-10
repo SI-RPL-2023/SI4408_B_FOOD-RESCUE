@@ -57,7 +57,8 @@
             <input type="hidden" name="jenis" value="{{ request("jenis") }}">
             <input type="text" class="bg-[#D9D9D9] border-0 w-full pt-2 mb-6 mt-2 rounded text-xs focus:ring-0 search-location" placeholder="Cari Lokasi" name="location" value="{{ request("location") }}">
             <div class="grid grid-cols-2 gap-x-3 gap-y-4 text-[#113932]">
-              <button class="location-choice" value="Jakarta">Jakarta</button>
+              <!-- Daftar Lokasi Lama -->
+              <!-- <button class="location-choice" value="Jakarta">Jakarta</button>
               <button class="location-choice" value="Bogor">Bogor</button>
               <button class="location-choice" value="Bandung">Bandung</button>
               <button class="location-choice" value="Semarang">Semarang</button>
@@ -66,7 +67,20 @@
               <button class="location-choice" value="Solo">Solo</button>
               <button class="location-choice" value="Malang">Malang</button>
               <button class="location-choice" value="Surabaya">Surabaya</button>
-              <button class="location-choice" value="Jakarta">Tangerang</button>
+              <button class="location-choice" value="Jakarta">Tangerang</button> -->
+
+              <!-- Daftar Lokasi Baru (Disesuaiin sama yang di register) -->
+              <button class="location-choice" value="Jakarta">Jakarta</button>
+              <button class="location-choice" value="Bandung">Bandung</button>
+              <button class="location-choice" value="Surabaya">Surabaya</button>
+              <button class="location-choice" value="Depok">Depok</button>
+              <button class="location-choice" value="Bogor">Bogor</button>
+              <button class="location-choice" value="Tanggerang">Tanggerang</button>
+              <button class="location-choice" value="Bekasi">Bekasi</button>
+              <button class="location-choice" value="Purwakarta">Purwakarta</button>
+              <button class="location-choice" value="Yogyakarta">Yogyakarta</button>
+              <button class="location-choice" value="Bali">Bali</button>
+              <button class="location-choice" value="Lampung">Lampung</button>
             </div>
           </form>
         </div>
@@ -110,7 +124,7 @@
             <div class="flex flex-col justify-between h-full flex-1">
               <div class="font-Cabin-Medium">
                 <h3 class="text-black font-bold text-2xl">{{ $makanan->nama }}</h3>
-                <span class="text-gray-500 text-md font-regular block">{{ Auth::user()->namaDepan }} {{ Auth::user()->namaBelakang }}</span>
+                <span class="text-gray-500 text-md font-regular block">{{ $makanan->id_pengunggah }}</span>
                 <div class="mt-10">
                   <img src="/images/icons/comment.svg" alt="Icon" class="mr-2 w-4 inline"><span class="text-sm">{{ rand(1, 99) }} comments</span>
                 </div>
