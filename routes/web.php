@@ -4,6 +4,7 @@ use App\Http\Controllers\ControllerDonasiMakanan;
 use App\Http\Controllers\ControllerPengguna;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ResepController;
 use Illuminate\Support\Facades\Route;
 
@@ -113,6 +114,10 @@ Route::get('/donasi-makanan', function () {
 });
 Route::get('/donasi', [ControllerDonasiMakanan::class, 'index']);
 Route::post('/donasi/report', [ControllerDonasiMakanan::class, 'report']);
+Route::get('/donasi/detail/{id}',[ControllerDonasiMakanan::class, 'detail']);
+Route::get('/donasi/booking/{id}', [BookingController::class, 'booking'])->middleware('auth');
+
+
 
 // Halaman Input Makanan
 Route::post('donasi', [ControllerDonasiMakanan::class, 'add_donasi'])->name('donasi.action');

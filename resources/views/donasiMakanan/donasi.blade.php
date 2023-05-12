@@ -132,7 +132,7 @@
                   <img src="/images/icons/location.svg" alt="Icon" class="mr-2 w-4 inline"><span class="text-sm">{{ $makanan->lokasi }}</span>
                 </div>
               </div>
-              <a href="#" class="rounded-full bg-[#E39616] text-white font-inter text-center w-fit px-14 py-2 mt-10">Read More</a>
+              <a href="/donasi/detail/{{ $makanan->id }}" class="rounded-full bg-[#E39616] text-white font-inter text-center w-fit px-14 py-2 mt-10">Read More</a>
             </div>
           </div>
         </div>
@@ -143,7 +143,7 @@
       <h1 class="text-xl text-white">Makanan tidak ada</h1>
     </div>
   @endif
-  
+
 
   <div class="w-full h-screen bg-black bg-opacity-30 fixed top-0 hidden justify-center items-center modal-overlay">
     <div class="bg-[#EDEDED] rounded-md w-1/3 font-inter relative overflow-hidden">
@@ -230,7 +230,7 @@
     locationBtn.forEach(location => {
       location.addEventListener('click', function() {
         const searchValue = this.getAttribute('value');
-        searchLocation.setAttribute('value', searchValue);  
+        searchLocation.setAttribute('value', searchValue);
       })
     })
   </script>
