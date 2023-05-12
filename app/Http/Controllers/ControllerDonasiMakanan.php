@@ -12,7 +12,7 @@ class ControllerDonasiMakanan extends Controller
 {
     public function index() {
         $makanans = Makanan::filter(request(['search', 'location', 'jenis']))->get();
-        
+
         return view('donasiMakanan.donasi', compact('makanans'));
     }
 
@@ -52,5 +52,11 @@ class ControllerDonasiMakanan extends Controller
         $food->save();
 
         return redirect('/donasi')->with('success', 'Upload Berhasil!');
+    }
+
+    public function detail($id)
+    {
+        $makanan = Makanan::find($id);
+        return view('donasiMakanan.donasi_detail',compact('makanan'));
     }
 }
