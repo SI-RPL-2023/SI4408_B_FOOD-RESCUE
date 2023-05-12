@@ -16,6 +16,7 @@ class Makanan extends Model
         'nama',
         'deskripsi',
         'jenis',
+        'merk',
         'lokasi',
         'exp_date',
         'id_pengunggah',
