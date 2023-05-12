@@ -23,8 +23,7 @@ class DatabaseSeeder extends Seeder
         Makanan::create([
             'nama' => 'Nasi Goreng', 
             'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam excepturi eius cupiditate ipsum nobis dignissimos eum ratione neque expedita.',
-            'jenis' => '2',
-            'lokasi' => 'Yogyakarta',
+            'jenis' => 'Makanan Matang',
             'exp_date' => '2023-12-20',
             'availability' => 'Tersedia',
             'foto' => 'nasi-goreng.svg'
@@ -33,8 +32,7 @@ class DatabaseSeeder extends Seeder
         Makanan::create([
             'nama' => 'Gula', 
             'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam excepturi eius cupiditate ipsum nobis dignissimos eum ratione neque expedita.',
-            'jenis' => '2',
-            'lokasi' => 'Cirebon',
+            'jenis' => 'Makanan Matang',
             'exp_date' => '2023-12-20',
             'availability' => 'Tersedia',
             'foto' => 'gula.svg'
@@ -43,9 +41,8 @@ class DatabaseSeeder extends Seeder
         Makanan::create([
             'nama' => 'Sirup', 
             'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam excepturi eius cupiditate ipsum nobis dignissimos eum ratione neque expedita.',
-            'jenis' => '2',
+            'jenis' => 'Makanan Matang',
             'exp_date' => '2023-12-20',
-            'lokasi' => 'Bandung',
             'availability' => 'Tersedia',
             'foto' => 'sirup.svg'
         ]);
@@ -53,8 +50,7 @@ class DatabaseSeeder extends Seeder
         Makanan::create([
             'nama' => 'Saus', 
             'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam excepturi eius cupiditate ipsum nobis dignissimos eum ratione neque expedita.',
-            'jenis' => '2',
-            'lokasi' => 'Malang',
+            'jenis' => 'Makanan Matang',
             'exp_date' => '2023-12-20',
             'availability' => 'Tersedia',
             'foto' => 'saus.svg'
@@ -63,8 +59,7 @@ class DatabaseSeeder extends Seeder
         Makanan::create([
             'nama' => 'Roti', 
             'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam excepturi eius cupiditate ipsum nobis dignissimos eum ratione neque expedita.',
-            'jenis' => '2',
-            'lokasi' => 'Bandung',
+            'jenis' => 'Makanan Matang',
             'exp_date' => '2023-12-20',
             'availability' => 'Tersedia',
             'foto' => 'roti.svg'
@@ -73,8 +68,7 @@ class DatabaseSeeder extends Seeder
         Makanan::create([
             'nama' => 'Minyak Goreng', 
             'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam excepturi eius cupiditate ipsum nobis dignissimos eum ratione neque expedita.',
-            'jenis' => '1',
-            'lokasi' => 'Tangerang',
+            'jenis' => 'Makanan Mentah',
             'exp_date' => '2023-12-20',
             'availability' => 'Tersedia',
             'foto' => 'minyak-goreng.svg'
@@ -83,8 +77,7 @@ class DatabaseSeeder extends Seeder
         Makanan::create([
             'nama' => 'Sayur', 
             'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam excepturi eius cupiditate ipsum nobis dignissimos eum ratione neque expedita.',
-            'jenis' => '1',
-            'lokasi' => 'Surabaya',
+            'jenis' => 'Makanan Mentah',
             'exp_date' => '2023-12-20',
             'availability' => 'Tersedia',
             'foto' => 'sayur.svg'
@@ -93,8 +86,7 @@ class DatabaseSeeder extends Seeder
         Makanan::create([
             'nama' => 'Beras', 
             'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam excepturi eius cupiditate ipsum nobis dignissimos eum ratione neque expedita.',
-            'jenis' => '1',
-            'lokasi' => 'Semarang',
+            'jenis' => 'Makanan Mentah',
             'exp_date' => '2023-12-20',
             'availability' => 'Tersedia',
             'foto' => 'beras.svg'
@@ -103,8 +95,7 @@ class DatabaseSeeder extends Seeder
         Makanan::create([
             'nama' => 'Daging Ayam', 
             'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam excepturi eius cupiditate ipsum nobis dignissimos eum ratione neque expedita.',
-            'jenis' => '1',
-            'lokasi' => 'Bogor',
+            'jenis' => 'Makanan Mentah',
             'exp_date' => '2023-12-20',
             'availability' => 'Tersedia',
             'foto' => 'daging-ayam.svg'
@@ -113,14 +104,10 @@ class DatabaseSeeder extends Seeder
         Makanan::create([
             'nama' => 'Daging Sapi', 
             'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam excepturi eius cupiditate ipsum nobis dignissimos eum ratione neque expedita.',
-            'jenis' => '1',
-            'lokasi' => 'Bandung',
+            'jenis' => 'Makanan Mentah',
             'exp_date' => '2023-12-20',
             'availability' => 'Tersedia',
             'foto' => 'daging-sapi.svg'
         ]);
-
-        $this->call(ResepSeeder::class);
     }
-    
 }

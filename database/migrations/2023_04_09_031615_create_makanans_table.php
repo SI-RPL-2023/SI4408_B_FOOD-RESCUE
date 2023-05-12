@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('nama');
             $table->text('deskripsi');
             $table->string('jenis');
-            $table->string('lokasi');
             $table->date('exp_date');
             $table->string('availability');
             $table->string('foto')->nullable();
