@@ -13,10 +13,10 @@
 
 
         <div class="container mx-auto bg-white p-10">
-            <a href="/" class="no-underline"><i class="fa-solid fa-arrow-left text-4xl"></i></a>
+            <a href="/donasi" class="no-underline"><i class="fa-solid fa-arrow-left text-4xl"></i></a>
             <div class="grid grid-cols-3">
                 <div class="foto">
-                    <img src="{{ asset('images/donasi/'.$makanan->foto) }}" alt="" class="mx-auto">
+                    <img src="/upload/makanan/{{ $makanan->foto }}" alt="" class="mx-auto h-11/12 w-4/5 rounded-lg">
                 </div>
                 <div class="sm:col-span-2">
                     <div class="flex grid-cols-3 divide-x-2 divide-black justify-start gap-5">
@@ -50,7 +50,7 @@
                         <div class="py-2"><a href="#"><i class="fa-regular fa-comment-dots text-2xl me-1"></i></a>
                             354 comments</div>
                         <div class="py-2"><a href="#"><i class="fa-solid fa-location-dot text-2xl me-1"></i></a>
-                            Jl. Terusan Buah Batu</div>
+                        {{ $makanan->lokasi }}</div>
                     </div>
                     <hr class="border-gray-400">
                     <div class="col-span-2">
@@ -69,7 +69,7 @@
                                     <tr>
                                         <td>Merk</td>
                                         <td>:</td>
-                                        <td>Tropical</td>
+                                        <td>{{ $makanan->merk }}</td>
                                     </tr>
                                     <tr>
                                         <td>Expired</td>

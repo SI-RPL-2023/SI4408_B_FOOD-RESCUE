@@ -63,6 +63,12 @@
                     <option value="2">Makanan Jadi</option>
                 </select>
         </div>
+
+        <div class="mb-6">
+            <label for="merk" class="block mb-2 text-md font-bold text-gray-900 dark:text-white">Merk</label>
+            <input type="text" id="merk" name="merk" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-hijau1 focus:border-hijau1 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-hijau1 dark:focus:border-hijau1 font-Cabin-Medium" placeholder="Masukkan Merk Makanan" required>
+          </div>
+
         <div class="mb-6">
             <label for="exp_date" class="block text-gray-900 font-bold mb-2">Tanggal Kadaluarsa</label>
 

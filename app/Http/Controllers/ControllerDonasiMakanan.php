@@ -33,6 +33,7 @@ class ControllerDonasiMakanan extends Controller
             'deskripsi' => $request->deskripsi,
             'lokasi' => $request->lokasi,
             'jenis' => $request->jenis,
+            'merk' => $request-> merk,
             'exp_date' => $request->exp_date,
             'id_pengunggah' => $request->id_pengunggah,
             'availability' => $request->availability
