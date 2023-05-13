@@ -36,7 +36,7 @@ class TransaksiController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return view('detail-transaksi');
     }
 
     /**
