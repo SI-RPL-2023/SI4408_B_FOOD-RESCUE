@@ -1,9 +1,15 @@
 <?php
 
+
+use App\Http\Controllers\ControllerDashboard;
 use App\Http\Controllers\ControllerDonasiMakanan;
 use App\Http\Controllers\ControllerPengguna;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\TransaksiController;
+
+use App\Http\Controllers\KunjunganController;
+use App\Http\Controllers\ControllerView;
+use App\Http\Controllers\ControllerJumlah;
+
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ResepController;
@@ -24,9 +30,14 @@ use Illuminate\Support\Facades\Route;
 // Views Routes
 
 // Landing Page
-Route::get('/', function () {
-    return view('beranda');
-});
+// Route::get('/', function () {
+//     return view('beranda');
+// });
+
+Route::get('/', [KunjunganController::class, 'index'])->name('home');
+
+Route::post('/profile/update', [ProfileController::class, 'update'])->middleware('auth');
+
 
 // Login Routes
 Route::get('/login', function () {
@@ -58,18 +69,60 @@ Route::get('/inputmakanan', function () {
     return view('inputmakanan');
 });
 
-
-// ============= Admin Things =================
-// reported-items
-Route::get('/admin-report-items', function () {
-    return view('admin.itemreport');
+// Halaman AboutUs
+Route::get('/about', function () {
+    return view('AboutUs.about');
 });
 
-// reported-items
-Route::get('/admin-dashboard', function () {
-    return view('admin.dashboard');
+// Halaman FAQ
+// Route::get('/FAQ', function () {
+//     return view('Faq.FaqPage');
+// });
+
+// Halaman 404
+Route::get('/404', function () {
+    return view('404.noPage');
 });
 
+// ================= Admin Things =================
+// Dashboard
+// Route::get('/dashboard', function () {
+//     return view('admin.dashboard');
+// });
+Route::get('/dashboard', [ControllerDashboard::class, 'index'])
+    ->name('dashboard')
+    ->middleware('admin');
+    // ->middleware(AdminMiddleware::class);
+
+
+Route::get('/dashboard', [ControllerDashboard::class, 'all']);
+
+    // Dashboard Pengguna
+// Route::get('/donasi', [ControllerPengguna::class, 'tombol']);
+Route::get('/dashboard-pengguna', [ControllerPengguna::class, 'pullDataPengguna']);
+
+
+
+
+// Dashboard Barang
+Route::get('/dashboard-barang', function () {
+    return view('admin.admin_barang');
+});
+
+
+// Dashboard Resep
+Route::get('/dashboard-resep', function () {
+    return view('admin.admin_resep');
+});
+// reported-items
+Route::get('/dashboard-laporan', function () {
+    return view('admin.admin_laporan');
+});
+
+// pop-up
+Route::get('/share', function () {
+    return view('share');
+});
 
 // test-logout
 Route::get('/profile', function () {
@@ -77,10 +130,6 @@ Route::get('/profile', function () {
 });
 
 
-// Beranda
-// Route::get('/', function () {
-//     return view('beranda');
-// });
 
 
 // Halaman Profil
@@ -109,6 +158,15 @@ Route::get('/donasi/booking/{id}', [BookingController::class, 'booking'])->middl
 
 // Halaman Input Makanan
 Route::post('donasi', [ControllerDonasiMakanan::class, 'add_donasi'])->name('donasi.action');
+
+// Halaman Resep
+Route::get('/resep', function () {
+    return view('resep');
+});
+// Menampilkan Resep
+Route::get('/resep', [ResepController::class, 'index'])->name('resep.index');
+// Menampilkan Detail Resep
+Route::get('/resep/{id}', [ResepController::class, 'show'])->name('detailresep');
 
 
 // POST GET Routes

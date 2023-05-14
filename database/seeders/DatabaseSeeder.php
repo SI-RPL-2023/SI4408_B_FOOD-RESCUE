@@ -48,6 +48,7 @@ class DatabaseSeeder extends Seeder
             'jenis' => '2',
             'merk' => 'Tropical',
             'exp_date' => '2023-12-20',
+            'lokasi' => 'Bandung',
             'availability' => 'Tersedia',
             'foto' => 'sirup.svg'
         ]);
@@ -128,6 +129,8 @@ class DatabaseSeeder extends Seeder
             'availability' => 'Tersedia',
             'foto' => 'daging-sapi.svg'
         ]);
+
+        $this->call(ResepSeeder::class);
     }
 
 
