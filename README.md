@@ -10,7 +10,7 @@ We're Group 265 from class SI4408. Bachelor of Information Systems Telkom Univer
 
 | No  | Name                                                                         | NIM        | Role                |
 | --- | ---------------------------------------------------------------------------- | ---------- | ------------------- |
-| 1   | [Ariadani Dwi Fathurrahman](https://www.instagram.com/ariadanidf/)           | 1202202071 | ``Project Manager`` |
+| 1   | [Ariadani Dwi Fathurahman](https://www.instagram.com/ariadanidf/)           | 1202202071 | ``Project Manager`` |
 | 2   | [Almira Syamsi Nur Insan](https://www.instagram.com/almiraasy/)              | 1202200164 | ``Analyst``         |
 | 3   | [Ario Kusuma Purboyo](https://www.instagram.com/ariokusuma/)                 | 1202204123 | ``Programmer``      |
 | 4   | [Apriani Nur Raina](https://www.instagram.com/anraina_/)                     | 1202200195 | ``Programmer``      |
