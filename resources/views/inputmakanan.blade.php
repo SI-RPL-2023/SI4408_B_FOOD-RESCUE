@@ -33,8 +33,26 @@
             <input type="textarea" id="deskripsi" name="deskripsi" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-hijau1 focus:border-hijau1 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-hijau1 dark:focus:border-hijau1 font-Cabin-Medium" placeholder="Masukkan Deskripsi Singkat Makanan" required>
           </div>
           <div class="mb-6">
+            <!-- Input Lokasi Lama -->
+            <!-- <label for="lokasi" class="block mb-2 text-md font-bold text-gray-900 dark:text-white">Lokasi</label>
+            <input type="lokasi" id="lokasi" name="lokasi" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-hijau1 focus:border-hijau1 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-hijau1 dark:focus:border-hijau1 font-Cabin-Medium" placeholder="Masukkan Detail Lokasi" required> -->
+            
+            <!-- Input Lokasi Baru (Disesuaiin sama register) -->
             <label for="lokasi" class="block mb-2 text-md font-bold text-gray-900 dark:text-white">Lokasi</label>
-            <input type="lokasi" id="lokasi" name="lokasi" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-hijau1 focus:border-hijau1 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-hijau1 dark:focus:border-hijau1 font-Cabin-Medium" placeholder="Masukkan Detail Lokasi" required>
+            <select id="lokasi" name="lokasi" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option selected>Pilih Kota</option>
+                <option value="Jakarta">Jakarta</option>
+                <option value="Bandung">Bandung</option>
+                <option value="Surabaya">Surabaya</option>
+                <option value="Depok">Depok</option>
+                <option value="Bogor">Bogor</option>
+                <option value="Tanggerang">Tanggerang</option>
+                <option value="Bekasi">Bekasi</option>
+                <option value="Purwakarta">Purwakarta</option>
+                <option value="Yogyakarta">Yogyakarta</option>
+                <option value="Bali">Bali</option>
+                <option value="Lampung">Lampung</option>
+            </select>
           </div>
 
         <div class="mb-6">
@@ -45,6 +63,12 @@
                     <option value="2">Makanan Jadi</option>
                 </select>
         </div>
+
+        <div class="mb-6">
+            <label for="merk" class="block mb-2 text-md font-bold text-gray-900 dark:text-white">Merk</label>
+            <input type="text" id="merk" name="merk" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-hijau1 focus:border-hijau1 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-hijau1 dark:focus:border-hijau1 font-Cabin-Medium" placeholder="Masukkan Merk Makanan" required>
+          </div>
+
         <div class="mb-6">
             <label for="exp_date" class="block text-gray-900 font-bold mb-2">Tanggal Kadaluarsa</label>
 
@@ -56,6 +80,8 @@
             </div>
 
         </div>
+
+        <input name="id_pengunggah" id="id_penggungah" for ="id_pengunggah" type="hidden" value="{{ Auth::user()->namaDepan }} {{ Auth::user()->namaBelakang }}">
 
         <input name="availability" id="availability" for ="availability" type="hidden" value="1">
 

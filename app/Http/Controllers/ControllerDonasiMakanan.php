@@ -10,14 +10,8 @@ use File;
 
 class ControllerDonasiMakanan extends Controller
 {
-    public function makananMatang() {
-        $makanans = Makanan::where('jenis', '2')->get();
-
-        return view('donasiMakanan.donasi', compact('makanans'));
-    }
-
-    public function makananMentah() {
-        $makanans = Makanan::where('jenis', '1')->get();
+    public function index() {
+        $makanans = Makanan::filter(request(['search', 'location', 'jenis']))->get();
 
         return view('donasiMakanan.donasi', compact('makanans'));
     }
@@ -37,9 +31,12 @@ class ControllerDonasiMakanan extends Controller
         $food = new Makanan([
             'nama' => $request->nama,
             'deskripsi' => $request->deskripsi,
+            'lokasi' => $request->lokasi,
             'jenis' => $request->jenis,
+            'merk' => $request-> merk,
             'exp_date' => $request->exp_date,
-            'availability' => $request->availability,
+            'id_pengunggah' => $request->id_pengunggah,
+            'availability' => $request->availability
         ]);
 
         if ($request->foto) {
@@ -56,5 +53,11 @@ class ControllerDonasiMakanan extends Controller
         $food->save();
 
         return redirect('/donasi')->with('success', 'Upload Berhasil!');
+    }
+
+    public function detail($id)
+    {
+        $makanan = Makanan::find($id);
+        return view('donasiMakanan.donasi_detail',compact('makanan'));
     }
 }

@@ -38,5 +38,9 @@
         @apply flex-1 ml-3 whitespace-nowrap text-abu2 font-bold text-[22px] font-Cabin-Medium;
 
     }
+
+    .location-choice {
+        @apply bg-[#D9D9D9] rounded text-center py-1 cursor-pointer;
+    }
 }
 
