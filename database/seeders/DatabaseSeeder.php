@@ -19,95 +19,116 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        
+
         Makanan::create([
-            'nama' => 'Nasi Goreng', 
+            'nama' => 'Nasi Goreng',
             'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam excepturi eius cupiditate ipsum nobis dignissimos eum ratione neque expedita.',
-            'jenis' => 'Makanan Matang',
+            'jenis' => '2',
+            'merk' => 'Tropical',
+            'lokasi' => 'Yogyakarta',
             'exp_date' => '2023-12-20',
             'availability' => 'Tersedia',
             'foto' => 'nasi-goreng.svg'
         ]);
 
         Makanan::create([
-            'nama' => 'Gula', 
+            'nama' => 'Gula',
             'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam excepturi eius cupiditate ipsum nobis dignissimos eum ratione neque expedita.',
-            'jenis' => 'Makanan Matang',
+            'jenis' => '2',
+            'merk' => 'Tropical',
+            'lokasi' => 'Cirebon',
             'exp_date' => '2023-12-20',
             'availability' => 'Tersedia',
             'foto' => 'gula.svg'
         ]);
 
         Makanan::create([
-            'nama' => 'Sirup', 
+            'nama' => 'Sirup',
             'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam excepturi eius cupiditate ipsum nobis dignissimos eum ratione neque expedita.',
-            'jenis' => 'Makanan Matang',
+            'jenis' => '2',
+            'merk' => 'Tropical',
             'exp_date' => '2023-12-20',
             'availability' => 'Tersedia',
             'foto' => 'sirup.svg'
         ]);
 
         Makanan::create([
-            'nama' => 'Saus', 
+            'nama' => 'Saus',
             'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam excepturi eius cupiditate ipsum nobis dignissimos eum ratione neque expedita.',
-            'jenis' => 'Makanan Matang',
+            'jenis' => '2',
+            'merk' => 'Tropical',
+            'lokasi' => 'Malang',
             'exp_date' => '2023-12-20',
             'availability' => 'Tersedia',
             'foto' => 'saus.svg'
         ]);
 
         Makanan::create([
-            'nama' => 'Roti', 
+            'nama' => 'Roti',
             'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam excepturi eius cupiditate ipsum nobis dignissimos eum ratione neque expedita.',
-            'jenis' => 'Makanan Matang',
+            'jenis' => '2',
+            'merk' => 'Tropical',
+            'lokasi' => 'Bandung',
             'exp_date' => '2023-12-20',
             'availability' => 'Tersedia',
             'foto' => 'roti.svg'
         ]);
 
         Makanan::create([
-            'nama' => 'Minyak Goreng', 
+            'nama' => 'Minyak Goreng',
             'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam excepturi eius cupiditate ipsum nobis dignissimos eum ratione neque expedita.',
-            'jenis' => 'Makanan Mentah',
+            'jenis' => '1',
+            'merk' => 'Tropical',
+            'lokasi' => 'Tangerang',
             'exp_date' => '2023-12-20',
             'availability' => 'Tersedia',
             'foto' => 'minyak-goreng.svg'
         ]);
 
         Makanan::create([
-            'nama' => 'Sayur', 
+            'nama' => 'Sayur',
             'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam excepturi eius cupiditate ipsum nobis dignissimos eum ratione neque expedita.',
-            'jenis' => 'Makanan Mentah',
+            'jenis' => '1',
+            'merk' => 'Tropical',
+            'lokasi' => 'Surabaya',
             'exp_date' => '2023-12-20',
             'availability' => 'Tersedia',
             'foto' => 'sayur.svg'
         ]);
 
         Makanan::create([
-            'nama' => 'Beras', 
+            'nama' => 'Beras',
             'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam excepturi eius cupiditate ipsum nobis dignissimos eum ratione neque expedita.',
-            'jenis' => 'Makanan Mentah',
+            'jenis' => '1',
+            'merk' => 'Tropical',
+            'lokasi' => 'Semarang',
             'exp_date' => '2023-12-20',
             'availability' => 'Tersedia',
             'foto' => 'beras.svg'
         ]);
 
         Makanan::create([
-            'nama' => 'Daging Ayam', 
+            'nama' => 'Daging Ayam',
             'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam excepturi eius cupiditate ipsum nobis dignissimos eum ratione neque expedita.',
-            'jenis' => 'Makanan Mentah',
+            'jenis' => '1',
+            'merk' => 'Tropical',
+            'lokasi' => 'Bogor',
             'exp_date' => '2023-12-20',
             'availability' => 'Tersedia',
             'foto' => 'daging-ayam.svg'
         ]);
 
         Makanan::create([
-            'nama' => 'Daging Sapi', 
+            'nama' => 'Daging Sapi',
             'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquam excepturi eius cupiditate ipsum nobis dignissimos eum ratione neque expedita.',
-            'jenis' => 'Makanan Mentah',
+            'jenis' => '1',
+            'merk' => 'Tropical',
+            'lokasi' => 'Bandung',
             'exp_date' => '2023-12-20',
             'availability' => 'Tersedia',
             'foto' => 'daging-sapi.svg'
         ]);
     }
+
+
 }

@@ -4,6 +4,9 @@ use App\Http\Controllers\ControllerDonasiMakanan;
 use App\Http\Controllers\ControllerPengguna;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\ResepController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -99,6 +102,10 @@ Route::get('/donasi-makanan', function () {
 Route::get('/donasi', [ControllerDonasiMakanan::class, 'makananMatang']);
 Route::get('/donasi/mentah', [ControllerDonasiMakanan::class, 'makananMentah']);
 Route::post('/donasi/report', [ControllerDonasiMakanan::class, 'report']);
+Route::get('/donasi/detail/{id}',[ControllerDonasiMakanan::class, 'detail']);
+Route::get('/donasi/booking/{id}', [BookingController::class, 'booking'])->middleware('auth');
+
+
 
 // Halaman Input Makanan
 Route::post('donasi', [ControllerDonasiMakanan::class, 'add_donasi'])->name('donasi.action');
@@ -118,6 +125,17 @@ Route::post('registerPersonal', [ControllerPengguna::class, 'register_action'])-
 // tester routes
 Route::post('/testing', [ControllerPengguna::class, 'testing'])->name('testing');
 
+
 // tester routes
 Route::get('transaksi', [TransaksiController::class, 'index'])->name('transaksi');
 Route::get('transaksi/{id}', [TransaksiController::class, 'show'])->name('transaksi.show');
+
+// BLOG
+Route::get('/timeline', [BlogController::class, 'section']);
+Route::get('/unggah-blog', [BlogController::class, 'view_add_blog']);
+Route::get('/edit-blog/{id}', [BlogController::class, 'view_edit_blog']);
+Route::post('input-blog', [BlogController::class, 'add_blog'])->name('input-blog');
+Route::post('update-blog/{id}', [BlogController::class, 'update_blog'])->name('update-blog');
+Route::get('/detail-blog/{id}', [BlogController::class, 'view_blog']);
+Route::get('/hapus-blog/{id}', [BlogController::class, 'hapus_blog']);
+
