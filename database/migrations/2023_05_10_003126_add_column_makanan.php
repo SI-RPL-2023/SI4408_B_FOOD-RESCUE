@@ -15,6 +15,10 @@ return new class extends Migration
             $table->string('id_pengunggah')->after('availability')->nullable();
         });
 
+        Schema::table('makanans', function (Blueprint $table) {
+            $table->string('user_pengunggah')->after('availability')->nullable();
+        });
+
     }
 
     /**

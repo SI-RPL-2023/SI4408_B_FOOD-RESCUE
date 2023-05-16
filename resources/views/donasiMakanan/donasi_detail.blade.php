@@ -27,7 +27,7 @@
                             <p class="">{{ $makanan->nama }}</p>
                         </div>
                         <div class=" py-2">
-                            <p class="ms-5">{{ $makanan->id_pengunggah }}</p>
+                            <p class="ms-5">{{ $makanan->user_pengunggah }}</p>
                         </div>
                         <div class=" px-2">
                             <p class="border-solid border-2 border-black rounded-lg p-2 ms-5">

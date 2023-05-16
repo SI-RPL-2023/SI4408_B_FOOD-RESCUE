@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Makanan;
+use App\Models\Booking;
 
 class TransaksiController extends Controller
 {
@@ -11,8 +13,8 @@ class TransaksiController extends Controller
      */
     public function index()
     {
-        
-        return view('transaksi');
+        $makanans = Makanan::all();
+        return view('transaksi_new', compact('makanans'));
     }
 
     /**
