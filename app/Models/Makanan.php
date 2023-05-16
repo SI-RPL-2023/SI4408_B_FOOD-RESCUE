@@ -20,6 +20,7 @@ class Makanan extends Model
         'lokasi',
         'exp_date',
         'id_pengunggah',
+        'user_pengunggah',
         'availability',
         'foto',
     ];
