@@ -134,3 +134,9 @@ Route::get('/review-page', function () {
 Route::get('/write-review', function () {
     return view('review.writeReview');
 });
+
+Route::get('/rate', function () {
+    return view('review.rate');
+});
+
+Route::post('review', [Review::class, 'add_review'])->name('review.action');
