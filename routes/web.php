@@ -148,7 +148,7 @@ Route::post('/profile/update', [ProfileController::class, 'update'])->middleware
 Route::get('/donasi-makanan', function () {
     return view('donasiMakanan.donasi');
 });
-Route::get('/donasi', [ControllerDonasiMakanan::class, 'makananMatang']);
+Route::get('/donasi', [ControllerDonasiMakanan::class, 'index']);
 Route::get('/donasi/mentah', [ControllerDonasiMakanan::class, 'makananMentah']);
 Route::post('/donasi/report', [ControllerDonasiMakanan::class, 'report']);
 Route::get('/donasi/detail/{id}',[ControllerDonasiMakanan::class, 'detail']);
