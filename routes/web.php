@@ -122,6 +122,16 @@ Route::get('/resep', function () {
 });
 // Menampilkan Resep
 Route::get('/resep', [ResepController::class, 'index'])->name('resep.index');
+
+// Menampilkan Tambah Resep
+Route::get('/tambahresep', function () {
+    return view('tambahresep');
+});
+
+
+Route::post('/tambahresep', [ResepController::class, 'store'])->name('resep.store');
+
+
 // Menampilkan Detail Resep
 Route::get('/resep/{id}', [ResepController::class, 'show'])->name('detailresep');
 
