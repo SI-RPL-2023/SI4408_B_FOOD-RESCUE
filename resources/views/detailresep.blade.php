@@ -122,7 +122,7 @@
                     <a> <h5 class="mb-2 text-xl font-regular tracking-tight text-gray-400 dark:text-white font-Cabin-Medium">{{ $resep->time }}</h5> </a>
                 </div>
             </div>
-            <p class="inline-flex pt-0 mb-0 font-medium text-gray-400">Author :Admin1</p>
+            {{-- <p class="inline-flex pt-0 mb-0 font-medium text-gray-400">Author :Admin1</p> --}}
 
 
 
