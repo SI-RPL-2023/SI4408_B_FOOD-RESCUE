@@ -10,6 +10,12 @@ class Review extends Controller
     {
         $review = new Review([
             'rating' => $request->rating,
+        ]);
+        return redirect('/write-review')->with('success', 'Write your Experience');
+
+
+        $review = new Review([
             'review' => $request->review,
         ]);
+        return redirect('/review-page')->with('success', 'Terimakasih atas ulasan anda');
     }}
