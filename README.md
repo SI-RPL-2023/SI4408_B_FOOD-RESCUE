@@ -29,12 +29,12 @@ FoodRescue This is a website that receives food items that are approaching their
 | 9      | Blog Upload Page                      |        ``Personal`` ``Business``        |        ``1202202071``      |         &check;        |
 | 10     | Blog Details Page                     |        ``Personal`` ``Business``        |        ``1202202071``      |         &check;        |
 |**---** | **---------- SPRINT 3 ---------**     |   **---------- SPRINT 3 ---------**     |      **-- SPRINT 3 --**    |   **-- SPRINT 3 --**   |
-| 1      | Dashboard Page                        |        ``Personal`` ``Business``        |        ``1202204123``      |         []             |
-| 2      | Delete Reported Page                  |   ``Personal`` ``Business`` ``Admin``   |        ``1202204123``      |         []             |
+| 1      | Dashboard Page                        |        ``Personal`` ``Business``        |        ``1202204123``      |         [ ]             |
+| 2      | Delete Reported Page                  |   ``Personal`` ``Business`` ``Admin``   |        ``1202204123``      |         [ ]             |
 | 3      | Share Recipe                          |        ``Personal`` ``Business``        |        ``1202204123``      |         &check;        |
-| 4      | Product Comemnt Page                  |        ``Personal`` ``Business``        |        ``1202200039``      |         []             |
-| 5      | Reward Page                           |        ``Personal`` ``Business``        |        ``1202200195``      |         []             |
-| 6      | Notification Page                     |        ``Personal`` ``Business``        |        ``1202201372``      |         []             |
+| 4      | Product Comemnt Page                  |        ``Personal`` ``Business``        |        ``1202200039``      |         [ ]             |
+| 5      | Reward Page                           |        ``Personal`` ``Business``        |        ``1202200195``      |         [ ]             |
+| 6      | Notification Page                     |        ``Personal`` ``Business``        |        ``1202201372``      |         [ ]             |
 | 7      | About Us Page                         |        ``Personal`` ``Business``        |        ``1202200164``      |         &check;        |
 | 8      | FAQ Page                              |        ``Personal`` ``Business``        |        ``1202200164``      |         &check;        |
 | 9      | Custom Error 404 Page                 |        ``Personal`` ``Business``        |        ``1202200164``      |         &check;        |
