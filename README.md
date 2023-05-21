@@ -37,11 +37,18 @@ We're Group 265 from class SI4408. Bachelor of Information Systems Telkom Univer
 git clone https://github.com/SI-RPL-2023/SI4408_B_FOOD-RESCUE.git
 ```
 
+- Rename ``.env.example`` to ``.env``<br>
+
 - Modify the .env file <br>
 *Configure the .env file according to Your local Database System*
 ```bash
 DB_PORT= <your_mysql_port>
 DB_DATABASE= <your_database_name>
+```
+
+- Update npm<br>
+```bash
+npm update
 ```
 
 - Install Composer

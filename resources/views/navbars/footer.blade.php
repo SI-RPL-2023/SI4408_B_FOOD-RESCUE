@@ -45,7 +45,7 @@
                                 <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Donasi</a>
                             </li>
                             <li>
-                                <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Daftar Makanan</a>
+                                <a href="{{ url('/resep') }}" class="hover:underline">Daftar Makanan</a>
                             </li>
                         </ul>
                     </div>
