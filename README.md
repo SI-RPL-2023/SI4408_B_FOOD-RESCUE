@@ -6,37 +6,37 @@ FoodRescue This is a website that receives food items that are approaching their
 
 ## Feature
 
-| No  | Feature Name                             | Role                                   | Handled By             |   Progress             |
-| --- | ---------------------------------------- | :------------------------------------: | ---------------------- |   :-----------------:  |
-|**-----**| **---------- SPRINT 1 ----------**   |   **---------- SPRINT 1 ----------**   |   **-- SPRINT 1 --**   |   **-- SPRINT 1 --**   |
-| 1       | Registration Page                    |       ``Personal`` ``Business``        |       1202202071       |         &check;        |
-| 2       | Login Page                           |   ``Personal`` ``Business`` ``Admin``  |       1202200164       |         &check;        |
-| 3       | Homepage                             |       ``Personal`` ``Business``        |       1202204123       |         &check;        |
-| 4       | Profile Page                         |       ``Personal`` ``Business``        |       1202200195       |         &check;        |
-| 5       | Update Profile Page                  |       ``Personal`` ``Business``        |       1202200195       |         &check;        |
-| 6       | Update Profile Picture Page          |       ``Personal`` ``Business``        |       1202200195       |         &check;        |
-| 8       | Food Donation Upload Page            |       ``Personal`` ``Business``        |       1202200195       |         &check;        |
-|**-----**| **---------- SPRINT 2 ----------**   |   **---------- SPRINT 2 ----------**   |   **-- SPRINT 2 --**   |   **-- SPRINT 2 --**   |
-| 1       | Searchbar Filter                     |          ``Personal`` ``Business``     |       1202202071       |         &check;        |
-| 2       | Searchbar                            |   ``Personal`` ``Business`` ``Admin``  |       1202200164       |         &check;        |
-| 3       | Food Detail Page                     |        ``Personal`` ``Business``       |       1202204123       |         &check;        |
-| 4       | Food Confirmation Page               |        ``Personal`` ``Business``       |       1202200195       |         &check;        |
-| 5       | Review Page                          |        ``Personal`` ``Business``       |       1202200195       |         &check;        |
-| 6       | Recipe Page                          |        ``Personal`` ``Business``       |       1202200195       |         &check;        |
-| 7       | Recipe Detail Page                   |        ``Personal`` ``Business``       |       1202200195       |         &check;        |
-| 8       | Blog Timeline Page                   |        ``Personal`` ``Business``       |       1202200195       |         &check;        |
-| 9       | Blog Upload Page                     |        ``Personal`` ``Business``       |       1202200195       |         &check;        |
-| 10      | Blog Details Page                    |        ``Personal`` ``Business``       |       1202200195       |         &check;        |
-|**-----**| **---------- SPRINT 3 ----------**   |   **---------- SPRINT 3 ----------**   |   **-- SPRINT 3 --**   |   **-- SPRINT 3 --**   |
-| 1       | Dashboard Page                       |        ``Personal`` ``Business``       |       1202202071       |         &check;        |
-| 2       | Delete Reported Page                 |   ``Personal`` ``Business`` ``Admin``  |       1202200164       |         &check;        |
-| 3       | Share Recipe                         |        ``Personal`` ``Business``       |       1202204123       |         &check;        |
-| 4       | Product Comemnt Page                 |        ``Personal`` ``Business``       |       1202200195       |         &check;        |
-| 5       | Reward Page                          |        ``Personal`` ``Business``       |       1202200195       |         &check;        |
-| 6       | Notification Page                    |        ``Personal`` ``Business``       |       1202200195       |         &check;        |
-| 7       | About Us Page                        |        ``Personal`` ``Business``       |       1202200195       |         &check;        |
-| 8       | FAQ Page                             |        ``Personal`` ``Business``       |       1202200195       |         &check;        |
-| 9       | Custom Error 404 Page                |        ``Personal`` ``Business``       |       1202200195       |         &check;        |
+| No  | Feature Name                             | Role                                   | Handled By                  |   Progress             |
+| --- | ---------------------------------------- | :------------------------------------: | :----------------------:    |   :-----------------:  |
+|**----**| **---------- SPRINT 1 ----------**   |   **---------- SPRINT 1 ----------**   |   **-- SPRINT 1 --**         |   **-- SPRINT 1 --**   |
+| 1      | Registration Page                    |       ``Personal`` ``Business``        |       ``1202202071``         |         &check;        |
+| 2      | Login Page                           |   ``Personal`` ``Business`` ``Admin``  |       ``1202200164``         |         &check;        |
+| 3      | Homepage                             |       ``Personal`` ``Business``        |       ``1202204123``         |         &check;        |
+| 4      | Profile Page                         |       ``Personal`` ``Business``        |       ``1202200195``         |         &check;        |
+| 5      | Update Profile Page                  |       ``Personal`` ``Business``        |       ``1202200195``         |         &check;        |
+| 6      | Update Profile Picture Page          |       ``Personal`` ``Business``        |       ``1202200195``         |         &check;        |
+| 8      | Food Donation Upload Page            |       ``Personal`` ``Business``        |       ``1202200195``         |         &check;        |
+|**----**| **---------- SPRINT 2 ----------**   |   **---------- SPRINT 2 ----------**   |   **-- SPRINT 2 --**         |   **-- SPRINT 2 --**   |
+| 1      | Searchbar Filter                     |          ``Personal`` ``Business``     |       ``1202202071``         |         &check;        |
+| 2      | Searchbar                            |   ``Personal`` ``Business`` ``Admin``  |       ``1202200164``         |         &check;        |
+| 3      | Food Detail Page                     |        ``Personal`` ``Business``       |       ``1202204123``         |         &check;        |
+| 4      | Food Confirmation Page               |        ``Personal`` ``Business``       |       ``1202200195``         |         &check;        |
+| 5      | Review Page                          |        ``Personal`` ``Business``       |       ``1202200195``         |         &check;        |
+| 6      | Recipe Page                          |        ``Personal`` ``Business``       |       ``1202200195``         |         &check;        |
+| 7      | Recipe Detail Page                   |        ``Personal`` ``Business``       |       ``1202200195``         |         &check;        |
+| 8      | Blog Timeline Page                   |        ``Personal`` ``Business``       |       ``1202200195``         |         &check;        |
+| 9      | Blog Upload Page                     |        ``Personal`` ``Business``       |       ``1202200195``         |         &check;        |
+| 10     | Blog Details Page                    |        ``Personal`` ``Business``       |       ``1202200195``         |         &check;        |
+|**----**| **---------- SPRINT 3 ----------**   |   **---------- SPRINT 3 ----------**   |   **-- SPRINT 3 --**         |   **-- SPRINT 3 --**   |
+| 1      | Dashboard Page                       |        ``Personal`` ``Business``       |       ``1202202071``         |         &check;        |
+| 2      | Delete Reported Page                 |   ``Personal`` ``Business`` ``Admin``  |       ``1202200164``         |         &check;        |
+| 3      | Share Recipe                         |        ``Personal`` ``Business``       |       ``1202204123``         |         &check;        |
+| 4      | Product Comemnt Page                 |        ``Personal`` ``Business``       |       ``1202200195``         |         &check;        |
+| 5      | Reward Page                          |        ``Personal`` ``Business``       |       ``1202200195``         |         &check;        |
+| 6      | Notification Page                    |        ``Personal`` ``Business``       |       ``1202200195``         |         &check;        |
+| 7      | About Us Page                        |        ``Personal`` ``Business``       |       ``1202200195``         |         &check;        |
+| 8      | FAQ Page                             |        ``Personal`` ``Business``       |       ``1202200195``         |         &check;        |
+| 9      | Custom Error 404 Page                |        ``Personal`` ``Business``       |       ``1202200195``         |         &check;        |
 
 # About Us
 
