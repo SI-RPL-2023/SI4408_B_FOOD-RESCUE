@@ -18,35 +18,33 @@ FoodRescue This is a website that receives food items that are approaching their
 | 8   | [Noor Panca Maulana](https://www.instagram.com/noorpancamaulana/)            | 1202204283 | ``Programmer``      |
 
 <table>
-<thead>
-<tr>
-<th align="center" colspan="3">Fruits || Food
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Apple<br>Banana<br>Orange</td>
-<td align="center">Apple<br>Banana<br>Orange</td>
-<td align="left">Apple<br>Banana<br>Orange</td>
-</tr>
-<tr>
-<td align="center" rowspan="4" colspan="2">
-Rowspan is 4
-<br>A. Peach
-<br>B. Orange
-<br>C. Banana
-</td>
-</tr>
-<tr>
-<td align="left">How's it?</td>
-</tr>
-<tr>
-<td align="right">1. Fine<br>2. Bad</td>
-</tr>
-<tr>
-<td align="left">It' OK!</td>
-</tr>
-</tbody>
+    <thead>
+        <tr>
+            <th align="center" colspan="3">Fruits || Food
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="left">Apple<br>Banana<br>Orange</td>
+        </tr>
+        <tr>
+            <td align="center" rowspan="4" colspan="2">
+                Rowspan is 4
+                <br>A. Peach
+                <br>B. Orange
+                <br>C. Banana
+            </td>
+        </tr>
+        <tr>
+            <td align="left">How's it?</td>
+        </tr>
+        <tr>
+            <td align="right">1. Fine<br>2. Bad</td>
+        </tr>
+        <tr>
+            <td align="left">It' OK!</td>
+        </tr>
+    </tbody>
 </table>
 
 # About Us
