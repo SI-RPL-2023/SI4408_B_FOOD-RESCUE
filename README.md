@@ -6,18 +6,18 @@ FoodRescue This is a website that receives food items that are approaching their
 
 ## Feature
 
-| No  | Feature Name                               |    Role                             | Handled By | Progress              |
-| --- | ------------------------------------------ | :---------------------------------: | ---------- | :-------------------: |
-| 1   | Registration Page                          | ``Personal`` ``Business``           | 1202202071 |   :heavy_check_mark:  |
-| 2   | Login Page                                 | ``Personal`` ``Business`` ``Admin`` | 1202200164 |   &check;        |
-| 3   | Homepage                                   | ``Personal`` ``Business``           | 1202204123 |   ``Programmer``      |
-| 4   | Profile Page                               | ``Personal`` ``Business``           | 1202200195 |   ``Programmer``      |
-| 5   | Update Profile Page                        | ``Personal`` ``Business``           | 1202200195 |   ``Programmer``      |
-| 6   | Update Profile Picture Page                | ``Personal`` ``Business``           | 1202200195 |   ``Programmer``      |
-| 7   | Food Donation Page                         | ``Personal`` ``Business``           | 1202200195 |   ``Programmer``      |
-| 8   | Food Donation Upload Page                  | ``Personal`` ``Business``           | 1202200195 |   ``Programmer``      |
-|-----| ----SPRINT2-----------------               | ``Personal`` ``Business``           | 1202200195 |   ``Programmer``      |
-| 10  | Food Donation Page                         | ``Personal`` ``Business``           | 1202200195 |   ``Programmer``      |
+| No  | Feature Name                               |    Role                             | Handled By | Progress   |
+| --- | ------------------------------------------ | :---------------------------------: | ---------- | :--------: |
+| 1   | Registration Page                          | ``Personal`` ``Business``           | 1202202071 |   &check;  |
+| 2   | Login Page                                 | ``Personal`` ``Business`` ``Admin`` | 1202200164 |   &check;  |
+| 3   | Homepage                                   | ``Personal`` ``Business``           | 1202204123 |   &check;  |
+| 4   | Profile Page                               | ``Personal`` ``Business``           | 1202200195 |   &check;  |
+| 5   | Update Profile Page                        | ``Personal`` ``Business``           | 1202200195 |   &check;  |
+| 6   | Update Profile Picture Page                | ``Personal`` ``Business``           | 1202200195 |   &check;  |
+| 7   | Food Donation Page                         | ``Personal`` ``Business``           | 1202200195 |   &check;  |
+| 8   | Food Donation Upload Page                  | ``Personal`` ``Business``           | 1202200195 |   &check;  |
+|-----| ----SPRINT2-----------------               | ``Personal`` ``Business``           | 1202200195 |   &check;  |
+| 10  | Food Donation Page                         | ``Personal`` ``Business``           | 1202200195 |   &check;  |
 
 
 # About Us
