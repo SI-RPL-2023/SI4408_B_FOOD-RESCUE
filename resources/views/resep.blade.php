@@ -10,7 +10,9 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         @vite(['resources/css/app.css','resources/js/app.js'])
         <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
-        <title>FodRescue</title>
+        @section('title')
+        Food Rescue | Recipe
+        @endsection
     </head>
 
     <body class = "bg-hijau2">
@@ -32,7 +34,7 @@
                 <div class="grid grid-rows-1 grid-flow-col gap-2 mt-8">
                     <div> <img class="h-auto w-4" src="images/timer.svg" alt="image description"></div>
                     <div> <p class="font-bold text-xs mb-2 text-left font-Cabin-Medium mr-5">{{ $resep->time }}</p> </div>
-                    <div> <img class="h-auto w-4" src="images/person.svg" alt="image description"></div>                       
+                    <div> <img class="h-auto w-4" src="images/person.svg" alt="image description"></div>
                     <div> <p class="font-bold text-xs mb-2 text-left font-Cabin-Medium">{{ $resep->person }}</p> </div>
                 </div>
                 <div class="mt-10 justify-center ml-10">

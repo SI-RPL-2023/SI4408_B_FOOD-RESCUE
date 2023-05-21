@@ -12,6 +12,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Inter&display=swap" rel="stylesheet">
   @vite(['resources/css/app.css','resources/js/app.js'])
+  @section('title')
+  Food Rescue | Donasi
+  @endsection
 </head>
 <body class="bg-hijau2">
         {{-- <div class="flex mx-auto place-content-center">

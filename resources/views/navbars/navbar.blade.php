@@ -8,7 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/css/app.css','resources/js/app.js'])
     <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
-    <title>FoodRescue</title>
+    {{-- <title>FoodRescue</title> --}}
+    <title>@yield('title')</title>
 
     {{-- Tailwinnd --}}
     <script src="https://cdn.tailwindcss.com"></script>

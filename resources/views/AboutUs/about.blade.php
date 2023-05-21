@@ -6,7 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite(['resources/css/app.css','resources/js/app.js'])
-    <title>AboutUs</title>
+    @section('title')
+    Food Rescue | About Us
+    @endsection
 </head>
 <body>
     <div class="mx-auto py-16 px-4 max-w-7xl mt-16 ">
@@ -15,7 +17,7 @@
             <h1 class="text-5xl flex justify-center font-Cabin-Medium text-white mt-7 font-bold">About Us</h1>
             <p class="mb-3 text-white ml-14 text-lg font-Cabin-Medium mt-10">
                 Revive Your Food - Recycle Before It Expires! At our website,<br>
-                we're passionate about reducing food waste and promoting sustainability.<br> 
+                we're passionate about reducing food waste and promoting sustainability.<br>
                 We provide a convenient and easy way for you to recycle foodstuffs that are<br>
                 nearing their expiration date, so you can give them a second life and reduce your<br>
                 environmental impact. Join us in the fight against food waste and make a difference with<br>
