@@ -4,6 +4,31 @@
 
 FoodRescue This is a website that receives food items that are approaching their expiration date, and processes them into ready-to-eat meals. It also provides recipes using ingredients that can be selected by Users. This Project is built with [Laravel](https://laravel.com/) Framework and [Flowbite Tailwind UI Component](https://flowbite.com/docs/getting-started/laravel/) for Front-End Framework.
 
+## Feature
+
+| No  | Feature Name                                                                 | NIM        | Role                |
+| --- | ---------------------------------------------------------------------------- | ---------- | ------------------- |
+| 1   | [Ariadani Dwi Fathurrahman](https://www.instagram.com/ariadanidf/)           | 1202202071 | ``Project Manager`` |
+| 2   | [Almira Syamsi Nur Insan](https://www.instagram.com/almiraasy/)              | 1202200164 | ``Analyst``         |
+| 3   | [Ario Kusuma Purboyo](https://www.instagram.com/ariokusuma/)                 | 1202204123 | ``Programmer``      |
+| 4   | [Apriani Nur Raina](https://www.instagram.com/anraina_/)                     | 1202200195 | ``Programmer``      |
+| 5   | [Bagas Distyo Utomo](https://www.instagram.com/bagasdistyo/)                 | 1202201372 | ``Programmer``      |
+| 6   | [Divani Azza Nabilla M.](https://www.instagram.com/divaniazza_/)             | 1202200127 | ``Programmer``      |
+| 7   | [Dewa Cetra Prabasworo Puspito](https://www.instagram.com/dewacetra.p.7402/) | 1202200039 | ``Programmer``      |
+| 8   | [Noor Panca Maulana](https://www.instagram.com/noorpancamaulana/)            | 1202204283 | ``Programmer``      |
+
+```markdown
+| :        Fruits \|\| Food       : |||
+| :--------- | :-------- | :--------  |
+| Apple      | : Apple : | Apple      \
+| Banana     |   Banana  | Banana     \
+| Orange     |   Orange  | Orange     |
+| :   Rowspan is 4    : || How's it?  |
+|^^    A. Peach         ||   1. Fine :|
+|^^    B. Orange        ||^^ 2. Bad   |
+|^^    C. Banana        ||  It's OK!  |
+```
+
 # About Us
 
 We're Group 265 from class SI4408. Bachelor of Information Systems Telkom University batch 44. Our Members are consist of :
