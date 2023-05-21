@@ -8,7 +8,7 @@ FoodRescue This is a website that receives food items that are approaching their
 
 | No  | Feature Name                             | Role                                   | Handled By                  |   Progress             |
 | --- | ---------------------------------------- | :------------------------------------: | :----------------------:    |   :-----------------:  |
-|**----**| **---------- SPRINT 1 ----------**   |   **---------- SPRINT 1 ----------**   |   **-- SPRINT 1 --**         |   **-- SPRINT 1 --**   |
+|**---**| **---------- SPRINT 1 ----------**   |   **---------- SPRINT 1 ----------**   |   **-- SPRINT 1 --**         |   **-- SPRINT 1 --**   |
 | 1      | Registration Page                    |       ``Personal`` ``Business``        |       ``1202202071``         |         &check;        |
 | 2      | Login Page                           |   ``Personal`` ``Business`` ``Admin``  |       ``1202200164``         |         &check;        |
 | 3      | Homepage                             |       ``Personal`` ``Business``        |       ``1202204123``         |         &check;        |
@@ -16,7 +16,7 @@ FoodRescue This is a website that receives food items that are approaching their
 | 5      | Update Profile Page                  |       ``Personal`` ``Business``        |       ``1202200195``         |         &check;        |
 | 6      | Update Profile Picture Page          |       ``Personal`` ``Business``        |       ``1202200195``         |         &check;        |
 | 8      | Food Donation Upload Page            |       ``Personal`` ``Business``        |       ``1202200195``         |         &check;        |
-|**----**| **---------- SPRINT 2 ----------**   |   **---------- SPRINT 2 ----------**   |   **-- SPRINT 2 --**         |   **-- SPRINT 2 --**   |
+|**----**| **---------- SPRINT 2 ---------**   |   **---------- SPRINT 2 ---------**   |   **-- SPRINT 2 --**         |   **-- SPRINT 2 --**   |
 | 1      | Searchbar Filter                     |          ``Personal`` ``Business``     |       ``1202202071``         |         &check;        |
 | 2      | Searchbar                            |   ``Personal`` ``Business`` ``Admin``  |       ``1202200164``         |         &check;        |
 | 3      | Food Detail Page                     |        ``Personal`` ``Business``       |       ``1202204123``         |         &check;        |
@@ -27,7 +27,7 @@ FoodRescue This is a website that receives food items that are approaching their
 | 8      | Blog Timeline Page                   |        ``Personal`` ``Business``       |       ``1202200195``         |         &check;        |
 | 9      | Blog Upload Page                     |        ``Personal`` ``Business``       |       ``1202200195``         |         &check;        |
 | 10     | Blog Details Page                    |        ``Personal`` ``Business``       |       ``1202200195``         |         &check;        |
-|**----**| **---------- SPRINT 3 ----------**   |   **---------- SPRINT 3 ----------**   |   **-- SPRINT 3 --**         |   **-- SPRINT 3 --**   |
+|**---**| **---------- SPRINT 3 ---------**   |   **---------- SPRINT 3 ---------**   |   **-- SPRINT 3 --**         |   **-- SPRINT 3 --**   |
 | 1      | Dashboard Page                       |        ``Personal`` ``Business``       |       ``1202202071``         |         &check;        |
 | 2      | Delete Reported Page                 |   ``Personal`` ``Business`` ``Admin``  |       ``1202200164``         |         &check;        |
 | 3      | Share Recipe                         |        ``Personal`` ``Business``       |       ``1202204123``         |         &check;        |
