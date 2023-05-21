@@ -26,6 +26,8 @@ FoodRescue This is a website that receives food items that are approaching their
     <tbody>
         <tr>
             <td align="left">Apple<br>Banana<br>Orange</td>
+            <td align="center">Apple<br>Banana<br>Orange</td>
+            <td align="left">Apple<br>Banana<br>Orange</td>
         </tr>
         <tr>
             <td align="center" rowspan="4" colspan="2">
