@@ -9,7 +9,7 @@ FoodRescue This is a website that receives food items that are approaching their
 | No  | Feature Name                               |    Role                             | Handled By | Progress              |
 | --- | ------------------------------------------ | :---------------------------------: | ---------- | :-------------------: |
 | 1   | Registration Page                          | ``Personal`` ``Business``           | 1202202071 |   :heavy_check_mark:  |
-| 2   | Login Page                                 | ``Personal`` ``Business`` ``Admin`` | 1202200164 |   ``Analyst``         |
+| 2   | Login Page                                 | ``Personal`` ``Business`` ``Admin`` | 1202200164 |   &check;        |
 | 3   | Homepage                                   | ``Personal`` ``Business``           | 1202204123 |   ``Programmer``      |
 | 4   | Profile Page                               | ``Personal`` ``Business``           | 1202200195 |   ``Programmer``      |
 | 5   | Update Profile Page                        | ``Personal`` ``Business``           | 1202200195 |   ``Programmer``      |
