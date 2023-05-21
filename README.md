@@ -16,7 +16,7 @@ FoodRescue This is a website that receives food items that are approaching their
 | 6   | Update Profile Picture Page                | ``Personal`` ``Business``           | 1202200195 |   &check;  |
 | 7   | Food Donation Page                         | ``Personal`` ``Business``           | 1202200195 |   &check;  |
 | 8   | Food Donation Upload Page                  | ``Personal`` ``Business``           | 1202200195 |   &check;  |
-|-----| ----SPRINT2-----------------               | ``Personal`` ``Business``           | 1202200195 |   &check;  |
+|-----| ----------SPRINT2----------               | ``Personal`` ``Business``           | 1202200195 |   &check;  |
 | 10  | Food Donation Page                         | ``Personal`` ``Business``           | 1202200195 |   &check;  |
 
 
