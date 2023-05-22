@@ -60,7 +60,7 @@
                             <div class="pl-[62px]">
                                 <h3 class="font-Cabin-Medium">Point</h3>
                                 {{-- <h3 class="font-semibold text-2xl font-Cabin-Medium">{{ Auth::user()->email }}</h3> --}}
-                                <h3 class="font-semibold text-2xl font-Cabin-Medium">100</h3>
+                                <h3 class="font-semibold text-2xl font-Cabin-Medium">{{ Auth::user()->point ?? 0 }}</h3>
                             </div>
                         </div>
 

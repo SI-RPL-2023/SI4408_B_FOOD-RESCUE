@@ -90,7 +90,9 @@
 
                     </div>
 
-                    <input name="id_pengunggah" id="id_penggungah" for ="id_pengunggah" type="hidden" value="{{ Auth::user()->namaDepan }} {{ Auth::user()->namaBelakang }}">
+                    <input name="id_pengunggah" id="id_pengunggah" for ="id_pengunggah" type="hidden" value="{{ Auth::user()->id }}">
+
+                    {{-- <input name="id_pengunggah" id="id_penggungah" for ="id_pengunggah" type="hidden" value="{{ Auth::user()->namaDepan }} {{ Auth::user()->namaBelakang }}"> --}}
 
                     <input name="availability" id="availability" for ="availability" type="hidden" value="1">
 

@@ -10,7 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/css/app.css','resources/js/app.js'])
-    <title>Items Report</title>
+    @section('title')
+    Dashboard | Resep
+    @endsection
 </head>
 <body class="h-screen bg-no-repeat bg-cover">
 
@@ -38,19 +40,22 @@
 
                     <tbody>
                         {{-- data1 --}}
+                        @foreach ( $data_resep as $data)
+
+
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white flex mx-auto place-content-center">
-                                <img class="w-24 h-24 rounded" src="/images/products/brokoli.jpg" alt="brokoli">
+                                <img class="w-24 h-24 rounded" src="{{ asset('storage/photos/'.$data->foto) }}" alt="brokoli">
                             </th>
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white mx-auto place-content-center text-center">1</th>
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white mx-auto place-content-center text-center">Sayuran</th>
-                            <td class="px-6 py-3 md:table-fixed max-w-xs break-words place-content-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi nulla dolorem aspernatur voluptatum tempore earum fugit quisquam fuga, quam, doloribus velit!</td>
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white mx-auto place-content-center text-center">{{ $data->id }}</th>
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white mx-auto place-content-center text-center">{{ $data->nama }}</th>
+                            <td class="px-6 py-3 md:table-fixed max-w-xs break-words place-content-center">{{ $data->deskripsi }}</td>
                             <td class="px-6 py-4 place-content-center text-center">
                                 <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Periksa</a>
                             </td>
                         </tr>
 
-
+                        @endforeach
                     </tbody>
                 </table>
             </div>
