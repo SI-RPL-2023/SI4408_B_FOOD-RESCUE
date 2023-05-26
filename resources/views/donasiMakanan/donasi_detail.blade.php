@@ -27,7 +27,7 @@
                             <p class="">{{ $makanan->nama }}</p>
                         </div>
                         <div class=" py-2">
-                            <p class="ms-5">{{ $makanan->id_pengunggah }}</p>
+                            <p class="ms-5">{{ $makanan->user_pengunggah }}</p>
                         </div>
                         <div class=" px-2">
                             <p class="border-solid border-2 border-black rounded-lg p-2 ms-5">
@@ -87,7 +87,9 @@
 
                         <div class="text-center mt-10">
                             <!-- Ini Angka 1 nya diubah jadi ID si produknya -->
+                            @if ($makanan->id_pengunggah != auth()->user()->id)
                             <a href="/donasi/booking/{{ $makanan->id }}" class="bg-amber-500 py-3 px-8 text-white rounded-2xl text-LG">Booking</a>
+                            @endif
                         </div>
                     </div>
                 </div>

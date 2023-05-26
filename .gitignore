@@ -36,5 +36,8 @@ ehthumbs.db
 Thumbs.db
 
 .env
-/node_modules
+
+/node_modules/
+/vendor/
 hot
+# node_modules

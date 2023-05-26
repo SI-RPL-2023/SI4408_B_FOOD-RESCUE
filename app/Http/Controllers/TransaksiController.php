@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Makanan;
+use App\Models\Booking;
+use Illuminate\Support\Facades\DB;
 
 class TransaksiController extends Controller
 {
@@ -11,8 +14,13 @@ class TransaksiController extends Controller
      */
     public function index()
     {
-        
-        return view('transaksi');
+        // $makanans = Makanan::all();
+        $makanan1 = DB::table('makanans')->leftjoin('bookings as bs', 'makanans.id', '=', 'bs.produk_id')->select('makanans.*', 'bs.user_id', 'makanans.created_at as time')->where('makanans.id_pengunggah', auth()->user()->id);
+
+        $makanan2 = DB::table('makanans')->rightjoin('bookings as bs', 'makanans.id', '=', 'bs.produk_id')->select('makanans.*', 'bs.user_id', 'bs.created_at as time')->where('bs.user_id', auth()->user()->id);
+
+        $makanans = $makanan1->union($makanan2)->orderByDesc('time')->get();
+        return view('transaksi_new', compact('makanans'));
     }
 
     /**
@@ -36,7 +44,8 @@ class TransaksiController extends Controller
      */
     public function show(string $id)
     {
-        return view('detail-transaksi');
+        $makanan = Makanan::leftjoin('bookings as bs', 'makanans.id', '=', 'bs.produk_id')->select('makanans.*', 'bs.user_id', 'bs.status', 'bs.id as booking_id', 'bs.created_at as booking', 'bs.updated_at as selesai')->where('makanans.id', $id)->first();
+        return view('detail-transaksi', compact('makanan'));
     }
 
     /**

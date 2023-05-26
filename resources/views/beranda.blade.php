@@ -17,6 +17,7 @@
 
 <div class="container mx-auto mt-8">
   <p class="text-5xl flex justify-center font-Cabin-Medium text-white mt-7 font-bold">Revive Your Food</p>
+  {{-- <p class="">Total Visit Count: {{ $visitCount->count }}</p> --}}
   <p class="text-5xl flex justify-center font-Cabin-Medium text-white mt-3 font-bold">Recycle Before It Expired</p>
   <p class="text-lg flex justify-center font-Cabin-Medium text-white mt-5">Join our mission to reduce food waste by recycling edible items that are close to expiration.</p>
   <p class="text-lg flex justify-center font-Cabin-Medium text-white mt-3">Give your food a second chance and help protect the planet one meal at a time.</p>

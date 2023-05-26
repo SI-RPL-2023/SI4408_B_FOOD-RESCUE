@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('user_id');
             $table->bigInteger('produk_id');
-            $table->text('status')->default('Belum Dibayar');
+            $table->text('status');
             $table->timestamps();
         });
     }
