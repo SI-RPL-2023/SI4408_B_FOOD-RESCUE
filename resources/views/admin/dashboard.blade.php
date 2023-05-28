@@ -138,7 +138,7 @@
                                                     Alasan Pelaporan
                                                 </th>
                                                 <th scope="col" class="px-6 py-3">
-                                                    Harga
+                                                    Pengunggah
                                                 </th>
                                                 <th scope="col" class="px-6 py-3">
                                                     Tanggal Lapor
@@ -149,31 +149,36 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($data_laporantable as $data_laporantable)
+                                            @foreach ($data_laporantable as $data)
+
                                                 <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-100">
                                                     <th scope="row" class="px-2  py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                         <div class="pl-8">
                                                             <img class=" w-24 h-24 rounded max-w-xs" src="/images/products/brokoli.jpg" alt="brokoli">
                                                         </div>
                                                     </th>
+                                                    @foreach($data->laporan as $laporan)
                                                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                        Brokoli
+                                                        {{ $laporan->merk }}
                                                     </th>
                                                     <td class="px-6 py-4">
-                                                        Jakarta
+                                                        {{ $laporan->lokasi }}
                                                     </td>
-                                                    <td class="px-6 py-4">
-                                                        Sayuran
+
+                                                    <td class="flex justify-center items-center w-[100px] {{ $laporan->jenis == 1 ? 'bg-green-100 text-green-800' : ($laporan->jenis == 2 ? 'bg-orange-100 text-orange-800' : 'bg-yellow-100 text-yellow-800') }} text-md font-semibold mr-2 px-2.5 py-0.5 rounded dark:{{ $laporan->jenis == 1 ? 'bg-green-200 text-green-900' : ($laporan->jenis == 2 ? 'bg-orange-200 text-orange-900' : 'bg-yellow-200 text-yellow-900') }} outline outline-{{ $laporan->jenis == 1 ? 'green-900' : ($laporan->jenis == 2 ? 'orange-900' : 'yellow-900') }} outline-2 ">
+                                                        {{-- {{ $laporan->jenis }} --}}
+                                                        {{ $laporan->jenis == 1 ? 'Mentah' : ($laporan->jenis == 2 ? 'Matang' : 'Admin') }}
                                                     </td>
                                                     <td class="px-6 py-4 md:table-fixed max-w-xs break-words text-black font-semibold">
-                                                        {{ $data_laporantable->deskripsi }}
+                                                        {{ $data->deskripsi }}
                                                     </td>
                                                     <td class="px-6 py-4">
-                                                        Rp12.000
+                                                        {{ $laporan->id_pengunggah }}
                                                     </td>
                                                     <td class="px-6 py-4">
-                                                        {{ $data_laporantable->created_at }}
+                                                        {{ $data->created_at }}
                                                     </td>
+                                                    @endforeach
                                                     <td class="px-6 py-4">
                                                         <a href="{{ url ('dashboard-laporan') }}" class="w-[95px] flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-hijau1 rounded-lg hover:bg-hijau2 focus:ring-2 focus:outline-none focus:ring-hijau3 ring-offset-2">
                                                             Periksa

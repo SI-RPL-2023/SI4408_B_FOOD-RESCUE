@@ -97,8 +97,43 @@ class ControllerDashboard extends Controller
     private function daftarLaporan()
         {
             $data_laporantable = DB::table('reports')->get();
+            // $detil_laporan = DB::table('makanans')->get();
+            $find_id_makanan = $data_laporantable->pluck('makanan_id')->toArray();
+            // $detil_makanan = DB::table('makanans')->where
 
-            return view('admin.dashboard', ['data_laporantable' => $data_laporantable]);
+            $hasil_laporan = DB::table('makanans')->whereIn('id', $find_id_makanan)->get();
+
+            $grouped_laporan =$hasil_laporan->groupBy('id');
+            // dd($grouped_laporan);
+
+            $data_laporantable = $data_laporantable->map(function ($item) use ($grouped_laporan) {
+                $item->laporan = $grouped_laporan[$item->makanan_id] ?? [];
+                return $item;
+            });
+            // dd($merged_array);
+
+            // $data_laporantable = array_merge($data_laporantable->toArray(), $hasil_laporan->toArray());
+
+
+            // dd($hasil_laporan);
+            // dd($merged_array);
+
+            // dd($data_laporantable);
+
+            return view('admin.dashboard', [
+                'data_laporantable' => $data_laporantable
+            ]);
+            // return view('admin.dashboard', [
+            //     'data_laporantable' => $data_laporantable
+            // ]);
+
+
+
+            // return view('admin.dashboard', ['data_laporantable' => $data_laporantable]);
+            // return view('admin.dashboard', [
+            //     'data_laporantable' => $data_laporantable,
+            //     'hasil_laporan' => $hasil_laporan
+            // ]);
         }
 
 
@@ -128,6 +163,7 @@ class ControllerDashboard extends Controller
 
     public function pullDataLaporan(): View //push data to Dashboard Resep
     {
+        $data_laporan = DB::table('reports')->get();
         $data_laporan = DB::table('reports')->get();
 
         return view('admin.admin_laporan', ['data_laporan' => $data_laporan]);
