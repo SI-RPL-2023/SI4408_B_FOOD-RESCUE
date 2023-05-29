@@ -157,7 +157,8 @@
                                                             <img class=" w-24 h-24 rounded max-w-xs" src="/images/products/brokoli.jpg" alt="brokoli">
                                                         </div>
                                                     </th>
-                                                    @foreach($data->laporan as $laporan)
+                                                    @foreach($data->makanan as $laporan)
+                                                    @foreach($data->pengguna as $pengguna)
                                                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                         {{ $laporan->merk }}
                                                     </th>
@@ -173,11 +174,12 @@
                                                         {{ $data->deskripsi }}
                                                     </td>
                                                     <td class="px-6 py-4">
-                                                        {{ $laporan->id_pengunggah }}
+                                                        {{ $pengguna->namaDepan }}
                                                     </td>
                                                     <td class="px-6 py-4">
                                                         {{ $data->created_at }}
                                                     </td>
+                                                    @endforeach
                                                     @endforeach
                                                     <td class="px-6 py-4">
                                                         <a href="{{ url ('dashboard-laporan') }}" class="w-[95px] flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-hijau1 rounded-lg hover:bg-hijau2 focus:ring-2 focus:outline-none focus:ring-hijau3 ring-offset-2">
