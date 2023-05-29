@@ -69,6 +69,12 @@ Route::get('/inputmakanan', function () {
     return view('inputmakanan');
 });
 
+// reward
+Route::get('/reward', function () {
+    return view('reward');
+});
+
+
 // Halaman AboutUs
 Route::get('/about', function () {
     return view('AboutUs.about');
