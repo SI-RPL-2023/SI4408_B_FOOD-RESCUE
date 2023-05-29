@@ -200,8 +200,23 @@ class ControllerDashboard extends Controller
 
     public function pullDataLaporan(): View //push data to Dashboard Resep
     {
-        $data_laporan = DB::table('reports')->get();
-        $data_laporan = DB::table('reports')->get();
+        // $data_laporan = DB::table('reports')->get();
+        // $data_laporan = DB::table('reports')->get();
+
+        $data_laporantable = DB::table('reports')->get();
+            $find_id_makanan = $data_laporantable->pluck('makanan_id')->toArray();
+
+            $hasil_laporan = DB::table('makanans')->whereIn('id', $find_id_makanan)->get();
+            $grouped_laporan = $hasil_laporan->groupBy('id');
+
+            $orang = DB::table('table_pengguna')->get();
+            $final_cari = $orang->groupBy('id');
+
+            $data_laporan = $data_laporantable->map(function ($item) use ($grouped_laporan, $final_cari) {
+                $item->makanan = $grouped_laporan[$item->makanan_id] ?? [];
+                $item->pengguna = $final_cari[$item->user_id] ?? [];
+                return $item;
+            });
 
         return view('admin.admin_laporan', ['data_laporan' => $data_laporan]);
     }

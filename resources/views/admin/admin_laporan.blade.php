@@ -31,9 +31,9 @@
                             <th scope="col" class="px-6 py-3 place-content-center text-center">Gambar Barang</th>
                             <th scope="col" class="px-6 py-3 place-content-center text-center">Nama Produk</th>
                             <th scope="col" class="px-6 py-3 place-content-center text-center">Lokasi</th>
-                            <th scope="col" class="px-6 py-3 place-content-center">Kategory</th>
+                            <th scope="col" class="px-6 py-3 place-content-center">Kategori</th>
                             <th scope="col" class="px-6 py-3 md:table-fixed max-w-xs break-words place-content-center text-center">Alasan Pelaporan</th>
-                            <th scope="col" class="px-6 py-3 place-content-center text-center">Harga</th>
+                            <th scope="col" class="px-6 py-3 place-content-center text-center">Pengunggah</th>
                             <th scope="col" class="px-6 py-3 place-content-center text-center">Tanggal Lapor</th>
                             <th scope="col" class="px-6 py-3 place-content-center text-center">Tindakan</th>
                             </th>
@@ -44,16 +44,18 @@
                     <tbody>
                         {{-- data1 --}}
                         @foreach ($data_laporan as $data)
+                        @foreach ($data->makanan as $laporan)
+                        @foreach ($data->pengguna as $pengguna)
 
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white flex mx-auto place-content-center">
                                 <img class="w-24 h-24 rounded" src="/images/products/brokoli.jpg" alt="brokoli">
                             </th>
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white mx-auto place-content-center text-center">Sayuran</th>
-                            <td class="px-6 py-4 place-content-center text-center">Jakarta</td>
-                            <td class="px-6 py-4 place-content-center text-center">Sayuran</td>
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white mx-auto place-content-center text-center">{{ $laporan->merk }}</th>
+                            <td class="px-6 py-4 place-content-center text-center">{{ $laporan->lokasi }}</td>
+                            <td class="px-6 py-4 place-content-center text-center">{{ $laporan->jenis == 1 ? 'Mentah' : ($laporan->jenis == 2 ? 'Matang' : 'Admin') }}</td>
                             <td class="px-6 py-3 md:table-fixed max-w-xs break-words place-content-center  text-black font-semibold ">{{ $data->deskripsi }}</td>
-                            <td class="px-6 py-4 place-content-center text-center">$2999</td>
+                            <td class="px-6 py-4 place-content-center text-center">{{ $pengguna->namaDepan }}</td>
                             <td class="px-6 py-4 place-content-center text-center">{{ $data->created_at }}</td>
                             <td class="px-6 py-4 place-content-center text-center">
                                 <a href="{{ url ('dashboard-laporan') }}" class="w-[95px] flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-hijau1 rounded-lg hover:bg-hijau2 focus:ring-2 focus:outline-none focus:ring-hijau3 ring-offset-2">
@@ -62,6 +64,8 @@
                                 </a>
                             </td>
                         </tr>
+                        @endforeach
+                        @endforeach
                         @endforeach
                         {{-- end of table --}}
                     </tbody>
