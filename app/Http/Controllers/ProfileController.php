@@ -8,9 +8,15 @@ use Illuminate\Support\Facades\Hash;
 // use File;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use App\Models\Makanan;
 
 class ProfileController extends Controller
 {
+    public function home()
+    {
+        return view('profilPage');
+    }
+
     public function index()
     {
         return view('Profile_Update');
@@ -53,5 +59,11 @@ class ProfileController extends Controller
         $user->save();
 
         return redirect('profile-page')->with('status', 'Profile updated!');
+    }
+
+    public function show($id)
+    {
+        $makanan = Makanan::find($id);
+        return view('profilePage', compact('resep'));
     }
 }

@@ -10,7 +10,10 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         @vite(['resources/css/app.css','resources/js/app.js'])
         <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
-        <title>FodRescue</title>
+        {{-- <title>FodRescue</title> --}}
+        @section('title')
+        Food Rescue | Home
+        @endsection
     </head>
 
     <body class = "bg-hijau2">

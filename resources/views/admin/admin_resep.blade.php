@@ -10,7 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/css/app.css','resources/js/app.js'])
+<<<<<<< HEAD
     <title>Items Report</title>
+=======
+    @section('title')
+    Dashboard | Resep
+    @endsection
+>>>>>>> master
 </head>
 <body class="h-screen bg-no-repeat bg-cover">
 
@@ -38,6 +44,7 @@
 
                     <tbody>
                         {{-- data1 --}}
+<<<<<<< HEAD
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white flex mx-auto place-content-center">
                                 <img class="w-24 h-24 rounded" src="/images/products/brokoli.jpg" alt="brokoli">
@@ -51,12 +58,35 @@
                         </tr>
 
 
+=======
+                        @foreach ( $data_resep as $data)
+
+
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white flex mx-auto place-content-center">
+                                <img class="w-24 h-24 rounded" src="{{ asset('storage/photos/'.$data->foto) }}" alt="brokoli">
+                            </th>
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white mx-auto place-content-center text-center">{{ $data->id }}</th>
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white mx-auto place-content-center text-center">{{ $data->nama }}</th>
+                            <td class="px-6 py-3 md:table-fixed max-w-xs break-words place-content-center">{{ $data->deskripsi }}</td>
+                            {{-- CTA --}}
+                            <td class="px-6 py-4 place-content-center text-center w-[95px]">
+                                <a href="{{ url ('dashboard-laporan') }}" class="w-[95px] flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-hijau1 rounded-lg hover:bg-hijau2 focus:ring-2 focus:outline-none focus:ring-hijau3 ring-offset-2">
+                                    Periksa
+                                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </td>
+                        </tr>
+
+                        @endforeach
+>>>>>>> master
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 
+<<<<<<< HEAD
 {{-- ================================================ Dashboard ================================================ --}}
 
 {{-- start of main div --}}
@@ -91,6 +121,8 @@
                 </ul>
         </div>
         </div>
+=======
+>>>>>>> master
 {{-- end of main div --}}
     </div>
 

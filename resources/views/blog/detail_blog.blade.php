@@ -8,7 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite(['resources/css/app.css','resources/js/app.js'])
+<<<<<<< HEAD
     <title>Detail Blog</title>
+=======
+    @section('title')
+    Detail Blog
+    @endsection
+>>>>>>> master
 </head>
 <body>
     <div class="mx-auto w-[80rem] p-4 mt-10 mb-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
@@ -45,7 +51,11 @@
             </div>
             @endif
     </div>
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> master
 @endsection
 </body>
 </html>
