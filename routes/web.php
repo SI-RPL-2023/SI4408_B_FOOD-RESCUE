@@ -13,6 +13,7 @@ use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ResepController;
+use App\Http\Controllers\RewardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -68,6 +69,12 @@ Route::get('/register-personal', function () {
 Route::get('/inputmakanan', function () {
     return view('inputmakanan');
 });
+
+// // reward
+// Route::get('/reward', function () {
+//     return view('reward');
+// });
+
 
 // Halaman AboutUs
 Route::get('/about', function () {
@@ -150,8 +157,8 @@ Route::get('/donasi-makanan', function () {
 });
 Route::get('/donasi', [ControllerDonasiMakanan::class, 'index']);
 Route::post('/donasi/report', [ControllerDonasiMakanan::class, 'report']);
-Route::get('/donasi/detail/{id}', [ControllerDonasiMakanan::class, 'detail']);
-Route::get('/donasi/booking/{id}', [BookingController::class, 'booking'])->middleware('auth');
+Route::get('/donasi/detail/{id}', [ControllerDonasiMakanan::class, 'detail'])->middleware('cache');
+Route::get('/donasi/booking/{id}', [BookingController::class, 'booking'])->middleware(['auth', 'cache']);
 Route::get('booking/selesai/{id}', [BookingController::class, 'update_status'])->name('booking.selesai')->middleware('auth');
 
 
@@ -195,3 +202,6 @@ Route::post('input-blog', [BlogController::class, 'add_blog'])->name('input-blog
 Route::post('update-blog/{id}', [BlogController::class, 'update_blog'])->name('update-blog');
 Route::get('/detail-blog/{id}', [BlogController::class, 'view_blog']);
 Route::get('/hapus-blog/{id}', [BlogController::class, 'hapus_blog']);
+
+// Reward
+Route::get('/reward', [RewardController::class, 'index'])->middleware('auth');;

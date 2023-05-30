@@ -12,11 +12,13 @@ use Illuminate\View\View;
 
 class ControllerPengguna extends Controller
 {
-    public function testing(Request $request){
+    public function testing(Request $request)
+    {
         // dd($request->all());
     }
 
-    public function register(){
+    public function register()
+    {
         $data['title'] = 'register';
         return view('loginRegister.registerPersonal', $data);
     }
@@ -42,6 +44,7 @@ class ControllerPengguna extends Controller
             'nohp' => $request->nohp,
             'email' => $request->email,
             'role' => $request->role,
+            'point' => 0,
             'password' => Hash::make($request->password),
         ]);
 
@@ -106,42 +109,42 @@ class ControllerPengguna extends Controller
 
 
 
-//     public function profile()
-//     {
-//         return view('profile');
-//     }
+    //     public function profile()
+    //     {
+    //         return view('profile');
+    //     }
 
-//     public function profile_action(Request $request)
-//     {
+    //     public function profile_action(Request $request)
+    //     {
 
-//         // $request->validate([
-//         //     'name' => 'required',
-//         //     'email' => 'required|unique:users',
-//         //     'uname' => 'required|unique:users',
-//         //     'nohp' => 'required',
-//         //     'lokasi' => 'required',
-//         // ]);
-//         $user = User::find(Auth::id());
+    //         // $request->validate([
+    //         //     'name' => 'required',
+    //         //     'email' => 'required|unique:users',
+    //         //     'uname' => 'required|unique:users',
+    //         //     'nohp' => 'required',
+    //         //     'lokasi' => 'required',
+    //         // ]);
+    //         $user = User::find(Auth::id());
 
-//         $user->update([
-//             'name' => $request->name,
-//             'email' => $request->email,
-//             'uname' => $request->uname,
-//             'nohp' => $request->nohp,
-//             'lokasi' => $request->lokasi,
-//         ]);
+    //         $user->update([
+    //             'name' => $request->name,
+    //             'email' => $request->email,
+    //             'uname' => $request->uname,
+    //             'nohp' => $request->nohp,
+    //             'lokasi' => $request->lokasi,
+    //         ]);
 
-//         // $user->name = $request->name;
-//         // $user->email = $request->email;
-//         // $user->uname = $request->uname;
-//         // $user->nohp = $request->nohp;
-//         // $user->lokasi = $request->lokasi;
+    //         // $user->name = $request->name;
+    //         // $user->email = $request->email;
+    //         // $user->uname = $request->uname;
+    //         // $user->nohp = $request->nohp;
+    //         // $user->lokasi = $request->lokasi;
 
-//         $user->save();
-//         $request->session()->regenerate();
-//         // return back()->with('success', 'Data Berhasil Di-Update');
-//         return redirect()->route('profile');
-//     }
+    //         $user->save();
+    //         $request->session()->regenerate();
+    //         // return back()->with('success', 'Data Berhasil Di-Update');
+    //         return redirect()->route('profile');
+    //     }
 
     public function logout(Request $request)
     {

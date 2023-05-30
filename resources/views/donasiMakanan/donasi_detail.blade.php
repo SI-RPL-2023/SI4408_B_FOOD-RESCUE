@@ -1,6 +1,7 @@
 @extends('navbars.layoutnav')
 
 @section('content')
+
     <section id="Detail" class=" py-5 min-h-screen font-Cabin">
 
         <div class="container mx-auto h-52 m-4">
@@ -124,5 +125,14 @@
                 },
             }));
         });
+
+        @if (Session::has('error'))
+            var message = '{{ Session::get('error') }}';
+            Swal.fire({
+                title: 'Error',
+                text:  message,
+                icon: 'error'
+            });
+        @endif
     </script>
 @endsection
