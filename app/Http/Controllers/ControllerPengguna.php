@@ -97,9 +97,9 @@ class ControllerPengguna extends Controller
 
     public function pullDataResep(): View
     {
-        $data_pengguna = DB::table('table_pengguna')->get();
+        $data_makanan = DB::table('makanans')->get();
 
-        return view('admin.admin_pengguna', ['data_pengguna' => $data_pengguna]);
+        return view('admin.admin_makanan', ['data_makanan' => $data_makanan]);
     }
 
 

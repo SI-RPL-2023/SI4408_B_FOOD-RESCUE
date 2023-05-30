@@ -28,15 +28,9 @@ use Illuminate\Support\Facades\Route;
 
 
 // Views Routes
+Route::get('/', [KunjunganController::class, 'index'])->name('home');// Homepage
 
-// Landing Page
-// Route::get('/', function () {
-//     return view('beranda');
-// });
 
-Route::get('/', [KunjunganController::class, 'index'])->name('home');
-
-Route::post('/profile/update', [ProfileController::class, 'update'])->middleware('auth');
 
 
 // Login Routes
@@ -86,38 +80,22 @@ Route::get('/404', function () {
 
 // ================= Admin Things =================
 // Dashboard
-// Route::get('/dashboard', function () {
-//     return view('admin.dashboard');
-// });
 Route::get('/dashboard', [ControllerDashboard::class, 'index'])
     ->name('dashboard')
     ->middleware('admin');
     // ->middleware(AdminMiddleware::class);
-
-
-Route::get('/dashboard', [ControllerDashboard::class, 'all']);
-
+Route::get('/dashboard', [ControllerDashboard::class, 'all']); //Dashboard Main Page
     // Dashboard Pengguna
 // Route::get('/donasi', [ControllerPengguna::class, 'tombol']);
-Route::get('/dashboard-pengguna', [ControllerPengguna::class, 'pullDataPengguna']);
+Route::get('/dashboard-pengguna', [ControllerDashboard::class, 'pullDataPengguna']); // Dashboard List Pengguna
+Route::get('/dashboard-makanan', [ControllerDashboard::class, 'pullDataMakanan']);// Dashboard List Makanan
+Route::get('/dashboard-resep', [ControllerDashboard::class, 'pullDataResep']);// Dashboard List Makanan
+Route::get('/dashboard-laporan', [ControllerDashboard::class, 'pullDataLaporan']);// Dashboard List Makanan
 
-
-
-
-// Dashboard Barang
-Route::get('/dashboard-barang', function () {
-    return view('admin.admin_barang');
-});
-
-
-// Dashboard Resep
-Route::get('/dashboard-resep', function () {
-    return view('admin.admin_resep');
-});
 // reported-items
-Route::get('/dashboard-laporan', function () {
-    return view('admin.admin_laporan');
-});
+// Route::get('/dashboard-laporan', function () {
+//     return view('admin.admin_laporan');
+// });
 
 // pop-up
 Route::get('/share', function () {
@@ -133,15 +111,9 @@ Route::get('/profile', function () {
 
 
 // Halaman Profil
-Route::get('/profile-page', function () {
-    return view('profilPage');
-});
+Route::get('/profile-page', [ProfileController::class, 'home'])->middleware('auth'); //Update Profile
+Route::post('/profile/update', [ProfileController::class, 'update'])->middleware('auth'); //Update Profile
 
-Route::get('/profile-update', function () {
-    return view('profile_update');
-});
-
-Route::post('/profile/update', [ProfileController::class, 'update'])->middleware('auth');
 
 
 // Halaman Donasi Makanan
@@ -149,6 +121,7 @@ Route::get('/donasi-makanan', function () {
     return view('donasiMakanan.donasi');
 });
 Route::get('/donasi', [ControllerDonasiMakanan::class, 'index']);
+Route::get('/donasi/mentah', [ControllerDonasiMakanan::class, 'makananMentah']);
 Route::post('/donasi/report', [ControllerDonasiMakanan::class, 'report']);
 Route::get('/donasi/detail/{id}',[ControllerDonasiMakanan::class, 'detail']);
 Route::get('/donasi/booking/{id}', [BookingController::class, 'booking'])->middleware('auth');
@@ -157,24 +130,18 @@ Route::get('/donasi/booking/{id}', [BookingController::class, 'booking'])->middl
 
 // Halaman Input Makanan
 Route::post('donasi', [ControllerDonasiMakanan::class, 'add_donasi'])->name('donasi.action');
-
 // Halaman Resep
 Route::get('/resep', function () {
     return view('resep');
 });
-// Menampilkan Resep
-Route::get('/resep', [ResepController::class, 'index'])->name('resep.index');
-// Menampilkan Detail Resep
-Route::get('/resep/{id}', [ResepController::class, 'show'])->name('detailresep');
+Route::get('/resep', [ResepController::class, 'index'])->name('resep.index'); // Menampilkan Resep
+Route::get('/resep/{id}', [ResepController::class, 'show'])->name('detailresep'); // Menampilkan Detail Resep
 
 
 // POST GET Routes
 Route::get('login', [ControllerPengguna::class, 'login'])->name('login');
 Route::post('login', [ControllerPengguna::class, 'login_action'])->name('login.action');
-
 Route::get('logout', [ControllerPengguna::class, 'logout'])->name('logout');
-
-
 Route::get('registerPersonal', [ControllerPengguna::class, 'register'])->name('register');
 Route::post('registerPersonal', [ControllerPengguna::class, 'register_action'])->name('register.action');
 

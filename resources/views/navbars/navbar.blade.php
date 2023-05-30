@@ -8,7 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/css/app.css','resources/js/app.js'])
     <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
-    <title>FoodRescue</title>
+    {{-- <title>FoodRescue</title> --}}
+    <title>@yield('title')</title>
 
     {{-- Tailwinnd --}}
     <script src="https://cdn.tailwindcss.com"></script>
@@ -86,6 +87,12 @@
                 @if (Auth::user()->role==0)
                 <div class="py-2">
                     <a href="{{ url('unggah-blog') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Unggah Blog</a>
+                </div>
+                @endif
+                <!-- Add Post Blog untuk DashboardAdmin -->
+                @if (Auth::user()->role==0)
+                <div class="py-2">
+                    <a href="{{ url('dashboard') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
                 </div>
                 @endif
 

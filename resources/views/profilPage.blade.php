@@ -9,7 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/css/app.css','resources/js/app.js'])
-    <title>Profile Page</title>
+    @section('title')
+    Profile Page
+    @endsection
 </head>
 <body>
 <!-- Navbar -->
@@ -58,7 +60,7 @@
                             <div class="pl-[62px]">
                                 <h3 class="font-Cabin-Medium">Point</h3>
                                 {{-- <h3 class="font-semibold text-2xl font-Cabin-Medium">{{ Auth::user()->email }}</h3> --}}
-                                <h3 class="font-semibold text-2xl font-Cabin-Medium">100</h3>
+                                <h3 class="font-semibold text-2xl font-Cabin-Medium">{{ Auth::user()->point ?? 0 }}</h3>
                             </div>
                         </div>
 
