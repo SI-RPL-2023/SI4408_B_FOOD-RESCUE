@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reward Page</title>
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div class="flex justify-center">
@@ -15,21 +15,27 @@
           <h1 class="text-5xl font-bold text-center mb-6 text-white">Reward</h1>
       
           <div class="bg-white rounded-lg shadow-md p-6">
-            <h2 class="text-xl font-bold text-center mb-4">Member Silver</h2>
+            <h2 class="text-xl font-bold text-center mb-4">Member {{ $member }}</h2>
             <div class="flex items-center justify-between mb-4">
               <div class="text-gray-500">Progress Point</div>
-              <div class="text-gray-500">100 / 500 Points</div>
+              <div class="text-gray-500">{{ $point }} / 400 Points</div>
             </div>
             <div class="bg-gray-200 h-4 rounded-full">
-              <div class="bg-blue-500 h-full rounded-full" style="width: 20%"></div>
+              <div class="bg-blue-500 h-full rounded-full" style="width: {{ $width }}px"></div>
             </div>
             <p class="text-center mt-4">
-              You are only 400 points away from reaching Gold status!
+              @if($selisih != 0)
+                @if($member == 'Silver')
+                  You are only {{ $selisih }} points away from reaching Gold status!
+                @elseif($member == 'Gold')
+                  You are only {{ $selisih }} points away from reaching Diamond status!
+                @endif
+              @endif
             </p>
           </div>
       
           <div class="mt-16">
-            <h2 class="text-3xl font-bold text-left mb-6 text-white">Kupon Khusus Member Silver</h2>
+            <h2 class="text-3xl font-bold text-left mb-6 text-white">Kupon Khusus Member {{ $member }}</h2>
             <h5 class="text-xl text-left mb-6 text-white">Klaim kupon khusus buat kamu</h5>
             <div class="grid grid-cols-2 gap-4">
               <div class="bg-gradient-to-r from-green-400 to-green-600 rounded-lg shadow-md p-6 flex">
