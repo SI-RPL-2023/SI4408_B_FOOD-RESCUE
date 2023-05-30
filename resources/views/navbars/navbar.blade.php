@@ -96,6 +96,13 @@
                 </div>
                 @endif
 
+                <!-- Add Daftar transaksi untuk user -->
+                @if (Auth::user()->role==1 or 2)
+                <div class="py-2">
+                    <a href="{{ url('transaksi') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Daftar Transaksi</a>
+                </div>
+                @endif
+
                 <div class="py-2">
                     <a href="{{ route('logout') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
                 </div>

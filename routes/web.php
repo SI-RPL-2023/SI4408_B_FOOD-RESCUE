@@ -9,7 +9,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\KunjunganController;
 use App\Http\Controllers\ControllerView;
 use App\Http\Controllers\ControllerJumlah;
-
+use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ResepController;
@@ -149,6 +149,11 @@ Route::post('registerPersonal', [ControllerPengguna::class, 'register_action'])-
 // tester routes
 Route::post('/testing', [ControllerPengguna::class, 'testing'])->name('testing');
 
+
+// tester routes
+Route::get('transaksi', [TransaksiController::class, 'index'])->name('transaksi');
+Route::get('transaksi/{id}', [TransaksiController::class, 'show'])->name('transaksi.show');
+
 // BLOG
 Route::get('/timeline', [BlogController::class, 'section']);
 Route::get('/unggah-blog', [BlogController::class, 'view_add_blog']);
@@ -157,3 +162,4 @@ Route::post('input-blog', [BlogController::class, 'add_blog'])->name('input-blog
 Route::post('update-blog/{id}', [BlogController::class, 'update_blog'])->name('update-blog');
 Route::get('/detail-blog/{id}', [BlogController::class, 'view_blog']);
 Route::get('/hapus-blog/{id}', [BlogController::class, 'hapus_blog']);
+

@@ -127,7 +127,7 @@
             <div class="flex flex-col justify-between h-full flex-1">
               <div class="font-Cabin-Medium">
                 <h3 class="text-black font-bold text-2xl">{{ $makanan->nama }}</h3>
-                <span class="text-gray-500 text-md font-regular block">{{ $makanan->id_pengunggah }}</span>
+                <span class="text-gray-500 text-md font-regular block">{{ $makanan->user_pengunggah }}</span>
                 <div class="mt-10">
                   <img src="/images/icons/comment.svg" alt="Icon" class="mr-2 w-4 inline"><span class="text-sm">{{ rand(1, 99) }} comments</span>
                 </div>

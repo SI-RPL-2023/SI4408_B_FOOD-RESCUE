@@ -20,8 +20,13 @@
 
 
 
+
 <div class="pt-4 pb-8 px-32">
     <div class="flex flex-col items-center p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <input name="id_pengunggah" id="id_pengunggah" for ="id_pengunggah" type="hidden" value="{{ Auth::user()->id }}">
+
+        <input name="user_pengunggah" id="user_pengunggah" for ="user_pengunggah" type="hidden" value="{{ Auth::user()->namaDepan }} {{ Auth::user()->namaBelakang }}">
+
 
         <div class="container mx-auto mt-8">
                 <div class="grid grid-cols-2 gap-4">
