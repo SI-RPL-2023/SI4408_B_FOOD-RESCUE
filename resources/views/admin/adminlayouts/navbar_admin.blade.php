@@ -7,7 +7,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         @vite(['resources/css/app.css','resources/js/app.js'])
+<<<<<<< HEAD
+        <title>Dashboard</title>
+=======
         <title>@yield('title')</title>
+>>>>>>> master
     </head>
 
     <body class="h-screen bg-no-repeat bg-cover">
@@ -68,6 +72,33 @@
 
             {{-- ======= Dashboard Utama ======= --}}
             <li class="flex mx-auto place-content-center">
+<<<<<<< HEAD
+                    <a href="{{ Request::is('/dashboard') ? '#' : '/dashboard' }}" class="{{ Request::is('dashboard') ? 'btn-aktif' : 'btn-nonaktif' }} flex items-center w-[278px] p-2 text-gray-900 rounded-lg ring-offset-2 focus:ring-hijau2">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class=" {{ Request::is('dashboard') ? 'ico-aktif' : 'ico-nonaktif' }}" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd" fill-rule="evenodd" d="M2.25 5.25a3 3 0 013-3h13.5a3 3 0 013 3V15a3 3 0 01-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 01-.53 1.28h-9a.75.75 0 01-.53-1.28l.621-.622a2.25 2.25 0 00.659-1.59V18h-3a3 3 0 01-3-3V5.25zm1.5 0v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5z"></path>
+                        </svg>
+
+                        <span class=" {{ Request::is('dashboard') ? 'txt-aktif' : 'txt-nonaktif'}} flex-1 ml-3 whitespace-nowrap font-bold text-[22px] font-Cabin-Medium">Dashboard</span>
+                    </a>
+                </li>
+                {{-- ======= Daftar Pengguna ======= --}}
+                <li class="flex mx-auto place-content-center">
+                    <a href="{{ Request::is('/dashboard-pengguna') ? '#' : '/dashboard-pengguna' }}" class="{{ Request::is('dashboard-pengguna') ? 'btn-aktif' : 'btn-nonaktif' }} flex items-center w-[278px] p-2 text-gray-900 rounded-lg">
+                        <svg aria-hidden="true" class="{{ Request::is('dashboard-pengguna') ? 'ico-aktif' : 'ico-nonaktif' }}" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
+                        </svg>
+                        <span class="{{ Request::is('dashboard-pengguna') ? 'txt-aktif' : 'txt-nonaktif'}} flex-1 ml-3 whitespace-nowrap font-bold text-[22px] font-Cabin-Medium">Daftar Pengguna</span>
+                    </a>
+
+
+            </li>
+            <li class="flex mx-auto place-content-center">
+                <a href="{{ url('dashboard-barang') }}" class="{{ Request::is('dashboard-barang') ? 'btn-aktif' : 'btn-nonaktif' }} flex items-center w-[278px] p-2 text-gray-900 rounded-lg ring-offset-2 focus:ring-hijau2">
+                    <svg aria-hidden="true" class="{{ Request::is('dashboard-barang') ? 'ico-aktif' : 'ico-nonaktif' }}" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
+                    </svg>
+                    <span class="{{ Request::is('dashboard-barang') ? 'txt-aktif' : 'txt-nonaktif'}} flex-1 ml-3 whitespace-nowrap font-bold text-[22px] font-Cabin-Medium">Daftar Barang</span>
+=======
                 <a href="{{ Request::is('/dashboard') ? '#' : '/dashboard' }}" class="{{ Request::is('dashboard') ? 'btn-aktif' : 'btn-nonaktif' }} flex items-center w-[278px] p-2 text-gray-900 rounded-lg ring-offset-2 focus:ring-hijau2">
                     <svg aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class=" {{ Request::is('dashboard') ? 'ico-aktif' : 'ico-nonaktif' }}" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path clip-rule="evenodd" fill-rule="evenodd" d="M2.25 5.25a3 3 0 013-3h13.5a3 3 0 013 3V15a3 3 0 01-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 01-.53 1.28h-9a.75.75 0 01-.53-1.28l.621-.622a2.25 2.25 0 00.659-1.59V18h-3a3 3 0 01-3-3V5.25zm1.5 0v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5z"></path>
@@ -94,6 +125,7 @@
                         <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
                     </svg>
                     <span class="{{ Request::is('dashboard-makanan') ? 'txt-aktif' : 'txt-nonaktif'}} flex-1 ml-3 whitespace-nowrap font-bold text-[22px] font-Cabin-Medium">Daftar Makanan</span>
+>>>>>>> master
                 </a>
             </li>
             {{-- Daftar Resep --}}

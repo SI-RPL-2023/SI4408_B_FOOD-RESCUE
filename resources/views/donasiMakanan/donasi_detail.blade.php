@@ -2,6 +2,8 @@
 
 @section('content')
 
+<<<<<<< HEAD
+=======
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,6 +21,7 @@
 <body>
 
 
+>>>>>>> master
     <section id="Detail" class=" py-5 min-h-screen font-Cabin">
 
         <div class="container mx-auto h-52 m-4">
@@ -105,7 +108,9 @@
 
                         <div class="text-center mt-10">
                             <!-- Ini Angka 1 nya diubah jadi ID si produknya -->
+                            @if ($makanan->id_pengunggah != auth()->user()->id)
                             <a href="/donasi/booking/{{ $makanan->id }}" class="bg-amber-500 py-3 px-8 text-white rounded-2xl text-LG">Booking</a>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -140,6 +145,15 @@
                 },
             }));
         });
+
+        @if (Session::has('error'))
+            var message = '{{ Session::get('error') }}';
+            Swal.fire({
+                title: 'Error',
+                text:  message,
+                icon: 'error'
+            });
+        @endif
     </script>
 @endsection
 </body>

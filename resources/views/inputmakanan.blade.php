@@ -20,6 +20,41 @@
 
 
 
+<<<<<<< HEAD
+            Tambah Makanan
+        </div><br>
+        <div class="mb-6">
+            <label for="nama" class="block mb-2 text-md font-bold text-gray-900 dark:text-white">Nama Makanan</label>
+            <input type="text" id="nama" name="nama" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-hijau1 focus:border-hijau1 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-hijau1 dark:focus:border-hijau1 font-Cabin-Medium" placeholder="Masukkan Nama Makanan" required>
+          </div>
+          <div class="mb-6">
+            <label for="deskripsi" class="block mb-2 text-md font-bold text-gray-900 dark:text-white">Deskripsi Singkat</label>
+            <input type="textarea" id="deskripsi" name="deskripsi" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-hijau1 focus:border-hijau1 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-hijau1 dark:focus:border-hijau1 font-Cabin-Medium" placeholder="Masukkan Deskripsi Singkat Makanan" required>
+          </div>
+          <div class="mb-6">
+            <!-- Input Lokasi Lama -->
+            <!-- <label for="lokasi" class="block mb-2 text-md font-bold text-gray-900 dark:text-white">Lokasi</label>
+            <input type="lokasi" id="lokasi" name="lokasi" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-hijau1 focus:border-hijau1 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-hijau1 dark:focus:border-hijau1 font-Cabin-Medium" placeholder="Masukkan Detail Lokasi" required> -->
+            
+            <!-- Input Lokasi Baru (Disesuaiin sama register) -->
+            <label for="lokasi" class="block mb-2 text-md font-bold text-gray-900 dark:text-white">Lokasi</label>
+            <select id="lokasi" name="lokasi" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option selected>Pilih Kota</option>
+                <option value="Jakarta">Jakarta</option>
+                <option value="Bandung">Bandung</option>
+                <option value="Surabaya">Surabaya</option>
+                <option value="Depok">Depok</option>
+                <option value="Bogor">Bogor</option>
+                <option value="Tanggerang">Tanggerang</option>
+                <option value="Bekasi">Bekasi</option>
+                <option value="Purwakarta">Purwakarta</option>
+                <option value="Yogyakarta">Yogyakarta</option>
+                <option value="Bali">Bali</option>
+                <option value="Lampung">Lampung</option>
+            </select>
+          </div>
+=======
+>>>>>>> master
 
 <div class="pt-4 pb-8 px-32">
     <div class="flex flex-col items-center p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -118,6 +153,14 @@
             </div>
 
 
+<<<<<<< HEAD
+        <input name="id_pengunggah" id="id_pengunggah" for ="id_pengunggah" type="hidden" value="{{ Auth::user()->id }}">
+
+        <input name="user_pengunggah" id="user_pengunggah" for ="user_pengunggah" type="hidden" value="{{ Auth::user()->namaDepan }} {{ Auth::user()->namaBelakang }}">
+
+        <input name="availability" id="availability" for ="availability" type="hidden" value="1">
+=======
+>>>>>>> master
 
 
     </div>
