@@ -86,14 +86,14 @@
                 </a>
 
 
-            {{-- ======= Daftar Pengguna ======= --}}
+            {{-- ======= Daftar Barang ======= --}}
             </li>
             <li class="flex mx-auto place-content-center">
-                <a href="{{ url('dashboard-makanan') }}" class="{{ Request::is('dashboard-makanan') ? 'btn-aktif' : 'btn-nonaktif' }} flex items-center w-[278px] p-2 text-gray-900 rounded-lg ring-offset-2 focus:ring-hijau2">
-                    <svg aria-hidden="true" class="{{ Request::is('dashboard-makanan') ? 'ico-aktif' : 'ico-nonaktif' }}" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <a href="{{ url('dashboard-barang') }}" class="{{ Request::is('dashboard-barang') ? 'btn-aktif' : 'btn-nonaktif' }} flex items-center w-[278px] p-2 text-gray-900 rounded-lg ring-offset-2 focus:ring-hijau2">
+                    <svg aria-hidden="true" class="{{ Request::is('dashboard-barang') ? 'ico-aktif' : 'ico-nonaktif' }}" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
                     </svg>
-                    <span class="{{ Request::is('dashboard-makanan') ? 'txt-aktif' : 'txt-nonaktif'}} flex-1 ml-3 whitespace-nowrap font-bold text-[22px] font-Cabin-Medium">Daftar Makanan</span>
+                    <span class="{{ Request::is('dashboard-barang') ? 'txt-aktif' : 'txt-nonaktif'}} flex-1 ml-3 whitespace-nowrap font-bold text-[22px] font-Cabin-Medium">Daftar Barang</span>
                 </a>
             </li>
             {{-- Daftar Resep --}}

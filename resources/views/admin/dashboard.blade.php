@@ -35,11 +35,21 @@
                         <div>
                             {{-- Dashboard Info Pengguna --}}
                             <div class="w-auto">
-                                <a href="{{ url('dashboard-pengguna') }}" class=" flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100">
-                                    <img class="p-4 w-24 h-24 max-w-xs rounded-lg" src="/images/products/brokoli.jpg" alt="">
+                                <a href="{{ url('dashboard-pengguna') }}" class=" flex flex-col items-center px-[22px] bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100">
+                                    <div class="pl-0">
+                                        {{-- Icons --}}
+                                        <div class=" w-16 h-16 rounded-md bg-hijau_hover ">
+                                            <div class="p-2 ">
+                                                <svg fill="#4D774E" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                    <path d="M10 9a3 3 0 100-6 3 3 0 000 6zM6 8a2 2 0 11-4 0 2 2 0 014 0zM1.49 15.326a.78.78 0 01-.358-.442 3 3 0 014.308-3.516 6.484 6.484 0 00-1.905 3.959c-.023.222-.014.442.025.654a4.97 4.97 0 01-2.07-.655zM16.44 15.98a4.97 4.97 0 002.07-.654.78.78 0 00.357-.442 3 3 0 00-4.308-3.517 6.484 6.484 0 011.907 3.96 2.32 2.32 0 01-.026.654zM18 8a2 2 0 11-4 0 2 2 0 014 0zM5.304 16.19a.844.844 0 01-.277-.71 5 5 0 019.947 0 .843.843 0 01-.277.71A6.975 6.975 0 0110 18a6.974 6.974 0 01-4.696-1.81z"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div class="flex flex-col justify-between p-4 leading-normal">
-                                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $data_pengguna }}</h5>
-                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Pengguna</p>
+                                        <h5 class="mb-1 pt-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $data_pengguna }}</h5>
+                                        <p class="mb-1 font-bold text-2xl text-hijau1 dark:text-gray-400">Pengguna</p>
                                     </div>
                                 </a>
                             </div>
@@ -47,11 +57,22 @@
 
                             {{-- Dashboard Info Barang --}}
                             <div class="w-auto">
-                                <a href="{{ url('dashboard-barang') }}" class=" flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                                    <img class="p-4 w-24 h-24 rounded" src="/images/products/brokoli.jpg" alt="">
+                                <a href="{{ url('dashboard-barang') }}" class=" flex flex-col items-center px-[22px] bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                    <div class="pl-0">
+                                        {{-- Icons --}}
+                                        <div class=" w-16 h-16 rounded-md bg-hijau_hover ">
+                                            <div class="p-2 ">
+
+                                                <svg fill="#4D774E" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                    <path clip-rule="evenodd" fill-rule="evenodd" d="M10.362 1.093a.75.75 0 00-.724 0L2.523 5.018 10 9.143l7.477-4.125-7.115-3.925zM18 6.443l-7.25 4v8.25l6.862-3.786A.75.75 0 0018 14.25V6.443zm-8.75 12.25v-8.25l-7.25-4v7.807a.75.75 0 00.388.657l6.862 3.786z"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div class="flex flex-col justify-between p-4 leading-normal">
-                                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $data_makanan }}</h5>
-                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Makanan</p>
+                                        <h5 class="mb-1 pt-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $data_makanan }}</h5>
+                                        <p class="mb-1 font-bold text-2xl text-hijau1 dark:text-gray-400">Barang</p>
                                     </div>
                                 </a>
                             </div>
@@ -61,24 +82,46 @@
                             {{-- Dashboard Info Resep --}}
                             <div class=" ">
                                 <div class="w-auto">
-                                    <a href="{{ url('dashboard-resep') }}" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                                        <img class="p-4 w-24 h-24 rounded" src="/images/products/brokoli.jpg" alt="">
+                                    <a href="{{ url('dashboard-resep') }}" class="flex flex-col items-center px-[22px] bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                        {{-- <img class="p-4 w-24 h-24 rounded" src="/images/products/brokoli.jpg" alt=""> --}}
+                                        <div class="pl-0">
+                                            {{-- Icons --}}
+                                            <div class=" w-16 h-16 rounded-md bg-hijau_hover ">
+                                                <div class="p-2 ">
+                                                    <svg fill="#4D774E" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                        <path clip-rule="evenodd" fill-rule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003zM12 8.25a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V9a.75.75 0 01.75-.75zm0 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <div class="flex flex-col justify-between p-4 leading-normal">
-                                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $data_resep }}</h5>
-                                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Resep</p>
+                                            <h5 class="mb-1 pt-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $data_resep }}</h5>
+                                            <p class="mb-1 font-bold text-2xl text-hijau1 dark:text-gray-400">Resep</p>
                                         </div>
                                     </a>
                                 </div>
                             </div>
 
-                            {{-- Dashboard Info Resep --}}
+                            {{-- Dashboard Laporan --}}
                             <div>
                                 <div class="w-auto">
-                                    <a href="{{ url('dashboard-laporan') }}" class=" flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                                        <img class="p-4 w-24 h-24 rounded" src="/images/products/brokoli.jpg" alt="">
+                                    <a href="{{ url('dashboard-laporan') }}" class=" flex flex-col items-center px-[22px] bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                        {{-- <img class="p-4 w-24 h-24 rounded" src="/images/products/brokoli.jpg" alt=""> --}}
+                                        <div class="pl-0">
+                                            {{-- Icons --}}
+                                            <div class=" w-16 h-16 rounded-md bg-oren2 ">
+                                                <div class="p-2 ">
+                                                    <svg fill="#F24E1E" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                        <path clip-rule="evenodd" fill-rule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003zM12 8.25a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V9a.75.75 0 01.75-.75zm0 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <div class="flex flex-col justify-between p-4 leading-normal">
-                                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $data_laporan }}</h5>
-                                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Laporan</p>
+                                            <h5 class="mb-1 pt-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $data_laporan }}</h5>
+                                            <p class="mb-1 font-bold text-2xl text-oren dark:text-gray-400">Laporan</p>
                                         </div>
                                     </a>
                                 </div>

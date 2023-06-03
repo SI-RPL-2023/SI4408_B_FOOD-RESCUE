@@ -84,7 +84,7 @@ Route::get('/dashboard', [ControllerDashboard::class, 'all']); //Dashboard Main 
     // Dashboard Pengguna
 // Route::get('/donasi', [ControllerPengguna::class, 'tombol']);
 Route::get('/dashboard-pengguna', [ControllerDashboard::class, 'pullDataPengguna']); // Dashboard List Pengguna
-Route::get('/dashboard-makanan', [ControllerDashboard::class, 'pullDataMakanan']);// Dashboard List Makanan
+Route::get('/dashboard-barang', [ControllerDashboard::class, 'pullDataMakanan']);// Dashboard List Makanan
 Route::get('/dashboard-resep', [ControllerDashboard::class, 'pullDataResep']);// Dashboard List Makanan
 Route::get('/dashboard-laporan', [ControllerDashboard::class, 'pullDataLaporan']);// Dashboard List Makanan
 
