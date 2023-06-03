@@ -68,10 +68,6 @@ Route::get('/about', function () {
     return view('AboutUs.about');
 });
 
-// Halaman FAQ
-// Route::get('/FAQ', function () {
-//     return view('Faq.FaqPage');
-// });
 
 // Halaman 404
 Route::get('/404', function () {
@@ -92,10 +88,6 @@ Route::get('/dashboard-makanan', [ControllerDashboard::class, 'pullDataMakanan']
 Route::get('/dashboard-resep', [ControllerDashboard::class, 'pullDataResep']);// Dashboard List Makanan
 Route::get('/dashboard-laporan', [ControllerDashboard::class, 'pullDataLaporan']);// Dashboard List Makanan
 
-// reported-items
-// Route::get('/dashboard-laporan', function () {
-//     return view('admin.admin_laporan');
-// });
 
 // pop-up
 Route::get('/share', function () {

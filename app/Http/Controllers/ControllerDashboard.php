@@ -96,60 +96,6 @@ class ControllerDashboard extends Controller
 
     private function daftarLaporan()
         {
-            $data_laporantable = DB::table('reports')->get();
-            $find_id_makanan = $data_laporantable->pluck('makanan_id')->toArray();
-            // dd($find_id_makanan);
-
-            $hasil_laporan = DB::table('makanans')->whereIn('id', $find_id_makanan)->get();
-            // dd($hasil_laporan);
-
-            $grouped_laporan =$hasil_laporan->groupBy('id');
-            // dd($grouped_laporan);
-
-             // cari nama berdasarkan id
-            $orang = DB::table('table_pengguna')->get();
-            // dd($orang);
-            $cari_orang = $data_laporantable->pluck('user_id')->toArray();
-
-            $hasil_cari = DB::table('table_pengguna')->whereIn('id', $cari_orang)->get();
-            // dd($hasil_cari);
-            $final_cari = $hasil_cari->groupBy('id');
-            // dd($hasil_cari);
-            // dd($final_cari);
-
-
-
-            $data_laporantable = $data_laporantable->map(function ($item) use ($grouped_laporan) {
-                $item->makanan = $grouped_laporan[$item->makanan_id] ?? [];
-                $item->pengguna = $final_cari[$item->id] ?? [];
-                // dd($item);
-                return $item;
-            });
-            // dd($data_laporantable);
-
-            // =================================================================================================
-
-            // cari nama berdasarkan id
-            $orang = DB::table('table_pengguna')->get();
-            $cari_orang = $data_laporantable->pluck('user_id')->toArray();
-
-            $hasil_cari = DB::table('table_pengguna')->whereIn('id', $cari_orang)->get();
-            // dd($hasil_cari);
-            $final_cari = $hasil_cari->groupBy('id');
-            // dd($hasil_cari);
-            // dd($final_cari);
-
-            $data_laporantablefinal = $orang->map(function ($item) use ($final_cari) {
-                $item->naama = $final_cari[$item->nohp] ?? [];
-                // dd($item);
-                return $item;
-            });
-            // dd($data_laporantablefinal);
-
-            // $merged_array = $data_laporantable->toArray() + $hasil_cari->toArray();
-            // dd($merged_array);
-
-
             //WORKING CODE, DON'T DELETE THIS!!!!`
             $data_laporantable = DB::table('reports')->get();
             $find_id_makanan = $data_laporantable->pluck('makanan_id')->toArray();

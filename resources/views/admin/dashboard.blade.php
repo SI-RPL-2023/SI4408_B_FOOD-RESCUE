@@ -150,33 +150,47 @@
                                         </thead>
                                         <tbody>
                                             @foreach ($data_laporantable as $data)
+                                            @foreach($data->makanan as $laporan)
+                                            @foreach($data->pengguna as $pengguna)
 
                                                 <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-100">
                                                     <th scope="row" class="px-2  py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                        {{-- Foto --}}
                                                         <div class="pl-8">
-                                                            <img class=" w-24 h-24 rounded max-w-xs" src="/images/products/brokoli.jpg" alt="brokoli">
+                                                            @if ($laporan->foto  && in_array(pathinfo($laporan->foto, PATHINFO_EXTENSION), ['jpg', 'jpeg', 'png']))
+                                                                <img class="w-16 h-16 aspect-square rounded" src="{{ asset('/upload/makanan/' . $laporan->foto) }}" alt="{{ $laporan->nama }}user_pfp">
+                                                            @else
+                                                                <img class="w-16 h-16 aspect-square rounded" src="{{ asset('images/default_profile.png') }}" alt="{{ $laporan->nama }}_pfp">
+                                                            @endif
+
+
                                                         </div>
                                                     </th>
-                                                    @foreach($data->makanan as $laporan)
-                                                    @foreach($data->pengguna as $pengguna)
                                                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                        {{-- Nama Produk --}}
                                                         {{ $laporan->merk }}
                                                     </th>
                                                     <td class="px-6 py-4">
+                                                        {{-- Lokasi  --}}
                                                         {{ $laporan->lokasi }}
                                                     </td>
+                                                        <td class="px-6 py-4 ">
+                                                            <div class="flex justify-center items-center w-[100px] {{ $laporan->jenis == 1 ? 'bg-green-100 text-green-800' : ($laporan->jenis == 2 ? 'bg-orange-100 text-orange-800' : 'bg-yellow-100 text-yellow-800') }} text-md font-semibold mr-2 px-2.5 py-0.5 rounded dark:{{ $laporan->jenis == 1 ? 'bg-green-200 text-green-900' : ($laporan->jenis == 2 ? 'bg-orange-200 text-orange-900' : 'bg-yellow-200 text-yellow-900') }} outline outline-{{ $laporan->jenis == 1 ? 'green-900' : ($laporan->jenis == 2 ? 'orange-900' : 'yellow-900') }} outline-2 ">
+                                                            {{-- Kategori --}}
+                                                            {{ $laporan->jenis == 1 ? 'Mentah' : ($laporan->jenis == 2 ? 'Matang' : 'Admin') }}
 
-                                                    <td class="flex justify-center items-center w-[100px] {{ $laporan->jenis == 1 ? 'bg-green-100 text-green-800' : ($laporan->jenis == 2 ? 'bg-orange-100 text-orange-800' : 'bg-yellow-100 text-yellow-800') }} text-md font-semibold mr-2 px-2.5 py-0.5 rounded dark:{{ $laporan->jenis == 1 ? 'bg-green-200 text-green-900' : ($laporan->jenis == 2 ? 'bg-orange-200 text-orange-900' : 'bg-yellow-200 text-yellow-900') }} outline outline-{{ $laporan->jenis == 1 ? 'green-900' : ($laporan->jenis == 2 ? 'orange-900' : 'yellow-900') }} outline-2 ">
-                                                        {{-- {{ $laporan->jenis }} --}}
-                                                        {{ $laporan->jenis == 1 ? 'Mentah' : ($laporan->jenis == 2 ? 'Matang' : 'Admin') }}
+                                                        </div>
                                                     </td>
                                                     <td class="px-6 py-4 md:table-fixed max-w-xs break-words text-black font-semibold">
+                                                        {{-- Alasan Pelaporan --}}
                                                         {{ $data->deskripsi }}
                                                     </td>
                                                     <td class="px-6 py-4">
+                                                        {{-- Pengunggah Makanan --}}
                                                         {{ $pengguna->namaDepan }}
                                                     </td>
                                                     <td class="px-6 py-4">
+                                                        {{-- Tanggal lapor --}}
                                                         {{ $data->created_at }}
                                                     </td>
                                                     @endforeach

@@ -49,11 +49,28 @@
 
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white flex mx-auto place-content-center">
-                                <img class="w-24 h-24 rounded" src="/images/products/brokoli.jpg" alt="brokoli">
+                                {{-- <img class="w-24 h-24 rounded" src="/images/products/brokoli.jpg" alt="brokoli"> --}}
+
+                                @if ($laporan->foto  && in_array(pathinfo($laporan->foto, PATHINFO_EXTENSION), ['jpg', 'jpeg', 'png']))
+                                {{-- <img class="w-16 h-16 aspect-square rounded" src="/upload/makanan/{{ $data->foto }}" alt="{{ $data->nama }}user_pfp"> --}}
+                                    <img class="w-16 h-16 aspect-square rounded" src="{{ asset('/upload/makanan/' . $laporan->foto) }}" alt="{{ $laporan->nama }}user_pfp">
+                                @else
+                                    <img class="w-16 h-16 aspect-square rounded" src="{{ asset('images/default_profile.png') }}" alt="{{ $laporan->nama }}_pfp">
+                                @endif
+
                             </th>
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white mx-auto place-content-center text-center">{{ $laporan->merk }}</th>
                             <td class="px-6 py-4 place-content-center text-center">{{ $laporan->lokasi }}</td>
-                            <td class="px-6 py-4 place-content-center text-center">{{ $laporan->jenis == 1 ? 'Mentah' : ($laporan->jenis == 2 ? 'Matang' : 'Admin') }}</td>
+
+                            {{-- <td class="px-6 py-4 place-content-center text-center"> --}}
+                            <td class="px-6 py-4 place-content-center text-center">
+                                <div class="flex justify-center items-center w-[100px] {{ $laporan->jenis == 1 ? 'bg-green-100 text-green-800' : ($laporan->jenis == 2 ? 'bg-orange-100 text-orange-800' : 'bg-yellow-100 text-yellow-800') }} text-md font-semibold mr-2 px-2.5 py-0.5 rounded dark:{{ $laporan->jenis == 1 ? 'bg-green-200 text-green-900' : ($laporan->jenis == 2 ? 'bg-orange-200 text-orange-900' : 'bg-yellow-200 text-yellow-900') }} outline outline-{{ $laporan->jenis == 1 ? 'green-900' : ($laporan->jenis == 2 ? 'orange-900' : 'yellow-900') }} outline-2 ">
+                                    {{ $laporan->jenis == 1 ? 'Mentah' : ($laporan->jenis == 2 ? 'Matang' : 'Admin') }}
+
+                                </div>
+                            </td>
+
+
                             <td class="px-6 py-3 md:table-fixed max-w-xs break-words place-content-center  text-black font-semibold ">{{ $data->deskripsi }}</td>
                             <td class="px-6 py-4 place-content-center text-center">{{ $pengguna->namaDepan }}</td>
                             <td class="px-6 py-4 place-content-center text-center">{{ $data->created_at }}</td>

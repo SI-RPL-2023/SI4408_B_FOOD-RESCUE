@@ -49,11 +49,13 @@
 
                                     {{-- Gambar --}}
                                     <div class="pl-4 grid auto-cols-max">
-                                        @if ($data->foto)
-                                            {{-- <img class="w-16 h-16 aspect-square rounded" src="/upload/makanan/{{ $data->foto }}" alt="{{ $data->nama }}user_pfp"> --}}
+
+
+                                        @if ($data->foto  && in_array(pathinfo($data->foto, PATHINFO_EXTENSION), ['jpg', 'jpeg', 'png']))
+                                        {{-- <img class="w-16 h-16 aspect-square rounded" src="/upload/makanan/{{ $data->foto }}" alt="{{ $data->nama }}user_pfp"> --}}
                                             <img class="w-16 h-16 aspect-square rounded" src="{{ asset('/upload/makanan/' . $data->foto) }}" alt="{{ $data->nama }}user_pfp">
                                         @else
-                                            <img class="w-16 h-16 aspect-square rounded" src="/images/default_profile.png') }}" alt="{{ $data->nama }}_pfp">
+                                            <img class="w-16 h-16 aspect-square rounded" src="{{ asset('images/default_profile.png') }}" alt="{{ $data->nama }}_pfp">
                                         @endif
                                     </div>
                                 </th>
