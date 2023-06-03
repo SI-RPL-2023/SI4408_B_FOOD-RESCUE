@@ -26,11 +26,19 @@
   <img class="h-auto max-w-lg mx-auto mt-10" src="images/resep/resep.jpg" alt="image description">
 </div>
 
+@auth
+    @if(auth()->user()->role == '0')
+        <div class="container mx-auto mt-10 flex justify-center">
+            <a href="{{ url('/tambahresep') }}" class="text-white bg-kuning hover:bg-kuning2 focus:ring-4 focus:outline-none focus:ring-kuning3 rounded-lg px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-kuning3 dark:hover:bg-kuning3 dark:focus:ring-kuning3 font-Cabin-Medium text-sm font-bold">Add Recipe</a>
+        </div>
+    @endif
+@endauth
+
 <div class="grid grid-cols-3 gap-11 mt-20 mr-10 ml-10">
     @foreach($resep as $resep)
         <div class="bg-white rounded-lg shadow-lg overflow-hidden flex">
             <div class="w-2/3">
-                <img class="w-full object-cover object-center" src="{{ asset('storage/photos/'.$resep->foto) }}" alt="{{ $resep->nama }}">
+                <img class="w-full object-cover object-center" src="{{ asset('storage/photos/'.str_replace('photos/', '', $resep->foto)) }}" alt="{{ $resep->nama }}">
             </div>
             <div class="p-4 w-2/3">
                 <h2 class="font-bold text-lg mb-2 text-center font-Cabin-Medium">{{ $resep->nama }}</h2>
