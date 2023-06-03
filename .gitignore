@@ -40,3 +40,4 @@ Thumbs.db
 /node_modules/
 /vendor/
 hot
+# node_modules

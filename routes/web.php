@@ -1,9 +1,19 @@
 <?php
 
+
+use App\Http\Controllers\ControllerDashboard;
 use App\Http\Controllers\ControllerDonasiMakanan;
 use App\Http\Controllers\ControllerPengguna;
 use App\Http\Controllers\ProfileController;
+
+use App\Http\Controllers\KunjunganController;
+use App\Http\Controllers\ControllerView;
+use App\Http\Controllers\ControllerJumlah;
+use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ResepController;
+use App\Http\Controllers\RewardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,11 +29,22 @@ use Illuminate\Support\Facades\Route;
 
 
 // Views Routes
+Route::get('/', [KunjunganController::class, 'index'])->name('home');// Homepage
 
+
+
+<<<<<<< HEAD
 // Landing Page
-Route::get('/', function () {
-    return view('beranda');
-});
+// Route::get('/', function () {
+//     return view('beranda');
+// });
+
+Route::get('/', [KunjunganController::class, 'index'])->name('home');
+
+Route::post('/profile/update', [ProfileController::class, 'update'])->middleware('auth');
+
+=======
+>>>>>>> master
 
 // Login Routes
 Route::get('/login', function () {
@@ -55,6 +76,15 @@ Route::get('/inputmakanan', function () {
     return view('inputmakanan');
 });
 
+<<<<<<< HEAD
+// // reward
+// Route::get('/reward', function () {
+//     return view('reward');
+// });
+
+
+=======
+>>>>>>> master
 // Halaman AboutUs
 Route::get('/about', function () {
     return view('AboutUs.about');
@@ -70,17 +100,64 @@ Route::get('/404', function () {
     return view('404.noPage');
 });
 
-// ============= Admin Things =================
-// reported-items
-Route::get('/admin-report-items', function () {
-    return view('admin.itemreport');
+// ================= Admin Things =================
+// Dashboard
+<<<<<<< HEAD
+// Route::get('/dashboard', function () {
+//     return view('admin.dashboard');
+// });
+Route::get('/dashboard', [ControllerDashboard::class, 'index'])
+    ->name('dashboard')
+    ->middleware('admin');
+// ->middleware(AdminMiddleware::class);
+
+
+Route::get('/dashboard', [ControllerDashboard::class, 'all']);
+
+// Dashboard Pengguna
+// Route::get('/donasi', [ControllerPengguna::class, 'tombol']);
+Route::get('/dashboard-pengguna', [ControllerPengguna::class, 'pullDataPengguna']);
+
+
+
+
+// Dashboard Barang
+Route::get('/dashboard-barang', function () {
+    return view('admin.admin_barang');
 });
 
-// reported-items
-Route::get('/admin-dashboard', function () {
-    return view('admin.dashboard');
-});
 
+// Dashboard Resep
+Route::get('/dashboard-resep', function () {
+    return view('admin.admin_resep');
+});
+// reported-items
+Route::get('/dashboard-laporan', function () {
+    return view('admin.admin_laporan');
+});
+=======
+Route::get('/dashboard', [ControllerDashboard::class, 'index'])
+    ->name('dashboard')
+    ->middleware('admin');
+    // ->middleware(AdminMiddleware::class);
+Route::get('/dashboard', [ControllerDashboard::class, 'all']); //Dashboard Main Page
+    // Dashboard Pengguna
+// Route::get('/donasi', [ControllerPengguna::class, 'tombol']);
+Route::get('/dashboard-pengguna', [ControllerDashboard::class, 'pullDataPengguna']); // Dashboard List Pengguna
+Route::get('/dashboard-makanan', [ControllerDashboard::class, 'pullDataMakanan']);// Dashboard List Makanan
+Route::get('/dashboard-resep', [ControllerDashboard::class, 'pullDataResep']);// Dashboard List Makanan
+Route::get('/dashboard-laporan', [ControllerDashboard::class, 'pullDataLaporan']);// Dashboard List Makanan
+
+// reported-items
+// Route::get('/dashboard-laporan', function () {
+//     return view('admin.admin_laporan');
+// });
+>>>>>>> master
+
+// pop-up
+Route::get('/share', function () {
+    return view('share');
+});
 
 // test-logout
 Route::get('/profile', function () {
@@ -88,22 +165,12 @@ Route::get('/profile', function () {
 });
 
 
-// Beranda
-// Route::get('/', function () {
-//     return view('beranda');
-// });
 
 
 // Halaman Profil
-Route::get('/profile-page', function () {
-    return view('profilPage');
-});
+Route::get('/profile-page', [ProfileController::class, 'home'])->middleware('auth'); //Update Profile
+Route::post('/profile/update', [ProfileController::class, 'update'])->middleware('auth'); //Update Profile
 
-Route::get('/profile-update', function () {
-    return view('profile_update');
-});
-
-Route::post('/profile/update', [ProfileController::class, 'update'])->middleware('auth');
 
 
 // Halaman Donasi Makanan
@@ -111,10 +178,24 @@ Route::get('/donasi-makanan', function () {
     return view('donasiMakanan.donasi');
 });
 Route::get('/donasi', [ControllerDonasiMakanan::class, 'index']);
+<<<<<<< HEAD
+=======
+Route::get('/donasi/mentah', [ControllerDonasiMakanan::class, 'makananMentah']);
+>>>>>>> master
 Route::post('/donasi/report', [ControllerDonasiMakanan::class, 'report']);
+Route::get('/donasi/detail/{id}', [ControllerDonasiMakanan::class, 'detail'])->middleware('cache');
+Route::get('/donasi/booking/{id}', [BookingController::class, 'booking'])->middleware(['auth', 'cache']);
+Route::get('booking/selesai/{id}', [BookingController::class, 'update_status'])->name('booking.selesai')->middleware('auth');
+
 
 // Halaman Input Makanan
 Route::post('donasi', [ControllerDonasiMakanan::class, 'add_donasi'])->name('donasi.action');
+// Halaman Resep
+Route::get('/resep', function () {
+    return view('resep');
+});
+Route::get('/resep', [ResepController::class, 'index'])->name('resep.index'); // Menampilkan Resep
+Route::get('/resep/{id}', [ResepController::class, 'show'])->name('detailresep'); // Menampilkan Detail Resep
 
 // Halaman Resep
 Route::get('/resep', function () {
@@ -139,13 +220,27 @@ Route::get('/resep/{id}', [ResepController::class, 'show'])->name('detailresep')
 // POST GET Routes
 Route::get('login', [ControllerPengguna::class, 'login'])->name('login');
 Route::post('login', [ControllerPengguna::class, 'login_action'])->name('login.action');
-
 Route::get('logout', [ControllerPengguna::class, 'logout'])->name('logout');
-
-
 Route::get('registerPersonal', [ControllerPengguna::class, 'register'])->name('register');
 Route::post('registerPersonal', [ControllerPengguna::class, 'register_action'])->name('register.action');
 
 
 // tester routes
 Route::post('/testing', [ControllerPengguna::class, 'testing'])->name('testing');
+
+
+// tester routes
+Route::get('transaksi', [TransaksiController::class, 'index'])->name('transaksi');
+Route::get('transaksi/{id}', [TransaksiController::class, 'show'])->name('transaksi.show');
+
+// BLOG
+Route::get('/timeline', [BlogController::class, 'section']);
+Route::get('/unggah-blog', [BlogController::class, 'view_add_blog']);
+Route::get('/edit-blog/{id}', [BlogController::class, 'view_edit_blog']);
+Route::post('input-blog', [BlogController::class, 'add_blog'])->name('input-blog');
+Route::post('update-blog/{id}', [BlogController::class, 'update_blog'])->name('update-blog');
+Route::get('/detail-blog/{id}', [BlogController::class, 'view_blog']);
+Route::get('/hapus-blog/{id}', [BlogController::class, 'hapus_blog']);
+
+// Reward
+Route::get('/reward', [RewardController::class, 'index'])->middleware('auth');;

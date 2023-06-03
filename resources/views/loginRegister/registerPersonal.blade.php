@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/css/app.css','resources/js/app.js'])
-    <title>Login</title>
+    <title>Register Personal</title>
 </head>
-<body class="h-screen bg-no-repeat bg-cover bg-pattern">
+<body class="h-screen bg-no-repeat bg-cover bg-pattern bg-hijau1">
 
     <div class="pl-0 pt-8 mx-auto h-auto max-w-[10%]">
         <a href="/" class="flex items-center">

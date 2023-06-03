@@ -31,7 +31,7 @@
                                 <a href="https://tailwindcss.com/" class="hover:underline ">Reward</a>
                             </li>
                             <li class="mb-4">
-                                <a href="https://tailwindcss.com/" class="hover:underline ">Blog</a>
+                                <a href="{{ url('/timeline') }}" class="hover:underline ">Blog</a>
                             </li>
                             <li>
                                 <a href="{{ url('/resep') }}" class="hover:underline">Resep</a>
@@ -45,7 +45,7 @@
                                 <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Donasi</a>
                             </li>
                             <li>
-                                <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Daftar Makanan</a>
+                                <a href="{{ url('/resep') }}" class="hover:underline">Daftar Makanan</a>
                             </li>
                         </ul>
                     </div>

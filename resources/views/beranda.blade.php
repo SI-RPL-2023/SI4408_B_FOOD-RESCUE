@@ -10,13 +10,17 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         @vite(['resources/css/app.css','resources/js/app.js'])
         <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
-        <title>FodRescue</title>
+        {{-- <title>FodRescue</title> --}}
+        @section('title')
+        Food Rescue | Home
+        @endsection
     </head>
 
     <body class = "bg-hijau2">
 
 <div class="container mx-auto mt-8">
   <p class="text-5xl flex justify-center font-Cabin-Medium text-white mt-7 font-bold">Revive Your Food</p>
+  {{-- <p class="">Total Visit Count: {{ $visitCount->count }}</p> --}}
   <p class="text-5xl flex justify-center font-Cabin-Medium text-white mt-3 font-bold">Recycle Before It Expired</p>
   <p class="text-lg flex justify-center font-Cabin-Medium text-white mt-5">Join our mission to reduce food waste by recycling edible items that are close to expiration.</p>
   <p class="text-lg flex justify-center font-Cabin-Medium text-white mt-3">Give your food a second chance and help protect the planet one meal at a time.</p>
