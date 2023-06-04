@@ -9,6 +9,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\KunjunganController;
 use App\Http\Controllers\ControllerView;
 use App\Http\Controllers\ControllerJumlah;
+use App\Http\Controllers\ControllerNotif;
 use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BookingController;
@@ -29,7 +30,10 @@ use Illuminate\Support\Facades\Route;
 
 
 // Views Routes
-Route::get('/', [KunjunganController::class, 'index'])->name('home');// Homepage
+// Route::get('/', [KunjunganController::class, 'index'])->name('home');// Homepage
+Route::get('/', [KunjunganController::class, 'navbar_all'])->name('home');// Homepage
+Route::get('/notif', [ControllerNotif::class, 'notif_donasi'])->name('home');// Homepage
+// Route::get('/notif', [ControllerNotif::class, 'notif_donasi'])->name('home');// Homepage
 
 
 
@@ -38,7 +42,7 @@ Route::get('/', [KunjunganController::class, 'index'])->name('home');// Homepage
 //     return view('beranda');
 // });
 
-Route::get('/', [KunjunganController::class, 'index'])->name('home');
+Route::get('/', [KunjunganController::class, 'navbar_all'])->name('home');
 
 Route::post('/profile/update', [ProfileController::class, 'update'])->middleware('auth');
 

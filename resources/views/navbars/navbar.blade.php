@@ -67,7 +67,8 @@
 
         <!-- Tombol Sesudah Login -->
         @auth
-            <button id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification" class="inline-flex items-center text-sm font-medium text-center text-gray-500 hover:text-gray-900 focus:outline-none dark:hover:text-white dark:text-gray-400 mr-16" type="button"> 
+        {{-- Notif --}}
+            <button id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification" class="inline-flex items-center text-sm font-medium text-center text-gray-500 hover:text-gray-900 focus:outline-none dark:hover:text-white dark:text-gray-400 mr-16" type="button">
             <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path></svg>
             <div class="relative flex">
             <div class="relative inline-flex w-3 h-3 bg-red-500 border-2 border-white rounded-full -top-2 right-3 dark:border-gray-900"></div>
@@ -79,6 +80,9 @@
                 Notifications
             </div>
             <div class="divide-y divide-gray-100 dark:divide-gray-700">
+
+                @foreach ($notif as $item)
+
                 <a href="#" class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700">
                     <div class="flex-shrink-0">
                         <img class="rounded-full w-11 h-11" src="/docs/images/people/profile-picture-1.jpg" alt="Jese image">
@@ -94,7 +98,8 @@
                         <div class="text-xs text-blue-600 dark:text-blue-500">waktunya, contoh : 3 menit yang lalu</div>
                     </div>
                 </a>
-                
+                @endforeach
+
             </div>
             <a href="#" class="block py-2 text-sm font-medium text-center text-gray-900 rounded-b-lg bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white">
                 <div class="inline-flex items-center ">
@@ -156,7 +161,7 @@
     </button>
 </div>
 
-    
+
 
     <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 " id="navbar-cta">
         <ul class="flex flex-col py-4 px-8 mt-4 mb-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-11 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-hijau4 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
