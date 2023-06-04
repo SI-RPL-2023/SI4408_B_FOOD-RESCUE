@@ -17,7 +17,6 @@ class ResepController extends Controller
     }
 
     /**
-<<<<<<< HEAD
      * Show the form for creating a new resource.
      */
     public function create()
@@ -61,8 +60,6 @@ class ResepController extends Controller
     }
 
     /**
-=======
->>>>>>> master
      * Display the specified resource.
      */
     public function show($id)
@@ -70,7 +67,6 @@ class ResepController extends Controller
         $resep = Resep::find($id);
         // return view('detailresep', compact('resep'));
         return view('detailresep', compact('resep'));
-<<<<<<< HEAD
     }
 
     /**
@@ -87,9 +83,6 @@ class ResepController extends Controller
     public function update(Request $request, string $id)
     {
         //
-=======
-        // return view('share', compact('resep'));
->>>>>>> master
     }
 
     /**

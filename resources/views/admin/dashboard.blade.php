@@ -9,13 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         @vite(['resources/css/app.css','resources/js/app.js'])
-<<<<<<< HEAD
         <title>Dashboard</title>
-=======
-        @section('title')
-        Dashboard
-        @endsection
->>>>>>> master
     </head>
 <body class="h-screen bg-no-repeat bg-cover">
 
@@ -54,13 +48,8 @@
                                 <a href="{{ url('dashboard-barang') }}" class=" flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                                     <img class="p-4 w-24 h-24 rounded" src="/images/products/brokoli.jpg" alt="">
                                     <div class="flex flex-col justify-between p-4 leading-normal">
-<<<<<<< HEAD
                                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">10</h5>
                                         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Barang</p>
-=======
-                                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $data_makanan }}</h5>
-                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Makanan</p>
->>>>>>> master
                                     </div>
                                 </a>
                             </div>
@@ -73,11 +62,7 @@
                                     <a href="{{ url('dashboard-resep') }}" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                                         <img class="p-4 w-24 h-24 rounded" src="/images/products/brokoli.jpg" alt="">
                                         <div class="flex flex-col justify-between p-4 leading-normal">
-<<<<<<< HEAD
                                             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">10</h5>
-=======
-                                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $data_resep }}</h5>
->>>>>>> master
                                             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Resep</p>
                                         </div>
                                     </a>
@@ -90,11 +75,7 @@
                                     <a href="{{ url('dashboard-laporan') }}" class=" flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                                         <img class="p-4 w-24 h-24 rounded" src="/images/products/brokoli.jpg" alt="">
                                         <div class="flex flex-col justify-between p-4 leading-normal">
-<<<<<<< HEAD
                                             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">10</h5>
-=======
-                                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $data_laporan }}</h5>
->>>>>>> master
                                             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Laporan</p>
                                         </div>
                                     </a>
@@ -155,11 +136,7 @@
                                                     Alasan Pelaporan
                                                 </th>
                                                 <th scope="col" class="px-6 py-3">
-<<<<<<< HEAD
                                                     Harga
-=======
-                                                    Pengunggah
->>>>>>> master
                                                 </th>
                                                 <th scope="col" class="px-6 py-3">
                                                     Tanggal Lapor
@@ -170,7 +147,6 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-<<<<<<< HEAD
                                             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-100">
                                                 <th scope="row" class="px-2  py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                     <div class="pl-8">
@@ -265,48 +241,6 @@
                                                 </td>
                                             </tr>
 
-=======
-                                            @foreach ($data_laporantable as $data)
-
-                                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-100">
-                                                    <th scope="row" class="px-2  py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                        <div class="pl-8">
-                                                            <img class=" w-24 h-24 rounded max-w-xs" src="/images/products/brokoli.jpg" alt="brokoli">
-                                                        </div>
-                                                    </th>
-                                                    @foreach($data->makanan as $laporan)
-                                                    @foreach($data->pengguna as $pengguna)
-                                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                        {{ $laporan->merk }}
-                                                    </th>
-                                                    <td class="px-6 py-4">
-                                                        {{ $laporan->lokasi }}
-                                                    </td>
-
-                                                    <td class="flex justify-center items-center w-[100px] {{ $laporan->jenis == 1 ? 'bg-green-100 text-green-800' : ($laporan->jenis == 2 ? 'bg-orange-100 text-orange-800' : 'bg-yellow-100 text-yellow-800') }} text-md font-semibold mr-2 px-2.5 py-0.5 rounded dark:{{ $laporan->jenis == 1 ? 'bg-green-200 text-green-900' : ($laporan->jenis == 2 ? 'bg-orange-200 text-orange-900' : 'bg-yellow-200 text-yellow-900') }} outline outline-{{ $laporan->jenis == 1 ? 'green-900' : ($laporan->jenis == 2 ? 'orange-900' : 'yellow-900') }} outline-2 ">
-                                                        {{-- {{ $laporan->jenis }} --}}
-                                                        {{ $laporan->jenis == 1 ? 'Mentah' : ($laporan->jenis == 2 ? 'Matang' : 'Admin') }}
-                                                    </td>
-                                                    <td class="px-6 py-4 md:table-fixed max-w-xs break-words text-black font-semibold">
-                                                        {{ $data->deskripsi }}
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        {{ $pengguna->namaDepan }}
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        {{ $data->created_at }}
-                                                    </td>
-                                                    @endforeach
-                                                    @endforeach
-                                                    <td class="px-6 py-4">
-                                                        <a href="{{ url ('dashboard-laporan') }}" class="w-[95px] flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-hijau1 rounded-lg hover:bg-hijau2 focus:ring-2 focus:outline-none focus:ring-hijau3 ring-offset-2">
-                                                            Periksa
-                                                            <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                            @endforeach
->>>>>>> master
 
 {{-- End Data --}}
                                         </tbody>

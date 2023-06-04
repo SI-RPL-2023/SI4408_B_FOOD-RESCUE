@@ -20,7 +20,6 @@
 
 
 
-<<<<<<< HEAD
             Tambah Makanan
         </div><br>
         <div class="mb-6">
@@ -53,8 +52,6 @@
                 <option value="Lampung">Lampung</option>
             </select>
           </div>
-=======
->>>>>>> master
 
 <div class="pt-4 pb-8 px-32">
     <div class="flex flex-col items-center p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -153,14 +150,11 @@
             </div>
 
 
-<<<<<<< HEAD
         <input name="id_pengunggah" id="id_pengunggah" for ="id_pengunggah" type="hidden" value="{{ Auth::user()->id }}">
 
         <input name="user_pengunggah" id="user_pengunggah" for ="user_pengunggah" type="hidden" value="{{ Auth::user()->namaDepan }} {{ Auth::user()->namaBelakang }}">
 
         <input name="availability" id="availability" for ="availability" type="hidden" value="1">
-=======
->>>>>>> master
 
 
     </div>

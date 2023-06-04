@@ -89,33 +89,6 @@ class ControllerPengguna extends Controller
     // public function pullData(): View {
     //     $data_pengguna = DB::table('table_pengguna')->get();
     // }
-<<<<<<< HEAD
-=======
-
-    public function pullDataPengguna(): View
-    {
-        $data_pengguna = DB::table('table_pengguna')->get();
-
-        return view('admin.admin_pengguna', ['data_pengguna' => $data_pengguna]);
-    }
-
-
-    public function pullDataResep(): View
-    {
-        $data_makanan = DB::table('makanans')->get();
-
-        return view('admin.admin_makanan', ['data_makanan' => $data_makanan]);
-    }
-
-
-
-
-
-//     public function profile()
-//     {
-//         return view('profile');
-//     }
->>>>>>> master
 
     public function pullDataPengguna(): View
     {

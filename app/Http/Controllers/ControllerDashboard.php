@@ -5,17 +5,12 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\KunjunganController;
 use App\Models\User;
-<<<<<<< HEAD
-use App\Models\Kunjungan;
-use Illuminate\View\View;
-=======
 use App\Models\Resep;
 use App\Models\Report;
 use App\Models\Makanan;
 use App\Models\Kunjungan;
 use Illuminate\View\View;
 use Illuminate\Support\Facades\DB;
->>>>>>> master
 
 /*
 |--------------------------------------------------------------------------|
@@ -43,30 +38,18 @@ class ControllerDashboard extends Controller
         $controller = new ControllerDashboard();
         $data_pengguna = $controller->sumDataPengguna();
         $dataResep = $controller->sumDataResep();
-<<<<<<< HEAD
-        $dataBarang = $controller->sumDataBarang();
-        $dataLaporan = $controller->sumDataLaporan();
-        $totalKunjungan = $controller->totalKunjungan();
-=======
         $dataBarang = $controller->sumDataMakanan();
         $dataLaporan = $controller->sumDataLaporan();
         $totalKunjungan = $controller->totalKunjungan();
         $dataLaporantable = $controller->daftarLaporan();
->>>>>>> master
 
         return view('admin.dashboard', [
             'data_pengguna' => $data_pengguna->data_pengguna,
             'data_resep' => $dataResep->data_resep,
-<<<<<<< HEAD
-            'data_barang' => $dataBarang->data_barang,
-            'data_laporan' => $dataLaporan->data_laporan,
-            'total_kunjungan' => $totalKunjungan,
-=======
             'data_makanan' => $dataBarang->data_makanan,
             'data_laporan' => $dataLaporan->data_laporan,
             'total_kunjungan' => $totalKunjungan,
             'data_laporantable' => $dataLaporantable->data_laporantable,
->>>>>>> master
         ]);
 
     }
@@ -79,16 +62,6 @@ class ControllerDashboard extends Controller
 
     private function sumDataResep(): View
     {
-<<<<<<< HEAD
-        $total_dashboard = User::count();
-        return view('admin.dashboard', ['data_barang' => $total_dashboard]);
-    }
-
-    private function sumDataBarang(): View
-    {
-        $total_barang = User::count();
-        return view('admin.dashboard', ['data_barang' => $total_barang]);
-=======
         $total_resep = Resep::count();
         return view('admin.dashboard', ['data_resep' => $total_resep]);
     }
@@ -97,18 +70,12 @@ class ControllerDashboard extends Controller
     {
         $total_makanan = Makanan::count();
         return view('admin.dashboard', ['data_makanan' => $total_makanan]);
->>>>>>> master
     }
 
     private function sumDataLaporan(): View
     {
-<<<<<<< HEAD
-        $total_laporan = User::count();
-        return view('admin.dashboard', ['data_barang' => $total_laporan]);
-=======
         $total_laporan = Report::count();
         return view('admin.dashboard', ['data_laporan' => $total_laporan]);
->>>>>>> master
     }
 
     private function tombol() {
@@ -127,8 +94,6 @@ class ControllerDashboard extends Controller
         return $totalKunjungan;
     }
 
-<<<<<<< HEAD
-=======
     private function daftarLaporan()
         {
             $data_laporantable = DB::table('reports')->get();
@@ -255,7 +220,6 @@ class ControllerDashboard extends Controller
 
         return view('admin.admin_laporan', ['data_laporan' => $data_laporan]);
     }
->>>>>>> master
 }
 
 

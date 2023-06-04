@@ -51,11 +51,8 @@ class DatabaseSeeder extends Seeder
             'jenis' => '2',
             'merk' => 'Tropical',
             'exp_date' => '2023-12-20',
-<<<<<<< HEAD
-            'lokasi' => 'Bandung',
-=======
             'id_pengunggah' => '1',
->>>>>>> master
+            'lokasi' => 'Bandung',
             'availability' => 'Tersedia',
             'foto' => 'sirup.svg'
         ]);
