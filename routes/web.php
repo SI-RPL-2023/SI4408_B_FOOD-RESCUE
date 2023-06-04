@@ -27,6 +27,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+
+Route::get('/db', function () {
+    return view('welcome');
+});
+
 // Views Routes
 Route::get('/', [KunjunganController::class, 'index'])->name('home');// Homepage
 
