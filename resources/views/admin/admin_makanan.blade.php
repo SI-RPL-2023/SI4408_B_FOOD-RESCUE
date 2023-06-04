@@ -29,7 +29,7 @@
                             <th scope="col" class="px-6 py-3 place-content-center text-center">Gambar Barang</th>
                             <th scope="col" class="px-6 py-3 place-content-center text-center">Nama Produk</th>
                             <th scope="col" class="px-6 py-3 place-content-center text-center">Lokasi</th>
-                            <th scope="col" class="px-6 py-3 place-content-center">Category</th>
+                            <th scope="col" class="px-6 py-3 place-content-center">Jenis Bahan</th>
                             <th scope="col" class="px-6 py-3 md:table-fixed max-w-xs break-words place-content-center text-center">Deskripsi</th>
                             <th scope="col" class="px-6 py-3 place-content-center text-center">Harga</th>
                             <th scope="col" class="px-6 py-3 place-content-center text-center">Tanggal Upload</th>

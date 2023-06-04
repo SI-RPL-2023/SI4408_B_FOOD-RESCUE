@@ -166,6 +166,21 @@ class ControllerDashboard extends Controller
 
         return view('admin.admin_laporan', ['data_laporan' => $data_laporan]);
     }
+
+    public function hapusLaporan($makanan_id)
+    {
+        // Report::find($makanan_id)->delete();
+        $report = Report::where('makanan_id', $makanan_id)->first();
+
+        if ($report) {
+            $makanan = Makanan::find($makanan_id);
+            if ($makanan) {
+                $makanan->delete();
+            }
+        }
+
+        return redirect('/dashboard-laporan');
+    }
 }
 
 

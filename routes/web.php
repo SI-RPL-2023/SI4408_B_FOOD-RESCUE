@@ -92,6 +92,8 @@ Route::get('/dashboard-pengguna', [ControllerDashboard::class, 'pullDataPengguna
 Route::get('/dashboard-barang', [ControllerDashboard::class, 'pullDataMakanan']);// Dashboard List Makanan
 Route::get('/dashboard-resep', [ControllerDashboard::class, 'pullDataResep']);// Dashboard List Makanan
 Route::get('/dashboard-laporan', [ControllerDashboard::class, 'pullDataLaporan']);// Dashboard List Makanan
+Route::get('/dashboard-laporan/{id}', [ControllerDashboard::class, 'hapusLaporan'])->name('hapuss');;// Dashboard List Makanan
+
 
 
 // pop-up
