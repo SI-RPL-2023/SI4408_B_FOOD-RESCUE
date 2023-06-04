@@ -169,7 +169,6 @@ class ControllerDashboard extends Controller
 
     public function hapusLaporan($makanan_id)
     {
-        // Report::find($makanan_id)->delete();
         $report = Report::where('makanan_id', $makanan_id)->first();
 
         if ($report) {
