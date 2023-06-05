@@ -32,6 +32,7 @@ use Illuminate\Support\Facades\Route;
 // Views Routes
 // Route::get('/', [KunjunganController::class, 'index'])->name('home');// Homepage
 Route::get('/', [KunjunganController::class, 'navbar_all'])->name('home');// Homepage
+
 Route::get('/notif', [ControllerNotif::class, 'notif_donasi'])->name('home');// Homepage
 // Route::get('/notif', [ControllerNotif::class, 'notif_donasi'])->name('home');// Homepage
 
@@ -191,6 +192,10 @@ Route::post('/tambahresep', [ResepController::class, 'store'])->name('resep.stor
 // Menampilkan Detail Resep
 Route::get('/resep/{id}', [ResepController::class, 'show'])->name('detailresep');
 
+// Login Routes
+Route::get('/notifikasi', function () {
+    return view('notifikasi');
+});
 
 // POST GET Routes
 Route::get('login', [ControllerPengguna::class, 'login'])->name('login');
