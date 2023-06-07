@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/css/app.css','resources/js/app.js'])
-    <title>Login</title>
+    @section('title')
+    Food Rescue | Login
+    @endsection
 </head>
 <body class="h-screen bg-no-repeat bg-cover bg-pattern bg-hijau1">
 

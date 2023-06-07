@@ -21,7 +21,7 @@ class ResepController extends Controller
      */
     public function create()
     {
-        //
+        return view('tambahresep');
     }
 
     /**
@@ -29,7 +29,34 @@ class ResepController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Validasi form
+ 
+        $validatedData = $request->validate([
+            'nama' => 'required|string',
+            'foto' => 'required|image',
+            'deskripsi' => 'required|string',
+            'person' => 'required|string',
+            'time' => 'required|string',
+            'ingredients' => 'required|string',
+            'steps' => 'required|string',
+        ]);
+
+        $photoPath = $request->file('foto')->store('photos', 'public');
+
+
+        $resep = Resep::create([
+            'nama' => $validatedData['nama'],
+            'foto' => $photoPath,
+            'deskripsi' => $validatedData['deskripsi'],
+            'person' => $validatedData['person'],
+            'time' => $validatedData['time'],
+            'ingredients' => $validatedData['ingredients'],
+            'steps' => $validatedData['steps'],
+        ]);
+        $resep->save();
+         // Redirect ke halaman sukses atau halaman lainnya
+        return redirect('/resep')->with('success', 'Resep berhasil ditambahkan!');
+
     }
 
     /**
