@@ -8,14 +8,18 @@
     @vite(['resources/css/app.css','resources/js/app.js'])
     <title>Register Bisnis</title>
 </head>
-<body class="h-screen bg-no-repeat bg-cover bg-pattern">
+<body class="h-screen bg-no-repeat bg-cover bg-pattern bg-hijau1" >
 
-    <img class="pl-8 pt-8 mx-auto h-auto max-w-[10%]" src="/images/logo2.svg" alt="logo2">
+    <div class="pl-0 pt-8 mx-auto h-auto max-w-[10%]">
+        <a href="/" class="flex items-center">
+            <img src="images/logo2.svg" class="h-auto" alt="FoodRescue Logo" />
+        </a>
+    </div>
 
-    <div class=" pt-8 flex mx-auto place-content-center">
+    <div class=" pt-8 pb-8 flex mx-auto place-content-center">
         <div class=" py-8 max-w-xl p-2 bg-white border border-gray-200 rounded-xl shadow dark:bg-gray-800 dark:border-gray-700">
             <a>
-                <h5 class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Halo, Selamat Datang Kembali</h5>
+                <h5 class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Halooo..<br>Anda akan mendaftar sebagai Bisnis</h5>
             </a>
             <p class="text-center mb-3 font-normal text-gray-700 dark:text-gray-400">Silahkan masukan informasi Anda</p>
 
@@ -39,17 +43,40 @@
 
                     <div class="mb-2">
                         <label for="lokasi" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white font-Cabin-Medium">Lokasi Anda</label>
-                        <input type="text" id="lokasi" name="lokasi"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-hijau1 focus:border-hijau1 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-hijau1 dark:focus:border-hijau1 font-Cabin-Medium" placeholder="Indonesia" required>
+                        <select id="lokasi" name="lokasi" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option selected>Pilih Kota</option>
+                            <option value="Jakarta">Jakarta</option>
+                            <option value="Bandung">Bandung</option>
+                            <option value="Surabaya">Surabaya</option>
+                            <option value="Depok">Depok</option>
+                            <option value="Bogor">Bogor</option>
+                            <option value="Tanggerang">Tanggerang</option>
+                            <option value="Bekasi">Bekasi</option>
+                            <option value="Purwakarta">Purwakarta</option>
+                            <option value="Yogyakarta">Yogyakarta</option>
+                            <option value="Bali">Bali</option>
+                            <option value="Lampung">Lampung</option>
+                        </select>
                     </div>
 
                     <div class="mb-2">
                         <label for="nohp" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white font-Cabin-Medium">Nomor Hp</label>
-                        <input type="text" id="nohp" name="nohp" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-hijau1 focus:border-hijau1 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-hijau1 dark:focus:border-hijau1 font-Cabin-Medium" placeholder="+62-xxx" required>
+                        <div class="flex">
+                            <span class="inline-flex items-center px-2 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                                +62
+                            </span>
+                            <input type="text" id="nohp" name="nohp" class="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="08125">
+                        </div>
                     </div>
 
                     <div class="mb-2">
                         <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white font-Cabin-Medium">Masukan Email Anda</label>
-                        <input type="email" id="email" name="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-hijau1 focus:border-hijau1 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-hijau1 dark:focus:border-hijau1 font-Cabin-Medium" placeholder="name@mail.com" required>
+                        <div class="relative mb-6">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                            <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                            </div>
+                            <input type="email" id="email" name="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="email@gmail.com">
+                        </div>
                     </div>
 
                     <input name="role" id="role" for ="role" type="hidden" value="2">
@@ -57,11 +84,14 @@
                     <div class="mb-2">
                         <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white font-Cabin-Medium">Kata Sandi Anda</label>
                         <input type="password" id="password" name="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-hijau1 focus:border-hijau1 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-hijau1 dark:focus:border-hijau1 font-Cabin-Medium" required>
+                        @error('password')
+                        <p class="mt-2 text-xs text-red-500">{{ $message }}</p>
+                        @enderror
                     </div>
 
                     <div class="mb-2">
-                        <label for="repassword" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white font-Cabin-Medium">Kata Sandi Anda</label>
-                        <input type="password" id="repassword" name="repassword" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-hijau1 focus:border-hijau1 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-hijau1 dark:focus:border-hijau1 font-Cabin-Medium" required>
+                        <label for="password_confirmation" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white font-Cabin-Medium">Konfirmasi Kata Sandi Anda</label>
+                        <input type="password" id="password_confirmation" name="password_confirmation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-hijau1 focus:border-hijau1 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-hijau1 dark:focus:border-hijau1 font-Cabin-Medium" required>
                     </div>
 
                     <div class="pt-4 flex flex-col items-center">
@@ -71,13 +101,7 @@
             </div>
 
             <p class="pt-8 text-center font-Cabin-Medium">Sudah Punya Akun? <strong><a class="hover:text-hijau1" href="{{ url('login') }}" class="text-reset text-heavy">Masuk Sekarang</a></strong></p>
-
-            {{-- <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                Read more
-                <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-2 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </a> --}}
         </div>
-
     </div>
 
 

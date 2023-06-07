@@ -1,66 +1,126 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://github.com/SI-RPL-2023/SI4408_B_FOOD-RESCUE/blob/master/public/images/logo2.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# FoodRescue
 
-## About Laravel
+FoodRescue This is a website that receives food items that are approaching their expiration date, and processes them into ready-to-eat meals. It also provides recipes using ingredients that can be selected by Users. This Project is built with [Laravel](https://laravel.com/) Framework and [Flowbite Tailwind UI Component](https://flowbite.com/docs/getting-started/laravel/) for Front-End Framework.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Feature
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+| No  | Feature Name                             | Role                                    | Handled By                 |   Progress             |
+| --- | ---------------------------------------- | :------------------------------------:  |  :----------------------:  |   :-----------------:  |
+|**---** | **---------- SPRINT 1 ----------**    |   **---------- SPRINT 1 ----------**    |      **-- SPRINT 1 --**    |   **-- SPRINT 1 --**   |
+| 1      | Registration Page                     |       ``Personal`` ``Business``         |        ``1202204123``      |         &check;        |
+| 2      | Login Page                            |   ``Personal`` ``Business`` ``Admin``   |        ``1202204123``      |         &check;        |
+| 3      | Homepage                              |       ``Personal`` ``Business``         |        ``1202201372``      |         &check;        |
+| 4      | Profile Page                          |       ``Personal`` ``Business``         |        ``1202200039``      |         &check;        |
+| 5      | Update Profile Page                   |       ``Personal`` ``Business``         |        ``1202204283``      |         &check;        |
+| 6      | Update Profile Picture Page           |       ``Personal`` ``Business``         |        ``1202204283``      |         &check;        |
+| 7      | Food Donation Page                    |       ``Personal`` ``Business``         |        ``1202200127``      |         &check;        |
+| 8      | Food Donation Upload Page             |       ``Personal`` ``Business``         |        ``1202200195``      |         &check;        |
+|**----**| **---------- SPRINT 2 ---------**     |   **---------- SPRINT 2 ---------**     |      **-- SPRINT 2 --**    |   **-- SPRINT 2 --**   |
+| 1      | Searchbar Filter                      |          ``Personal`` ``Business``      |        ``1202200127``      |         &check;        |
+| 2      | Searchbar                             |   ``Personal`` ``Business`` ``Admin``   |        ``1202200127``      |         &check;        |
+| 3      | Food Detail Page                      |        ``Personal`` ``Business``        |        ``1202204283``      |         &check;        |
+| 4      | Food Confirmation Page                |        ``Personal`` ``Business``        |        ``1202200195``      |         &check;        |
+| 5      | Review Page                           |        ``Personal`` ``Business``        |        ``1202200039``      |         &check;        |
+| 6      | Recipe Page                           |        ``Personal`` ``Business``        |        ``1202201372``      |         &check;        |
+| 7      | Recipe Detail Page                    |        ``Personal`` ``Business``        |        ``1202201372``      |         &check;        |
+| 8      | Blog Timeline Page                    |        ``Personal`` ``Business``        |        ``1202202071``      |         &check;        |
+| 9      | Blog Upload Page                      |        ``Personal`` ``Business``        |        ``1202202071``      |         &check;        |
+| 10     | Blog Details Page                     |        ``Personal`` ``Business``        |        ``1202202071``      |         &check;        |
+|**---** | **---------- SPRINT 3 ---------**     |   **---------- SPRINT 3 ---------**     |      **-- SPRINT 3 --**    |   **-- SPRINT 3 --**   |
+| 1      | Dashboard Page                        |        ``Personal`` ``Business``        |        ``1202204123``      |         [ ]             |
+| 2      | Delete Reported Page                  |   ``Personal`` ``Business`` ``Admin``   |        ``1202204123``      |         [ ]             |
+| 3      | Share Recipe                          |        ``Personal`` ``Business``        |        ``1202204123``      |         &check;        |
+| 4      | Product Comemnt Page                  |        ``Personal`` ``Business``        |        ``1202200039``      |         [ ]             |
+| 5      | Reward Page                           |        ``Personal`` ``Business``        |        ``1202200195``      |         [ ]             |
+| 6      | Notification Page                     |        ``Personal`` ``Business``        |        ``1202201372``      |         [ ]             |
+| 7      | About Us Page                         |        ``Personal`` ``Business``        |        ``1202200164``      |         &check;        |
+| 8      | FAQ Page                              |        ``Personal`` ``Business``        |        ``1202200164``      |         &check;        |
+| 9      | Custom Error 404 Page                 |        ``Personal`` ``Business``        |        ``1202200164``      |         &check;        |
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+# About Us
 
-## Learning Laravel
+We're Group 265 from class SI4408. Bachelor of Information Systems Telkom University batch 44. Our Members are consist of :
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+| No  | Name                                                                         | NIM        | Role                |
+| --- | ---------------------------------------------------------------------------- | ---------- | ------------------- |
+| 1   | [Ariadani Dwi Fathurahman](https://www.instagram.com/ariadanidf/)           | 1202202071 | ``Project Manager`` |
+| 2   | [Almira Syamsi Nur Insan](https://www.instagram.com/almiraasy/)              | 1202200164 | ``Analyst``         |
+| 3   | [Ario Kusuma Purboyo](https://www.instagram.com/ariokusuma/)                 | 1202204123 | ``Programmer``      |
+| 4   | [Apriani Nur Raina](https://www.instagram.com/anraina_/)                     | 1202200195 | ``Programmer``      |
+| 5   | [Bagas Distyo Utomo](https://www.instagram.com/bagasdistyo/)                 | 1202201372 | ``Programmer``      |
+| 6   | [Divani Azza Nabilla M.](https://www.instagram.com/divaniazza_/)             | 1202200127 | ``Programmer``      |
+| 7   | [Dewa Cetra Prabasworo Puspito](https://www.instagram.com/dewacetra.p.7402/) | 1202200039 | ``Programmer``      |
+| 8   | [Noor Panca Maulana](https://www.instagram.com/noorpancamaulana/)            | 1202204283 | ``Programmer``      |
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+# Installation
+## Prerequisite
+*(Using MacOS? You can install it using [Homebrew](https://brew.sh/) )*
+- PHP >= 8
+- [Composer](https://getcomposer.org/) 
+- [NodeJS](https://nodejs.org/en/download)
+- [Flowbite](https://nodejs.org/en/download) *(Installed and run via NodeJS)*
+- [XAMPP](https://www.apachefriends.org/download.html) or [DBeaver](https://dbeaver.io)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## Serve the Application
+*Run the following commands on your terminal, git bash, or PowerShell*
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- Clone this Project
+```bash
+git clone https://github.com/SI-RPL-2023/SI4408_B_FOOD-RESCUE.git
+```
 
-### Premium Partners
+- Rename ``.env.example`` to ``.env``<br>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+- Modify the .env file <br>
+*Configure the .env file according to Your local Database System*
+```bash
+DB_PORT= <your_mysql_port>
+DB_DATABASE= <your_database_name>
+```
 
-## Contributing
+- Update npm<br>
+```bash
+npm update
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- Install Composer
+```bash
+composer install
+```
 
-## Code of Conduct
+- Generate Key
+```bash
+php artisan key:generate
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- Migrate Database
+```bash
+php artisan migrate
+```
 
-## Security Vulnerabilities
+- Link Storage
+```bash
+php artisan storage:link
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Install Tailwind Css and Flowbite using NPM:
+```bash
+npm install -D tailwindcss postcss autoprefixer flowbite
+```
 
-## License
+- Run the laravel server
+```bash
+php artisan serve
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Run the Flowbite Vite
+```bash
+npm run dev
+```
+
+Thank You
+
+    

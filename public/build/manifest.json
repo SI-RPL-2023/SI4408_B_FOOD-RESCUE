@@ -1,11 +1,23 @@
 {
+  "public/images/background-login.svg": {
+    "file": "assets/background-login-5e88c48a.svg",
+    "src": "public/images/background-login.svg"
+  },
+  "public/images/banner-donasi.png": {
+    "file": "assets/banner-donasi-1db7def0.png",
+    "src": "public/images/banner-donasi.png"
+  },
   "resources/css/app.css": {
-    "file": "assets/app-0ead8bc6.css",
+<<<<<<< HEAD
+    "file": "assets/app-1eb621e1.css",
+=======
+    "file": "assets/app-43a6d156.css",
+>>>>>>> master
     "isEntry": true,
     "src": "resources/css/app.css"
   },
   "resources/js/app.js": {
-    "file": "assets/app-397cd224.js",
+    "file": "assets/app-547abec6.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }
