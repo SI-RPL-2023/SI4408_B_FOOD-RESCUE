@@ -5,7 +5,7 @@ use App\Http\Controllers\ControllerDashboard;
 use App\Http\Controllers\ControllerDonasiMakanan;
 use App\Http\Controllers\ControllerPengguna;
 use App\Http\Controllers\ProfileController;
-
+use App\Http\Controllers\Review;
 use App\Http\Controllers\KunjunganController;
 use App\Http\Controllers\ControllerView;
 use App\Http\Controllers\ControllerJumlah;
@@ -27,6 +27,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 
 
 
@@ -72,6 +73,7 @@ Route::get('/inputmakanan', function () {
     return view('inputmakanan');
 });
 
+
 // Halaman AboutUs
 Route::get('/about', function () {
     return view('AboutUs.about');
@@ -113,12 +115,11 @@ Route::get('/profile', function () {
 });
 
 
-
-
 // Halaman Profil
 Route::get('/profile-page', [ProfileController::class, 'home'])->middleware('auth'); //Update Profile
 Route::post('/profile/update', [ProfileController::class, 'update'])->middleware('auth'); //Update Profile
 
+Route::post('/profile/update', [ProfileController::class, 'update'])->middleware('auth');
 
 
 // Halaman Donasi Makanan
@@ -177,6 +178,31 @@ Route::post('registerPersonal', [ControllerPengguna::class, 'register_action'])-
 
 // tester routes
 Route::post('/testing', [ControllerPengguna::class, 'testing'])->name('testing');
+
+
+// navbar
+Route::get('/navbar', function () {
+    return view('navbars.navbar');
+});
+
+Route::get('/layout', function () {
+    return view('navbars.layoutnav');
+});
+
+// Halaman Review
+Route::get('/review-page', function () {
+    return view('review.reviewpage');
+});
+
+Route::get('/write-review', function () {
+    return view('review.writeReview');
+});
+
+Route::get('/rate', function () {
+    return view('review.rate');
+});
+
+Route::post('review', [Review::class, 'add_review'])->name('review.action');
 
 
 // tester routes
