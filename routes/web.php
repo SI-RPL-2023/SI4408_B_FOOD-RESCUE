@@ -91,9 +91,9 @@ Route::get('/about', function () {
 });
 
 // Halaman FAQ
-// Route::get('/FAQ', function () {
-//     return view('Faq.FaqPage');
-// });
+Route::get('/FAQ', function () {
+    return view('Faq.FaqPage');
+});
 
 // Halaman 404
 Route::get('/404', function () {
