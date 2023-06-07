@@ -25,7 +25,7 @@
     <div class="bg-white mx-10">
     <div class="flex flex-wrap">
         <div class="w-full md:w-1/2 lg:w-1/3 ">
-            <img src="{{ asset('storage/photos/'.$resep->foto) }}" alt="{{ $resep->nama }}" class="w-full h-auto mr-6 ml-14 mb-8 mt-36">
+            <img src="{{ asset('storage/photos/'.str_replace('photos/', '', $resep->foto)) }}" alt="{{ $resep->nama }}" class="w-full h-auto mr-6 ml-14 mb-8 mt-36">
 
 <!-- Tombol share -->
 <a href="#" class="text-white bg-kuning hover:bg-kuning2 focus:ring-4 focus:outline-none focus:ring-kuning3 rounded-lg px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-kuning3 dark:hover:bg-kuning3 dark:focus:ring-kuning3 font-Cabin-Medium text-xl font-bold ml-64 mt-6 mb-10" onclick="openModal()">Share</a>
@@ -73,20 +73,22 @@
             <h1 class="text-3xl font-bold text-center mt-5 mb-10 font-Cabin-Medium">{{ $resep->nama }}</h1>
             <p class="text-lg text-justify ml-16 mb-5 font-Cabin-Medium">{{ $resep->deskripsi }}</p>
             <h1 class="text-lg font-bold text-justify ml-16 mb-4 font-Cabin-Medium">Ingredients</h1>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <ul class="list-disc pl-5">
                 @php
-                $ingredients = explode('- ', $resep->ingredients);
+                $ingredients = explode("\n", $resep->ingredients);
                 array_shift($ingredients);
                 @endphp
                 @foreach ($ingredients as $ingredient)
                 <li class="text-lg text-justify ml-16 mb-5 font-Cabin-Medium">{{ trim($ingredient) }}</li>
                 @endforeach
             </ul>
+            
             <h1 class="text-lg font-bold text-justify ml-16 mb-4 font-Cabin-Medium">Steps</h1>
             <!-- <p class="text-lg text-justify ml-16 mb-5">{{ $resep->steps }}</p> -->
             <ul class="list-disc pl-5">
                 @php
-                $steps = explode('- ', $resep->steps);
+                $steps = explode("\n", $resep->steps);
                 array_shift($steps);
                 @endphp
                 @foreach ($steps as $step)

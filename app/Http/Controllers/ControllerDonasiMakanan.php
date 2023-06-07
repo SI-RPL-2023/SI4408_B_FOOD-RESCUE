@@ -38,7 +38,6 @@ class ControllerDonasiMakanan extends Controller
             'merk' => $request->merk,
             'exp_date' => $request->exp_date,
             'id_pengunggah' => $request->id_pengunggah,
-            'user_pengunggah' => $request->user_pengunggah,
             'availability' => $request->availability
         ]);
 
@@ -53,6 +52,7 @@ class ControllerDonasiMakanan extends Controller
 
             $food->foto = $foto;
         }
+        
         $food->save();
 
         return redirect('/donasi')->with('success', 'Upload Berhasil!');

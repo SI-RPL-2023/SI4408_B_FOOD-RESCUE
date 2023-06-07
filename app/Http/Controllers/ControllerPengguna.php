@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
+use Illuminate\Validation\Rule;
+use Illuminate\Validation\ValidationException;
 // use Illuminate\Support\Facades\Validator;
 
 class ControllerPengguna extends Controller
@@ -30,13 +32,40 @@ class ControllerPengguna extends Controller
             'namaBelakang' => 'required',
             'lokasi' => 'required',
             'nohp' => 'required',
-            'email' => 'required',
+            'email' => 'required|email|unique:users',
             'role' => 'required',
+            'password' => [
+                'required',
+                'confirmed',
+                'min:8',
+                'regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/',
+                function ($attribute, $value, $fail) {
+                    if (strlen($value) < 8) {
+                        throw ValidationException::withMessages([
+                            'password' => 'Password harus memiliki setidaknya 8 karakter.',
+                        ]);
+                    }
+                    if (preg_match('/^[a-zA-Z]+$/', $value)) {
+                        throw ValidationException::withMessages([
+                            'password' => 'Password tidak boleh berupa huruf semua.',
+                        ]);
+                    }
+                    if (preg_match('/^\d+$/', $value)) {
+                        throw ValidationException::withMessages([
+                            'password' => 'Password tidak boleh berupa angka semua.',
+                        ]);
+                    }
+                    if (!preg_match('/[@$!%*?&]/', $value)) {
+                        throw ValidationException::withMessages([
+                            'password' => 'Password harus memiliki setidaknya satu karakter khusus.',
+                        ]);
+                    }
+                },
+            ],
+        ], 
+    );
 
-            'password' => 'required',
-            'repassword' => 'required|same:password',
-        ]);
-
+        
         $user = new User([
             'namaDepan' => $request->namaDepan,
             'namaBelakang' => $request->namaBelakang,

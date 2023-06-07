@@ -4,6 +4,41 @@
 
 FoodRescue This is a website that receives food items that are approaching their expiration date, and processes them into ready-to-eat meals. It also provides recipes using ingredients that can be selected by Users. This Project is built with [Laravel](https://laravel.com/) Framework and [Flowbite Tailwind UI Component](https://flowbite.com/docs/getting-started/laravel/) for Front-End Framework.
 
+## Feature
+
+| No  | Feature Name                             | Role                                    | Handled By                 |   Progress             |
+| --- | ---------------------------------------- | :------------------------------------:  |  :----------------------:  |   :-----------------:  |
+|**---** | **---------- SPRINT 1 ----------**    |   **---------- SPRINT 1 ----------**    |      **-- SPRINT 1 --**    |   **-- SPRINT 1 --**   |
+| 1      | Registration Page                     |       ``Personal`` ``Business``         |        ``1202204123``      |         &check;        |
+| 2      | Login Page                            |   ``Personal`` ``Business`` ``Admin``   |        ``1202204123``      |         &check;        |
+| 3      | Homepage                              |       ``Personal`` ``Business``         |        ``1202201372``      |         &check;        |
+| 4      | Profile Page                          |       ``Personal`` ``Business``         |        ``1202200039``      |         &check;        |
+| 5      | Update Profile Page                   |       ``Personal`` ``Business``         |        ``1202204283``      |         &check;        |
+| 6      | Update Profile Picture Page           |       ``Personal`` ``Business``         |        ``1202204283``      |         &check;        |
+| 7      | Food Donation Page                    |       ``Personal`` ``Business``         |        ``1202200127``      |         &check;        |
+| 8      | Food Donation Upload Page             |       ``Personal`` ``Business``         |        ``1202200195``      |         &check;        |
+|**----**| **---------- SPRINT 2 ---------**     |   **---------- SPRINT 2 ---------**     |      **-- SPRINT 2 --**    |   **-- SPRINT 2 --**   |
+| 1      | Searchbar Filter                      |          ``Personal`` ``Business``      |        ``1202200127``      |         &check;        |
+| 2      | Searchbar                             |   ``Personal`` ``Business`` ``Admin``   |        ``1202200127``      |         &check;        |
+| 3      | Food Detail Page                      |        ``Personal`` ``Business``        |        ``1202204283``      |         &check;        |
+| 4      | Food Confirmation Page                |        ``Personal`` ``Business``        |        ``1202200195``      |         &check;        |
+| 5      | Review Page                           |        ``Personal`` ``Business``        |        ``1202200039``      |         &check;        |
+| 6      | Recipe Page                           |        ``Personal`` ``Business``        |        ``1202201372``      |         &check;        |
+| 7      | Recipe Detail Page                    |        ``Personal`` ``Business``        |        ``1202201372``      |         &check;        |
+| 8      | Blog Timeline Page                    |        ``Personal`` ``Business``        |        ``1202202071``      |         &check;        |
+| 9      | Blog Upload Page                      |        ``Personal`` ``Business``        |        ``1202202071``      |         &check;        |
+| 10     | Blog Details Page                     |        ``Personal`` ``Business``        |        ``1202202071``      |         &check;        |
+|**---** | **---------- SPRINT 3 ---------**     |   **---------- SPRINT 3 ---------**     |      **-- SPRINT 3 --**    |   **-- SPRINT 3 --**   |
+| 1      | Dashboard Page                        |        ``Personal`` ``Business``        |        ``1202204123``      |         [ ]             |
+| 2      | Delete Reported Page                  |   ``Personal`` ``Business`` ``Admin``   |        ``1202204123``      |         [ ]             |
+| 3      | Share Recipe                          |        ``Personal`` ``Business``        |        ``1202204123``      |         &check;        |
+| 4      | Product Comemnt Page                  |        ``Personal`` ``Business``        |        ``1202200039``      |         [ ]             |
+| 5      | Reward Page                           |        ``Personal`` ``Business``        |        ``1202200195``      |         [ ]             |
+| 6      | Notification Page                     |        ``Personal`` ``Business``        |        ``1202201372``      |         [ ]             |
+| 7      | About Us Page                         |        ``Personal`` ``Business``        |        ``1202200164``      |         &check;        |
+| 8      | FAQ Page                              |        ``Personal`` ``Business``        |        ``1202200164``      |         &check;        |
+| 9      | Custom Error 404 Page                 |        ``Personal`` ``Business``        |        ``1202200164``      |         &check;        |
+
 # About Us
 
 We're Group 265 from class SI4408. Bachelor of Information Systems Telkom University batch 44. Our Members are consist of :
@@ -37,11 +72,18 @@ We're Group 265 from class SI4408. Bachelor of Information Systems Telkom Univer
 git clone https://github.com/SI-RPL-2023/SI4408_B_FOOD-RESCUE.git
 ```
 
+- Rename ``.env.example`` to ``.env``<br>
+
 - Modify the .env file <br>
 *Configure the .env file according to Your local Database System*
 ```bash
 DB_PORT= <your_mysql_port>
 DB_DATABASE= <your_database_name>
+```
+
+- Update npm<br>
+```bash
+npm update
 ```
 
 - Install Composer
@@ -81,3 +123,4 @@ npm run dev
 
 Thank You
 
+    

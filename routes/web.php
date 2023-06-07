@@ -5,10 +5,11 @@ use App\Http\Controllers\ControllerDashboard;
 use App\Http\Controllers\ControllerDonasiMakanan;
 use App\Http\Controllers\ControllerPengguna;
 use App\Http\Controllers\ProfileController;
-
+use App\Http\Controllers\Review;
 use App\Http\Controllers\KunjunganController;
 use App\Http\Controllers\ControllerView;
 use App\Http\Controllers\ControllerJumlah;
+use App\Http\Controllers\ControllerNotif;
 use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BookingController;
@@ -28,16 +29,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+
+
+Route::get('/db', function () {
+    return view('welcome');
+});
+
 // Views Routes
+// Route::get('/', [KunjunganController::class, 'index'])->name('home');// Homepage
+Route::get('/', [KunjunganController::class, 'navbar_all'])->name('home');// Homepage
 
-// Landing Page
-// Route::get('/', function () {
-//     return view('beranda');
-// });
-
-Route::get('/', [KunjunganController::class, 'index'])->name('home');
-
-Route::post('/profile/update', [ProfileController::class, 'update'])->middleware('auth');
+Route::get('/notif', [ControllerNotif::class, 'notif_donasi'])->name('home');// Homepage
+// Route::get('/notif', [ControllerNotif::class, 'notif_donasi'])->name('home');// Homepage
 
 
 // Login Routes
@@ -70,10 +73,6 @@ Route::get('/inputmakanan', function () {
     return view('inputmakanan');
 });
 
-// // reward
-// Route::get('/reward', function () {
-//     return view('reward');
-// });
 
 
 // Halaman AboutUs
@@ -81,10 +80,6 @@ Route::get('/about', function () {
     return view('AboutUs.about');
 });
 
-// Halaman FAQ
-// Route::get('/FAQ', function () {
-//     return view('Faq.FaqPage');
-// });
 
 // Halaman 404
 Route::get('/404', function () {
@@ -93,38 +88,22 @@ Route::get('/404', function () {
 
 // ================= Admin Things =================
 // Dashboard
-// Route::get('/dashboard', function () {
-//     return view('admin.dashboard');
-// });
 Route::get('/dashboard', [ControllerDashboard::class, 'index'])
     ->name('dashboard')
     ->middleware('admin');
-// ->middleware(AdminMiddleware::class);
-
 
 Route::get('/dashboard', [ControllerDashboard::class, 'all']);
 
 // Dashboard Pengguna
-// Route::get('/donasi', [ControllerPengguna::class, 'tombol']);
-Route::get('/dashboard-pengguna', [ControllerPengguna::class, 'pullDataPengguna']);
+Route::get('/dashboard-pengguna', [ControllerDashboard::class, 'pullDataPengguna']); // Dashboard List Pengguna
+Route::get('/dashboard-barang', [ControllerDashboard::class, 'pullDataMakanan']);// Dashboard List Makanan
+Route::get('/dashboard-resep', [ControllerDashboard::class, 'pullDataResep']);// Dashboard List Makanan
+Route::get('/dashboard-laporan', [ControllerDashboard::class, 'pullDataLaporan']);// Dashboard List Makanan
+Route::get('/dashboard-laporan/{id}', [ControllerDashboard::class, 'hapusLaporan'])->name('hapuss');;// Dashboard List Makanan
 
 
 
 
-// Dashboard Barang
-Route::get('/dashboard-barang', function () {
-    return view('admin.admin_barang');
-});
-
-
-// Dashboard Resep
-Route::get('/dashboard-resep', function () {
-    return view('admin.admin_resep');
-});
-// reported-items
-Route::get('/dashboard-laporan', function () {
-    return view('admin.admin_laporan');
-});
 
 // pop-up
 Route::get('/share', function () {
@@ -137,16 +116,9 @@ Route::get('/profile', function () {
 });
 
 
-
-
 // Halaman Profil
-Route::get('/profile-page', function () {
-    return view('profilPage');
-});
-
-Route::get('/profile-update', function () {
-    return view('profile_update');
-});
+Route::get('/profile-page', [ProfileController::class, 'home'])->middleware('auth'); //Update Profile
+Route::post('/profile/update', [ProfileController::class, 'update'])->middleware('auth'); //Update Profile
 
 Route::post('/profile/update', [ProfileController::class, 'update'])->middleware('auth');
 
@@ -155,7 +127,9 @@ Route::post('/profile/update', [ProfileController::class, 'update'])->middleware
 Route::get('/donasi-makanan', function () {
     return view('donasiMakanan.donasi');
 });
+
 Route::get('/donasi', [ControllerDonasiMakanan::class, 'index']);
+Route::get('/donasi/mentah', [ControllerDonasiMakanan::class, 'makananMentah']);
 Route::post('/donasi/report', [ControllerDonasiMakanan::class, 'report']);
 Route::get('/donasi/detail/{id}', [ControllerDonasiMakanan::class, 'detail'])->middleware('cache');
 Route::get('/donasi/booking/{id}', [BookingController::class, 'booking'])->middleware(['auth', 'cache']);
@@ -164,6 +138,12 @@ Route::get('booking/selesai/{id}', [BookingController::class, 'update_status'])-
 
 // Halaman Input Makanan
 Route::post('donasi', [ControllerDonasiMakanan::class, 'add_donasi'])->name('donasi.action');
+// Halaman Resep
+Route::get('/resep', function () {
+    return view('resep');
+});
+Route::get('/resep', [ResepController::class, 'index'])->name('resep.index'); // Menampilkan Resep
+Route::get('/resep/{id}', [ResepController::class, 'show'])->name('detailresep'); // Menampilkan Detail Resep
 
 // Halaman Resep
 Route::get('/resep', function () {
@@ -171,23 +151,59 @@ Route::get('/resep', function () {
 });
 // Menampilkan Resep
 Route::get('/resep', [ResepController::class, 'index'])->name('resep.index');
+
+// Menampilkan Tambah Resep
+Route::get('/tambahresep', function () {
+    return view('tambahresep');
+});
+
+
+Route::post('/tambahresep', [ResepController::class, 'store'])->name('resep.store');
+
+
 // Menampilkan Detail Resep
 Route::get('/resep/{id}', [ResepController::class, 'show'])->name('detailresep');
 
+// Login Routes
+Route::get('/notifikasi', function () {
+    return view('notifikasi');
+});
 
 // POST GET Routes
 Route::get('login', [ControllerPengguna::class, 'login'])->name('login');
 Route::post('login', [ControllerPengguna::class, 'login_action'])->name('login.action');
-
 Route::get('logout', [ControllerPengguna::class, 'logout'])->name('logout');
-
-
 Route::get('registerPersonal', [ControllerPengguna::class, 'register'])->name('register');
 Route::post('registerPersonal', [ControllerPengguna::class, 'register_action'])->name('register.action');
 
 
 // tester routes
 Route::post('/testing', [ControllerPengguna::class, 'testing'])->name('testing');
+
+
+// navbar
+Route::get('/navbar', function () {
+    return view('navbars.navbar');
+});
+
+Route::get('/layout', function () {
+    return view('navbars.layoutnav');
+});
+
+// Halaman Review
+Route::get('/review-page', function () {
+    return view('review.reviewpage');
+});
+
+Route::get('/write-review', function () {
+    return view('review.writeReview');
+});
+
+Route::get('/rate', function () {
+    return view('review.rate');
+});
+
+Route::post('review', [Review::class, 'add_review'])->name('review.action');
 
 
 // tester routes

@@ -136,3 +136,6 @@
         @endif
     </script>
 @endsection
+</body>
+</html>
+

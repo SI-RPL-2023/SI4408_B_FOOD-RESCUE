@@ -21,7 +21,7 @@
 
             <div class="flex items-center mx-auto mt-5 mb-5 w-3/5">
                 <img class="w-7 h-7 rounded-full mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="Admin avatar" />
-                    <span class="font-Cabin-medium dark:text-white">
+                    <span class="font-Cabin-medium dark:text-primary-500">
                         Admin Food Rescue
                     </span>
             </div>
