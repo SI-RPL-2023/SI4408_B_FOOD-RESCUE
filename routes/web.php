@@ -74,6 +74,7 @@ Route::get('/inputmakanan', function () {
 });
 
 
+
 // Halaman AboutUs
 Route::get('/about', function () {
     return view('AboutUs.about');
