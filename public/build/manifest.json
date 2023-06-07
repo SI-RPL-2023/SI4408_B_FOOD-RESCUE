@@ -8,7 +8,11 @@
     "src": "public/images/banner-donasi.png"
   },
   "resources/css/app.css": {
+<<<<<<< HEAD
+    "file": "assets/app-1eb621e1.css",
+=======
     "file": "assets/app-43a6d156.css",
+>>>>>>> master
     "isEntry": true,
     "src": "resources/css/app.css"
   },

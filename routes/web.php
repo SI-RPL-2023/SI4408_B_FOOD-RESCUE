@@ -13,6 +13,7 @@ use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ResepController;
+use App\Http\Controllers\RewardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,8 +35,6 @@ Route::get('/db', function () {
 
 // Views Routes
 Route::get('/', [KunjunganController::class, 'index'])->name('home');// Homepage
-
-
 
 
 // Login Routes
@@ -84,15 +83,17 @@ Route::get('/404', function () {
 Route::get('/dashboard', [ControllerDashboard::class, 'index'])
     ->name('dashboard')
     ->middleware('admin');
-    // ->middleware(AdminMiddleware::class);
-Route::get('/dashboard', [ControllerDashboard::class, 'all']); //Dashboard Main Page
-    // Dashboard Pengguna
-// Route::get('/donasi', [ControllerPengguna::class, 'tombol']);
+
+Route::get('/dashboard', [ControllerDashboard::class, 'all']);
+
+// Dashboard Pengguna
 Route::get('/dashboard-pengguna', [ControllerDashboard::class, 'pullDataPengguna']); // Dashboard List Pengguna
 Route::get('/dashboard-barang', [ControllerDashboard::class, 'pullDataMakanan']);// Dashboard List Makanan
 Route::get('/dashboard-resep', [ControllerDashboard::class, 'pullDataResep']);// Dashboard List Makanan
 Route::get('/dashboard-laporan', [ControllerDashboard::class, 'pullDataLaporan']);// Dashboard List Makanan
 Route::get('/dashboard-laporan/{id}', [ControllerDashboard::class, 'hapusLaporan'])->name('hapuss');;// Dashboard List Makanan
+
+
 
 
 
@@ -119,12 +120,13 @@ Route::post('/profile/update', [ProfileController::class, 'update'])->middleware
 Route::get('/donasi-makanan', function () {
     return view('donasiMakanan.donasi');
 });
+
 Route::get('/donasi', [ControllerDonasiMakanan::class, 'index']);
 Route::get('/donasi/mentah', [ControllerDonasiMakanan::class, 'makananMentah']);
 Route::post('/donasi/report', [ControllerDonasiMakanan::class, 'report']);
-Route::get('/donasi/detail/{id}',[ControllerDonasiMakanan::class, 'detail']);
-Route::get('/donasi/booking/{id}', [BookingController::class, 'booking'])->middleware('auth');
-
+Route::get('/donasi/detail/{id}', [ControllerDonasiMakanan::class, 'detail'])->middleware('cache');
+Route::get('/donasi/booking/{id}', [BookingController::class, 'booking'])->middleware(['auth', 'cache']);
+Route::get('booking/selesai/{id}', [BookingController::class, 'update_status'])->name('booking.selesai')->middleware('auth');
 
 
 // Halaman Input Makanan
@@ -135,6 +137,25 @@ Route::get('/resep', function () {
 });
 Route::get('/resep', [ResepController::class, 'index'])->name('resep.index'); // Menampilkan Resep
 Route::get('/resep/{id}', [ResepController::class, 'show'])->name('detailresep'); // Menampilkan Detail Resep
+
+// Halaman Resep
+Route::get('/resep', function () {
+    return view('resep');
+});
+// Menampilkan Resep
+Route::get('/resep', [ResepController::class, 'index'])->name('resep.index');
+
+// Menampilkan Tambah Resep
+Route::get('/tambahresep', function () {
+    return view('tambahresep');
+});
+
+
+Route::post('/tambahresep', [ResepController::class, 'store'])->name('resep.store');
+
+
+// Menampilkan Detail Resep
+Route::get('/resep/{id}', [ResepController::class, 'show'])->name('detailresep');
 
 
 // POST GET Routes
@@ -162,3 +183,5 @@ Route::post('update-blog/{id}', [BlogController::class, 'update_blog'])->name('u
 Route::get('/detail-blog/{id}', [BlogController::class, 'view_blog']);
 Route::get('/hapus-blog/{id}', [BlogController::class, 'hapus_blog']);
 
+// Reward
+Route::get('/reward', [RewardController::class, 'index'])->middleware('auth');;

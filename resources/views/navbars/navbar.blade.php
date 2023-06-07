@@ -89,6 +89,7 @@
                     <a href="{{ url('unggah-blog') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Unggah Blog</a>
                 </div>
                 @endif
+
                 <!-- Add Post Blog untuk DashboardAdmin -->
                 @if (Auth::user()->role==0)
                 <div class="py-2">
@@ -129,7 +130,8 @@
                 <a href="{{ url('/donasi?jenis=2') }}" class="block py-2 pl-3 pr-4 text-white hover:text-kuning bg-kuning3 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg">Donate</a>
             </li>
             <li>
-                <a href="{{ url('/404') }}" class="block py-2 pl-3 pr-4 text-white hover:text-kuning bg-kuning3 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg">Reward</a>
+                <a href="{{ url('/reward') }}" class="block py-2 pl-3 pr-4 text-white hover:text-kuning bg-kuning3 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg">Reward</a>
+
             </li>
             <li>
                 <a href="{{ url('/resep') }}" class="block py-2 pl-3 pr-4 text-white hover:text-kuning bg-kuning3 rounded md:bg-transparent md:text-white-700 md:p-0 dark:text-white font-Alkatra text-lg">Recipe</a>

@@ -17,6 +17,52 @@ class ResepController extends Controller
     }
 
     /**
+<<<<<<< HEAD
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        return view('tambahresep');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        // Validasi form
+ 
+        $validatedData = $request->validate([
+            'nama' => 'required|string',
+            'foto' => 'required|image',
+            'deskripsi' => 'required|string',
+            'person' => 'required|string',
+            'time' => 'required|string',
+            'ingredients' => 'required|string',
+            'steps' => 'required|string',
+        ]);
+
+        $photoPath = $request->file('foto')->store('photos', 'public');
+
+
+        $resep = Resep::create([
+            'nama' => $validatedData['nama'],
+            'foto' => $photoPath,
+            'deskripsi' => $validatedData['deskripsi'],
+            'person' => $validatedData['person'],
+            'time' => $validatedData['time'],
+            'ingredients' => $validatedData['ingredients'],
+            'steps' => $validatedData['steps'],
+        ]);
+        $resep->save();
+         // Redirect ke halaman sukses atau halaman lainnya
+        return redirect('/resep')->with('success', 'Resep berhasil ditambahkan!');
+
+    }
+
+    /**
+=======
+>>>>>>> master
      * Display the specified resource.
      */
     public function show($id)
@@ -24,7 +70,26 @@ class ResepController extends Controller
         $resep = Resep::find($id);
         // return view('detailresep', compact('resep'));
         return view('detailresep', compact('resep'));
+<<<<<<< HEAD
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        //
+=======
         // return view('share', compact('resep'));
+>>>>>>> master
     }
 
     /**

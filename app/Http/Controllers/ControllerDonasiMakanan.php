@@ -10,13 +10,15 @@ use File;
 
 class ControllerDonasiMakanan extends Controller
 {
-    public function index() {
-        $makanans = Makanan::filter(request(['search', 'location', 'jenis']))->get();
-
+    public function index()
+    {
+        // $makanans = Makanan::filter(request(['search', 'location', 'jenis']))->get();
+        $makanans = Makanan::filter(request(['search', 'location', 'jenis']))->where('id_pengunggah', '!=', null)->get();
         return view('donasiMakanan.donasi', compact('makanans'));
     }
 
-    public function report(Request $request) {
+    public function report(Request $request)
+    {
         Report::create([
             'user_id' => auth()->user()->id,
             'makanan_id' => $request->id_makanan,
@@ -33,7 +35,7 @@ class ControllerDonasiMakanan extends Controller
             'deskripsi' => $request->deskripsi,
             'lokasi' => $request->lokasi,
             'jenis' => $request->jenis,
-            'merk' => $request-> merk,
+            'merk' => $request->merk,
             'exp_date' => $request->exp_date,
             'id_pengunggah' => $request->id_pengunggah,
             'user_pengunggah' => $request->user_pengunggah,
@@ -59,6 +61,6 @@ class ControllerDonasiMakanan extends Controller
     public function detail($id)
     {
         $makanan = Makanan::find($id);
-        return view('donasiMakanan.donasi_detail',compact('makanan'));
+        return view('donasiMakanan.donasi_detail', compact('makanan'));
     }
 }
