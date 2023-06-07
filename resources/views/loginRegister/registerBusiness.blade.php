@@ -84,11 +84,14 @@
                     <div class="mb-2">
                         <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white font-Cabin-Medium">Kata Sandi Anda</label>
                         <input type="password" id="password" name="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-hijau1 focus:border-hijau1 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-hijau1 dark:focus:border-hijau1 font-Cabin-Medium" required>
+                        @error('password')
+                        <p class="mt-2 text-xs text-red-500">{{ $message }}</p>
+                        @enderror
                     </div>
 
                     <div class="mb-2">
-                        <label for="repassword" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white font-Cabin-Medium">Konfirmasi Kata Sandi Anda</label>
-                        <input type="password" id="repassword" name="repassword" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-hijau1 focus:border-hijau1 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-hijau1 dark:focus:border-hijau1 font-Cabin-Medium" required>
+                        <label for="password_confirmation" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white font-Cabin-Medium">Konfirmasi Kata Sandi Anda</label>
+                        <input type="password" id="password_confirmation" name="password_confirmation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-hijau1 focus:border-hijau1 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-hijau1 dark:focus:border-hijau1 font-Cabin-Medium" required>
                     </div>
 
                     <div class="pt-4 flex flex-col items-center">

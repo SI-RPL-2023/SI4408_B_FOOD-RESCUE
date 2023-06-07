@@ -29,7 +29,7 @@
                             <th scope="col" class="px-6 py-3 place-content-center text-center">Gambar Barang</th>
                             <th scope="col" class="px-6 py-3 place-content-center text-center">Nama Produk</th>
                             <th scope="col" class="px-6 py-3 place-content-center text-center">Lokasi</th>
-                            <th scope="col" class="px-6 py-3 place-content-center">Category</th>
+                            <th scope="col" class="px-6 py-3 place-content-center">Jenis Bahan</th>
                             <th scope="col" class="px-6 py-3 md:table-fixed max-w-xs break-words place-content-center text-center">Deskripsi</th>
                             <th scope="col" class="px-6 py-3 place-content-center text-center">Harga</th>
                             <th scope="col" class="px-6 py-3 place-content-center text-center">Tanggal Upload</th>
@@ -49,11 +49,13 @@
 
                                     {{-- Gambar --}}
                                     <div class="pl-4 grid auto-cols-max">
-                                        @if ($data->foto)
-                                            {{-- <img class="w-16 h-16 aspect-square rounded" src="/upload/makanan/{{ $data->foto }}" alt="{{ $data->nama }}user_pfp"> --}}
+
+
+                                        @if ($data->foto  && in_array(pathinfo($data->foto, PATHINFO_EXTENSION), ['jpg', 'jpeg', 'png']))
+                                        {{-- <img class="w-16 h-16 aspect-square rounded" src="/upload/makanan/{{ $data->foto }}" alt="{{ $data->nama }}user_pfp"> --}}
                                             <img class="w-16 h-16 aspect-square rounded" src="{{ asset('/upload/makanan/' . $data->foto) }}" alt="{{ $data->nama }}user_pfp">
                                         @else
-                                            <img class="w-16 h-16 aspect-square rounded" src="/images/default_profile.png') }}" alt="{{ $data->nama }}_pfp">
+                                            <img class="w-16 h-16 aspect-square rounded" src="{{ asset('images/default_profile.png') }}" alt="{{ $data->nama }}_pfp">
                                         @endif
                                     </div>
                                 </th>

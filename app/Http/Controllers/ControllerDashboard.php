@@ -5,17 +5,12 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\KunjunganController;
 use App\Models\User;
-<<<<<<< HEAD
-use App\Models\Kunjungan;
-use Illuminate\View\View;
-=======
 use App\Models\Resep;
 use App\Models\Report;
 use App\Models\Makanan;
 use App\Models\Kunjungan;
 use Illuminate\View\View;
 use Illuminate\Support\Facades\DB;
->>>>>>> master
 
 /*
 |--------------------------------------------------------------------------|
@@ -43,30 +38,18 @@ class ControllerDashboard extends Controller
         $controller = new ControllerDashboard();
         $data_pengguna = $controller->sumDataPengguna();
         $dataResep = $controller->sumDataResep();
-<<<<<<< HEAD
-        $dataBarang = $controller->sumDataBarang();
-        $dataLaporan = $controller->sumDataLaporan();
-        $totalKunjungan = $controller->totalKunjungan();
-=======
         $dataBarang = $controller->sumDataMakanan();
         $dataLaporan = $controller->sumDataLaporan();
         $totalKunjungan = $controller->totalKunjungan();
         $dataLaporantable = $controller->daftarLaporan();
->>>>>>> master
 
         return view('admin.dashboard', [
             'data_pengguna' => $data_pengguna->data_pengguna,
             'data_resep' => $dataResep->data_resep,
-<<<<<<< HEAD
-            'data_barang' => $dataBarang->data_barang,
-            'data_laporan' => $dataLaporan->data_laporan,
-            'total_kunjungan' => $totalKunjungan,
-=======
             'data_makanan' => $dataBarang->data_makanan,
             'data_laporan' => $dataLaporan->data_laporan,
             'total_kunjungan' => $totalKunjungan,
             'data_laporantable' => $dataLaporantable->data_laporantable,
->>>>>>> master
         ]);
 
     }
@@ -79,16 +62,6 @@ class ControllerDashboard extends Controller
 
     private function sumDataResep(): View
     {
-<<<<<<< HEAD
-        $total_dashboard = User::count();
-        return view('admin.dashboard', ['data_barang' => $total_dashboard]);
-    }
-
-    private function sumDataBarang(): View
-    {
-        $total_barang = User::count();
-        return view('admin.dashboard', ['data_barang' => $total_barang]);
-=======
         $total_resep = Resep::count();
         return view('admin.dashboard', ['data_resep' => $total_resep]);
     }
@@ -97,18 +70,12 @@ class ControllerDashboard extends Controller
     {
         $total_makanan = Makanan::count();
         return view('admin.dashboard', ['data_makanan' => $total_makanan]);
->>>>>>> master
     }
 
     private function sumDataLaporan(): View
     {
-<<<<<<< HEAD
-        $total_laporan = User::count();
-        return view('admin.dashboard', ['data_barang' => $total_laporan]);
-=======
         $total_laporan = Report::count();
         return view('admin.dashboard', ['data_laporan' => $total_laporan]);
->>>>>>> master
     }
 
     private function tombol() {
@@ -127,64 +94,8 @@ class ControllerDashboard extends Controller
         return $totalKunjungan;
     }
 
-<<<<<<< HEAD
-=======
     private function daftarLaporan()
         {
-            $data_laporantable = DB::table('reports')->get();
-            $find_id_makanan = $data_laporantable->pluck('makanan_id')->toArray();
-            // dd($find_id_makanan);
-
-            $hasil_laporan = DB::table('makanans')->whereIn('id', $find_id_makanan)->get();
-            // dd($hasil_laporan);
-
-            $grouped_laporan =$hasil_laporan->groupBy('id');
-            // dd($grouped_laporan);
-
-             // cari nama berdasarkan id
-            $orang = DB::table('table_pengguna')->get();
-            // dd($orang);
-            $cari_orang = $data_laporantable->pluck('user_id')->toArray();
-
-            $hasil_cari = DB::table('table_pengguna')->whereIn('id', $cari_orang)->get();
-            // dd($hasil_cari);
-            $final_cari = $hasil_cari->groupBy('id');
-            // dd($hasil_cari);
-            // dd($final_cari);
-
-
-
-            $data_laporantable = $data_laporantable->map(function ($item) use ($grouped_laporan) {
-                $item->makanan = $grouped_laporan[$item->makanan_id] ?? [];
-                $item->pengguna = $final_cari[$item->id] ?? [];
-                // dd($item);
-                return $item;
-            });
-            // dd($data_laporantable);
-
-            // =================================================================================================
-
-            // cari nama berdasarkan id
-            $orang = DB::table('table_pengguna')->get();
-            $cari_orang = $data_laporantable->pluck('user_id')->toArray();
-
-            $hasil_cari = DB::table('table_pengguna')->whereIn('id', $cari_orang)->get();
-            // dd($hasil_cari);
-            $final_cari = $hasil_cari->groupBy('id');
-            // dd($hasil_cari);
-            // dd($final_cari);
-
-            $data_laporantablefinal = $orang->map(function ($item) use ($final_cari) {
-                $item->naama = $final_cari[$item->nohp] ?? [];
-                // dd($item);
-                return $item;
-            });
-            // dd($data_laporantablefinal);
-
-            // $merged_array = $data_laporantable->toArray() + $hasil_cari->toArray();
-            // dd($merged_array);
-
-
             //WORKING CODE, DON'T DELETE THIS!!!!`
             $data_laporantable = DB::table('reports')->get();
             $find_id_makanan = $data_laporantable->pluck('makanan_id')->toArray();
@@ -255,7 +166,20 @@ class ControllerDashboard extends Controller
 
         return view('admin.admin_laporan', ['data_laporan' => $data_laporan]);
     }
->>>>>>> master
+
+    public function hapusLaporan($makanan_id)
+    {
+        $report = Report::where('makanan_id', $makanan_id)->first();
+
+        if ($report) {
+            $makanan = Makanan::find($makanan_id);
+            if ($makanan) {
+                $makanan->delete();
+            }
+        }
+
+        return redirect('/dashboard-laporan');
+    }
 }
 
 

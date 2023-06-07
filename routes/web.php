@@ -28,23 +28,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+
+Route::get('/db', function () {
+    return view('welcome');
+});
+
 // Views Routes
 Route::get('/', [KunjunganController::class, 'index'])->name('home');// Homepage
 
-
-
-<<<<<<< HEAD
-// Landing Page
-// Route::get('/', function () {
-//     return view('beranda');
-// });
-
-Route::get('/', [KunjunganController::class, 'index'])->name('home');
-
-Route::post('/profile/update', [ProfileController::class, 'update'])->middleware('auth');
-
-=======
->>>>>>> master
 
 // Login Routes
 Route::get('/login', function () {
@@ -76,24 +67,11 @@ Route::get('/inputmakanan', function () {
     return view('inputmakanan');
 });
 
-<<<<<<< HEAD
-// // reward
-// Route::get('/reward', function () {
-//     return view('reward');
-// });
-
-
-=======
->>>>>>> master
 // Halaman AboutUs
 Route::get('/about', function () {
     return view('AboutUs.about');
 });
 
-// Halaman FAQ
-Route::get('/FAQ', function () {
-    return view('Faq.FaqPage');
-});
 
 // Halaman 404
 Route::get('/404', function () {
@@ -102,57 +80,22 @@ Route::get('/404', function () {
 
 // ================= Admin Things =================
 // Dashboard
-<<<<<<< HEAD
-// Route::get('/dashboard', function () {
-//     return view('admin.dashboard');
-// });
 Route::get('/dashboard', [ControllerDashboard::class, 'index'])
     ->name('dashboard')
     ->middleware('admin');
-// ->middleware(AdminMiddleware::class);
-
 
 Route::get('/dashboard', [ControllerDashboard::class, 'all']);
 
 // Dashboard Pengguna
-// Route::get('/donasi', [ControllerPengguna::class, 'tombol']);
-Route::get('/dashboard-pengguna', [ControllerPengguna::class, 'pullDataPengguna']);
-
-
-
-
-// Dashboard Barang
-Route::get('/dashboard-barang', function () {
-    return view('admin.admin_barang');
-});
-
-
-// Dashboard Resep
-Route::get('/dashboard-resep', function () {
-    return view('admin.admin_resep');
-});
-// reported-items
-Route::get('/dashboard-laporan', function () {
-    return view('admin.admin_laporan');
-});
-=======
-Route::get('/dashboard', [ControllerDashboard::class, 'index'])
-    ->name('dashboard')
-    ->middleware('admin');
-    // ->middleware(AdminMiddleware::class);
-Route::get('/dashboard', [ControllerDashboard::class, 'all']); //Dashboard Main Page
-    // Dashboard Pengguna
-// Route::get('/donasi', [ControllerPengguna::class, 'tombol']);
 Route::get('/dashboard-pengguna', [ControllerDashboard::class, 'pullDataPengguna']); // Dashboard List Pengguna
-Route::get('/dashboard-makanan', [ControllerDashboard::class, 'pullDataMakanan']);// Dashboard List Makanan
+Route::get('/dashboard-barang', [ControllerDashboard::class, 'pullDataMakanan']);// Dashboard List Makanan
 Route::get('/dashboard-resep', [ControllerDashboard::class, 'pullDataResep']);// Dashboard List Makanan
 Route::get('/dashboard-laporan', [ControllerDashboard::class, 'pullDataLaporan']);// Dashboard List Makanan
+Route::get('/dashboard-laporan/{id}', [ControllerDashboard::class, 'hapusLaporan'])->name('hapuss');;// Dashboard List Makanan
 
-// reported-items
-// Route::get('/dashboard-laporan', function () {
-//     return view('admin.admin_laporan');
-// });
->>>>>>> master
+
+
+
 
 // pop-up
 Route::get('/share', function () {
@@ -177,11 +120,9 @@ Route::post('/profile/update', [ProfileController::class, 'update'])->middleware
 Route::get('/donasi-makanan', function () {
     return view('donasiMakanan.donasi');
 });
+
 Route::get('/donasi', [ControllerDonasiMakanan::class, 'index']);
-<<<<<<< HEAD
-=======
 Route::get('/donasi/mentah', [ControllerDonasiMakanan::class, 'makananMentah']);
->>>>>>> master
 Route::post('/donasi/report', [ControllerDonasiMakanan::class, 'report']);
 Route::get('/donasi/detail/{id}', [ControllerDonasiMakanan::class, 'detail'])->middleware('cache');
 Route::get('/donasi/booking/{id}', [BookingController::class, 'booking'])->middleware(['auth', 'cache']);
