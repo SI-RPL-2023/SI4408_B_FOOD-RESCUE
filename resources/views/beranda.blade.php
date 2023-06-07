@@ -27,7 +27,7 @@
 </div>
 
 <div class="container mx-auto mt-8 flex justify-center">
-  <button type="button" class="text-white  bg-kuning  hover:bg-kuning2 focus:ring-4 focus:outline-none focus:ring-kuning3 flex justify-center font-medium rounded-full px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-kuning3 dark:hover:bg-kuning3 dark:focus:ring-kuning3 font-Cabin-Medium text-lg">Learn More</button>
+<a href="{{ url('/about') }}" class="text-white bg-kuning hover:bg-kuning2 focus:ring-4 focus:outline-none focus:ring-kuning3 flex justify-center font-medium rounded-full px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-kuning3 dark:hover:bg-kuning3 dark:focus:ring-kuning3 font-Cabin-Medium text-lg">Learn More</a>
 </div>
 
 <div class=" mt-11 mb-11 flex justify-center">

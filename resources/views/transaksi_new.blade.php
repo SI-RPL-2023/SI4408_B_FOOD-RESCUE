@@ -13,17 +13,12 @@
     @foreach ($makanans as $makanan)
     <div class="w-full rounded overflow-hidden shadow-lg flex p-7 bg-white mb-16">
         <div class="w-72 h-80 overflow-hidden flex justify-center items-center">
-<<<<<<< HEAD
             <img class="w-full" src="{{ asset('upload/makanan/'. $makanan->foto) }}" alt="Image">
-=======
-            <img class="w-full" src="{{ asset('images/products/makanan3.jpg') }}" alt="Image">
->>>>>>> master
         </div>
         <div class="flex-1 grid grid-rows-2">
             <div class="px-6 py-4">
 
                 <div class="flex items-center justify-between mb-8">
-<<<<<<< HEAD
                     <span><small class="font-medium text-base inline-flex items-center"><img src="{{ asset('images/icons/location.svg') }}" alt="" class="w-5 mr-2"> {{ $makanan->lokasi }}</small> 
                         @if ($makanan->user_id != null && $makanan->user_id == auth()->user()->id)
                             <span class="rounded-md py-2 px-2 bg-kuning2 text-white ml-3">Dibooking</span></span>
@@ -34,19 +29,10 @@
 
                 <h2 class="text-2xl font-bold mb-3">{{ $makanan->nama }}</h2>
                 <p class="font-medium">{{ $makanan->deskripsi }}</p>
-=======
-                    <span><small class="font-medium text-base inline-flex items-center"><img src="{{ asset('images/icons/location.svg') }}" alt="" class="w-5 mr-2"> Sunda Cafe</small> <span class="rounded-md py-2 px-2 bg-kuning2 text-white ml-3">Sudah Dibooking</span></span>
-                    <small class="font-medium text-base">21 April 2023 | 09:00 WIB</small>
-                </div>
-
-                <h2 class="text-2xl font-bold mb-3">Spicy Beef Taco Bowl</h2>
-                <p class="font-medium">Indulge in a flavor-packed meal with our Spicy Beef Taco Bowl! This hearty dish features succulent beef, seasoned to perfection with a fiery blend of spices that will tantalize your taste buds.</p>
->>>>>>> master
 
             </div>
             <div class="px-6  flex mt-auto">
                 <div class="ml-auto">
-<<<<<<< HEAD
                     @if ($makanan->user_id != null && $makanan->user_id == auth()->user()->id)
                         <a href="" class="text-kuning2 font-medium">Tanyakan Admin</a>
                     @endif
@@ -56,10 +42,6 @@
                     <a href="{{ route('transaksi.show', $makanan->id) }}" class="bg-kuning2 text-white py-2 px-3 rounded-md inline-block ml-3">Lihat Detail Makanan</a>
                     @endif
                     
-=======
-                    <a href="" class="text-kuning2 font-medium">Tanyakan Admin</a>
-                    <a href="{{ route('transaksi.show',Str::random(12)) }}" class="bg-kuning2 text-white py-2 px-3 rounded-md inline-block ml-3">Lihat Detail Transaksi</a>
->>>>>>> master
                 </div>
             </div>
         </div>

@@ -8,13 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite(['resources/css/app.css','resources/js/app.js'])
     <title>Unggah Blog</title>
-<<<<<<< HEAD
-=======
-    @section('title')
-    Unggah Blog
-    @endsection
-
->>>>>>> master
 </head>
 <body>
     <div class="mx-auto w-[80rem] p-4 mt-10 mb-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
@@ -57,8 +50,4 @@
 
 @endsection
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> master
