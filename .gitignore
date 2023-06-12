@@ -34,7 +34,6 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
-
 .env
 
 /node_modules/
@@ -42,4 +41,5 @@ Thumbs.db
 hot
 # node_modules
 
-.env
+
+
