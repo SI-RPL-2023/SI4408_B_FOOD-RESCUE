@@ -40,7 +40,7 @@
                 <div class="grid grid-rows-1 grid-flow-col gap-2 mt-8">
                     <div> <img class="h-auto w-4" src="images/timer.svg" alt="image description"></div>
                     <div> <p class="font-bold text-xs mb-2 text-left font-Cabin-Medium mr-5">{{ $resep->time }}</p> </div>
-                    <div> <img class="h-auto w-4" src="images/person.svg" alt="image description"></div>                       
+                    <div> <img class="h-auto w-4" src="images/person.svg" alt="image description"></div>
                     <div> <p class="font-bold text-xs mb-2 text-left font-Cabin-Medium">{{ $resep->person }}</p> </div>
                 </div>
                 <div class="mt-10 justify-center ml-10">

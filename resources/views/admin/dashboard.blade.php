@@ -160,92 +160,158 @@
                             </div>
 
 {{-- Tablenya --}}
-                            <div>
-                                <div class="w-auto">
-                                    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 ">
-                                        <thead class="text-xs text-gray-700 uppercase bg-abu dark:bg-gray-700 dark:text-gray-400 ">
+                            <div class="pb-6">
+                                <div class="mx-auto overflow-x-auto shadow-md sm:rounded-lg">
+                                    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                             <tr>
-                                                <th scope="col" class="px-6 py-2 max-w-[20]">
-                                                    Gambar Produk
+                                                <th scope="col" class="px-6 py-3 place-content-center text-center">Gambar Barang</th>
+                                                <th scope="col" class="px-6 py-3 place-content-center text-center">Nama Produk</th>
+                                                <th scope="col" class="px-6 py-3 place-content-center text-center">Lokasi</th>
+                                                <th scope="col" class="px-6 py-3 place-content-center">Jenis Bahan</th>
+                                                <th scope="col" class="px-6 py-3 md:table-fixed max-w-xs break-words place-content-center text-center">Alasan Pelaporan</th>
+                                                <th scope="col" class="px-6 py-3 place-content-center text-center">Pengunggah</th>
+                                                <th scope="col" class="px-6 py-3 place-content-center text-center">Tanggal Lapor</th>
+                                                <th scope="col" class="px-6 py-3 place-content-center text-center">Tindakan</th>
                                                 </th>
-                                                <th scope="col" class="px-6 py-3">
-                                                    Nama Produk
-                                                </th>
-                                                <th scope="col" class="px-6 py-3">
-                                                    Lokasi
-                                                </th>
-                                                <th scope="col" class="px-6 py-3">
-                                                    Kategori
-                                                </th>
-                                                <th scope="col" class="px-6 py-3">
-                                                    Alasan Pelaporan
-                                                </th>
-                                                <th scope="col" class="px-6 py-3">
-                                                    Pengunggah
-                                                </th>
-                                                <th scope="col" class="px-6 py-3">
-                                                    Tanggal Lapor
-                                                </th>
-                                                <th scope="col" class="px-6 py-3">
-                                                    Tindakan
-                                                </th>
+
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($data_laporantable as $data)
-                                            @foreach($data->makanan as $laporan)
-                                            @foreach($data->pengguna as $pengguna)
+                                             {{-- data1 --}}
+                        @foreach ($data_laporantable as $data)
+                        @foreach ($data->makanan as $laporan)
+                        @foreach ($data->pengguna as $pengguna)
 
-                                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-100">
-                                                    <th scope="row" class="px-2  py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                        {{-- Foto --}}
-                                                        <div class="pl-8">
-                                                            @if ($laporan->foto  && in_array(pathinfo($laporan->foto, PATHINFO_EXTENSION), ['jpg', 'jpeg', 'png']))
-                                                                <img class="w-16 h-16 aspect-square rounded" src="{{ asset('/upload/makanan/' . $laporan->foto) }}" alt="{{ $laporan->nama }}user_pfp">
-                                                            @else
-                                                                <img class="w-16 h-16 aspect-square rounded" src="{{ asset('images/default_profile.png') }}" alt="{{ $laporan->nama }}_pfp">
-                                                            @endif
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white flex mx-auto place-content-center">
+                                {{-- <img class="w-24 h-24 rounded" src="/images/products/brokoli.jpg" alt="brokoli"> --}}
+                {{-- Foto --}}
+                                @if ($laporan->foto  && in_array(pathinfo($laporan->foto, PATHINFO_EXTENSION), ['jpg', 'jpeg', 'png']))
+                                {{-- <img class="w-16 h-16 aspect-square rounded" src="/upload/makanan/{{ $data->foto }}" alt="{{ $data->nama }}user_pfp"> --}}
+                                    <img class="w-16 h-16 aspect-square rounded" src="{{ asset('/upload/makanan/' . $laporan->foto) }}" alt="{{ $laporan->nama }}user_pfp">
+                                @else
+                                    <img class="w-16 h-16 aspect-square rounded" src="{{ asset('images/default_profile.png') }}" alt="{{ $laporan->nama }}_pfp">
+                                @endif
+                            </th>
+                {{-- Nama Barang --}}
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white mx-auto place-content-center text-center">{{ $laporan->merk }}</th>
+                {{-- Lokasi --}}
+                            <td class="px-6 py-4 place-content-center text-center">{{ $laporan->lokasi }}</td>
+                {{-- Jenis Barang --}}
+                            <td class="px-6 py-4 place-content-center text-center">
+                                <div class="flex justify-center items-center w-[100px] {{ $laporan->jenis == 1 ? 'bg-green-100 text-green-800' : ($laporan->jenis == 2 ? 'bg-orange-100 text-orange-800' : 'bg-yellow-100 text-yellow-800') }} text-md font-semibold mr-2 px-2.5 py-0.5 rounded dark:{{ $laporan->jenis == 1 ? 'bg-green-200 text-green-900' : ($laporan->jenis == 2 ? 'bg-orange-200 text-orange-900' : 'bg-yellow-200 text-yellow-900') }} outline outline-{{ $laporan->jenis == 1 ? 'green-900' : ($laporan->jenis == 2 ? 'orange-900' : 'yellow-900') }} outline-2 ">
+                                    {{ $laporan->jenis == 1 ? 'Mentah' : ($laporan->jenis == 2 ? 'Matang' : 'Admin') }}
+                                </div>
+                            </td>
+                {{-- Deskripsi --}}
+                            <td class="px-6 py-3 md:table-fixed max-w-xs break-words place-content-center font-semibold ">{{ $data->deskripsi }}</td>
+                            <td class="px-6 py-4 place-content-center text-center">{{ $pengguna->namaDepan }}</td>
+                            <td class="px-6 py-4 place-content-center text-center">{{ $data->created_at }}</td>
+                            <td class="px-6 py-4 place-content-center text-center">
+                                {{-- <a href="{{ url ('dashboard-laporan') }}" class="w-[95px] flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-hijau1 rounded-lg hover:bg-hijau2 focus:ring-2 focus:outline-none focus:ring-hijau3 ring-offset-2">
+                                    Periksa
+                                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                </a> --}}
+                                <div class="flex justify-center m-5">
+                                    <button id="readProductButton" data-modal-toggle="readProductModal-{{ $laporan->id }}" class="w-[95px] flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-hijau1 rounded-lg hover:bg-hijau2 focus:ring-2 focus:outline-none focus:ring-hijau3 ring-offset-2" type="button">
+                                    Periksa
+                                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                    </button>
+                                </div>
 
+                                <!-- Main modal -->
+                                <div id="readProductModal-{{ $laporan->id }}" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-modal md:h-full">
+                                    <div class="relative p-4 w-full  mx-[800px]">
+            <!-- Modal content -->
+                                        <div class="w-[800px] p-4 bg-white rounded-lg shadow dark:bg-gray-800 sm:p-5">
+                                                <!-- Modal header -->
+                                                <div class="flex justify-between mb-2 rounded-t ">
+                                                    <div>
+                                                        <h3 class="font-semibold text-3xl text-black underline underline-offset-8 mb-8 font-Cabin-Medium">
+                                                            Detail Terlapor
+                                                        </h3>
+                                                    </div>
 
+                                                    <div>
+                                                        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 inline-flex dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="readProductModal-{{ $laporan->id }}">
+                                                            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                                            <span class="sr-only">Close modal</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                                {{-- Detil --}}
+                                                <div>
+                                                    <div class="text-lg text-gray-900 md:text-xl dark:text-white">
+                                                        <h3 class="font-semibold text-3xl">
+                                                            {{ $laporan->merk }}
+                                                        </h3>
+                                                        <p class="font-regular">
+                                                            {{ $laporan->lokasi }}
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div>
+                                                        <div class="pt-4 mb-0 font-semibold text-lg text-gray-900 dark:text-white font-Cabin-Medium">
+                                                            Jenis Bahan :
                                                         </div>
-                                                    </th>
-                                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                        {{-- Nama Produk --}}
-                                                        {{ $laporan->merk }}
-                                                    </th>
-                                                    <td class="px-6 py-4">
-                                                        {{-- Lokasi  --}}
-                                                        {{ $laporan->lokasi }}
-                                                    </td>
-                                                        <td class="px-6 py-4 ">
-                                                            <div class="flex justify-center items-center w-[100px] {{ $laporan->jenis == 1 ? 'bg-green-100 text-green-800' : ($laporan->jenis == 2 ? 'bg-orange-100 text-orange-800' : 'bg-yellow-100 text-yellow-800') }} text-md font-semibold mr-2 px-2.5 py-0.5 rounded dark:{{ $laporan->jenis == 1 ? 'bg-green-200 text-green-900' : ($laporan->jenis == 2 ? 'bg-orange-200 text-orange-900' : 'bg-yellow-200 text-yellow-900') }} outline outline-{{ $laporan->jenis == 1 ? 'green-900' : ($laporan->jenis == 2 ? 'orange-900' : 'yellow-900') }} outline-2 ">
-                                                            {{-- Kategori --}}
-                                                            {{ $laporan->jenis == 1 ? 'Mentah' : ($laporan->jenis == 2 ? 'Matang' : 'Admin') }}
 
+                                                        <div class="mb-4 font-light text-gray-500 sm:mb-0 dark:text-gray-400 font-Cabin-Medium">
+                                                            <div class=" flex flex-col items-center">
+                                                                <div class="flex justify-center items-center w-[100px] font-Cabin-Medium {{ $laporan->jenis == 1 ? 'bg-green-100 text-green-800' : ($laporan->jenis == 2 ? 'bg-orange-100 text-orange-800' : 'bg-yellow-100 text-yellow-800') }} text-md font-semibold mr-0 px-2.5 py-0.5 rounded dark:{{ $laporan->jenis == 1 ? 'bg-green-200 text-green-900' : ($laporan->jenis == 2 ? 'bg-orange-200 text-orange-900' : 'bg-yellow-200 text-yellow-900') }} outline outline-{{ $laporan->jenis == 1 ? 'green-900' : ($laporan->jenis == 2 ? 'orange-900' : 'yellow-900') }} outline-2 ">
+                                                                    {{ $laporan->jenis == 1 ? 'Mentah' : ($laporan->jenis == 2 ? 'Matang' : 'Admin') }}
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </td>
-                                                    <td class="px-6 py-4 md:table-fixed max-w-xs break-words text-black font-semibold">
-                                                        {{-- Alasan Pelaporan --}}
-                                                        {{ $data->deskripsi }}
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        {{-- Pengunggah Makanan --}}
-                                                        {{ $pengguna->namaDepan }}
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        {{-- Tanggal lapor --}}
-                                                        {{ $data->created_at }}
-                                                    </td>
-                                                    @endforeach
-                                                    @endforeach
-                                                    <td class="px-6 py-4">
-                                                        <a href="{{ url ('dashboard-laporan') }}" class="w-[95px] flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-hijau1 rounded-lg hover:bg-hijau2 focus:ring-2 focus:outline-none focus:ring-hijau3 ring-offset-2">
-                                                            Periksa
-                                                            <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                            @endforeach
+
+                                                    </div>
+                                                </div>
+
+                                                {{-- <div class="grid grid-cols-2 md:grid-cols-12 gap-9 pt-8 pb-8 px-8"> --}}
+                                                <div class="grid grid-rows-15 grid-flow-col gap-4 p-10">
+                                                    <div class="grid gap-4 col-span-6 max-h-[500px]">
+                                                        <div class="flex flex-col items-center ">
+                                                            {{-- Foto --}}
+                                                                @if ($laporan->foto  && in_array(pathinfo($laporan->foto, PATHINFO_EXTENSION), ['jpg', 'jpeg', 'png']))
+                                                                    <img class="w-64 h-64 aspect-square rounded-lg" src="{{ asset('/upload/makanan/' . $laporan->foto) }}" alt="{{ $laporan->nama }}user_pfp">
+                                                                @else
+                                                                    <img class="w-64 h-64 aspect-square rounded-lg " src="{{ asset('images/default_profile.png') }}" alt="{{ $laporan->nama }}_pfp">
+                                                                @endif
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="grid gap-4 col-span-6 p-2">
+                                                        <div class="text-left">
+                                                            <h1 class="mb-2 font-semibold text-xl leading-none text-gray-900 font-Cabin-Medium">Deskripsi Produk</h1>
+                                                            <p class="mb-4 font-medium text-lg text-gray-500 sm:mb-5">{{ $laporan->deskripsi }}</p>
+
+                                                            <h1 class="mb-2 font-semibold text-xl leading-none text-gray-900 font-Cabin-Medium">Tanggal Kadaluarsa</h1>
+                                                            <p class="mb-4 font-medium text-lg text-gray-500 sm:mb-5">{{ $laporan->exp_date }}</p>
+
+                                                            <h1 class="mb-2 font-semibold text-xl leading-none text-gray-900 font-Cabin-Medium">Pengunggah</h1>
+                                                            <p class="mb-4 font-medium text-lg text-gray-500 sm:mb-5">{{ $pengguna->namaDepan }}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    {{-- <a href="{{ route('hapuss', $laporan->id) }}" class="max-w-64 inline-flex items-center text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"> --}}
+                                                    <a href="{{ url('dashboard-laporan', $laporan->id) }}" class="max-w-64 inline-flex items-center text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                                        <svg aria-hidden="true" class="w-5 h-5 mr-1.5 -ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                                                        Hapus Barang
+                                                    </a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        @endforeach
+                        @endforeach
+                        @endforeach
+                        {{-- end of table --}}
 
 {{-- End Data --}}
                                         </tbody>

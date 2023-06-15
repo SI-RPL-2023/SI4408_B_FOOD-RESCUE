@@ -36,10 +36,9 @@ Route::get('/db', function () {
 });
 
 // Views Routes
-// Route::get('/', [KunjunganController::class, 'index'])->name('home');// Homepage
 Route::get('/', [KunjunganController::class, 'navbar_all'])->name('home');// Homepage
 
-Route::get('/notif', [ControllerNotif::class, 'notif_donasi'])->name('home');// Homepage
+Route::get('/notif', [ControllerNotif::class, 'notif_donasi'])->name('notif');// Homepage
 // Route::get('/notif', [ControllerNotif::class, 'notif_donasi'])->name('home');// Homepage
 
 
